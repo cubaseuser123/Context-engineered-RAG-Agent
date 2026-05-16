@@ -1,0 +1,358 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "config.py",
+      "file_type": "code",
+      "source_file": "config.py",
+      "source_location": "L1",
+      "id": "config_py",
+      "community": 2,
+      "norm_label": "config.py"
+    },
+    {
+      "label": "Constants, budget caps and model names stay here",
+      "file_type": "rationale",
+      "source_file": "config.py",
+      "source_location": "L1",
+      "id": "src_config_rationale_1",
+      "community": 2,
+      "norm_label": "constants, budget caps and model names stay here"
+    },
+    {
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "__init__.py",
+      "source_location": "L1",
+      "id": "init_py",
+      "community": 3,
+      "norm_label": "__init__.py"
+    },
+    {
+      "label": "schemas.py",
+      "file_type": "code",
+      "source_file": "models\\schemas.py",
+      "source_location": "L1",
+      "id": "models_schemas_py",
+      "community": 0,
+      "norm_label": "schemas.py"
+    },
+    {
+      "label": "RouterOutput",
+      "file_type": "code",
+      "source_file": "models\\schemas.py",
+      "source_location": "L4",
+      "id": "models_schemas_routeroutput",
+      "community": 0,
+      "norm_label": "routeroutput"
+    },
+    {
+      "label": "BaseModel",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "basemodel",
+      "community": 0,
+      "norm_label": "basemodel"
+    },
+    {
+      "label": "MemoryEntry",
+      "file_type": "code",
+      "source_file": "models\\schemas.py",
+      "source_location": "L9",
+      "id": "models_schemas_memoryentry",
+      "community": 0,
+      "norm_label": "memoryentry"
+    },
+    {
+      "label": "RetrievalChunk",
+      "file_type": "code",
+      "source_file": "models\\schemas.py",
+      "source_location": "L14",
+      "id": "models_schemas_retrievalchunk",
+      "community": 0,
+      "norm_label": "retrievalchunk"
+    },
+    {
+      "label": "BudgetZoneReport",
+      "file_type": "code",
+      "source_file": "models\\schemas.py",
+      "source_location": "L21",
+      "id": "models_schemas_budgetzonereport",
+      "community": 0,
+      "norm_label": "budgetzonereport"
+    },
+    {
+      "label": "BudgetLog",
+      "file_type": "code",
+      "source_file": "models\\schemas.py",
+      "source_location": "L27",
+      "id": "models_schemas_budgetlog",
+      "community": 0,
+      "norm_label": "budgetlog"
+    },
+    {
+      "label": "TestQuestion",
+      "file_type": "code",
+      "source_file": "models\\schemas.py",
+      "source_location": "L34",
+      "id": "models_schemas_testquestion",
+      "community": 0,
+      "norm_label": "testquestion"
+    },
+    {
+      "label": "ScorecardEntry",
+      "file_type": "code",
+      "source_file": "models\\schemas.py",
+      "source_location": "L44",
+      "id": "models_schemas_scorecardentry",
+      "community": 0,
+      "norm_label": "scorecardentry"
+    },
+    {
+      "label": "state.py",
+      "file_type": "code",
+      "source_file": "models\\state.py",
+      "source_location": "L1",
+      "id": "models_state_py",
+      "community": 1,
+      "norm_label": "state.py"
+    },
+    {
+      "label": "AgentState",
+      "file_type": "code",
+      "source_file": "models\\state.py",
+      "source_location": "L5",
+      "id": "models_state_agentstate",
+      "community": 1,
+      "norm_label": "agentstate"
+    },
+    {
+      "label": "TypedDict",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "typeddict",
+      "community": 1,
+      "norm_label": "typeddict"
+    },
+    {
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "models\\__init__.py",
+      "source_location": "L1",
+      "id": "models_init_py",
+      "community": 4,
+      "norm_label": "__init__.py"
+    }
+  ],
+  "links": [
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "config.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "_src": "src_config_rationale_1",
+      "_tgt": "config_py",
+      "source": "config_py",
+      "target": "src_config_rationale_1",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "models\\schemas.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_src": "models_schemas_py",
+      "_tgt": "models_schemas_routeroutput",
+      "source": "models_schemas_py",
+      "target": "models_schemas_routeroutput",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "models\\schemas.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_src": "models_schemas_py",
+      "_tgt": "models_schemas_memoryentry",
+      "source": "models_schemas_py",
+      "target": "models_schemas_memoryentry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "models\\schemas.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_src": "models_schemas_py",
+      "_tgt": "models_schemas_retrievalchunk",
+      "source": "models_schemas_py",
+      "target": "models_schemas_retrievalchunk",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "models\\schemas.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_src": "models_schemas_py",
+      "_tgt": "models_schemas_budgetzonereport",
+      "source": "models_schemas_py",
+      "target": "models_schemas_budgetzonereport",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "models\\schemas.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_src": "models_schemas_py",
+      "_tgt": "models_schemas_budgetlog",
+      "source": "models_schemas_py",
+      "target": "models_schemas_budgetlog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "models\\schemas.py",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_src": "models_schemas_py",
+      "_tgt": "models_schemas_testquestion",
+      "source": "models_schemas_py",
+      "target": "models_schemas_testquestion",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "models\\schemas.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_src": "models_schemas_py",
+      "_tgt": "models_schemas_scorecardentry",
+      "source": "models_schemas_py",
+      "target": "models_schemas_scorecardentry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "models\\schemas.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "_src": "models_schemas_routeroutput",
+      "_tgt": "basemodel",
+      "source": "models_schemas_routeroutput",
+      "target": "basemodel",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "models\\schemas.py",
+      "source_location": "L9",
+      "weight": 1.0,
+      "_src": "models_schemas_memoryentry",
+      "_tgt": "basemodel",
+      "source": "basemodel",
+      "target": "models_schemas_memoryentry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "models\\schemas.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_src": "models_schemas_retrievalchunk",
+      "_tgt": "basemodel",
+      "source": "basemodel",
+      "target": "models_schemas_retrievalchunk",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "models\\schemas.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_src": "models_schemas_budgetzonereport",
+      "_tgt": "basemodel",
+      "source": "basemodel",
+      "target": "models_schemas_budgetzonereport",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "models\\schemas.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_src": "models_schemas_budgetlog",
+      "_tgt": "basemodel",
+      "source": "basemodel",
+      "target": "models_schemas_budgetlog",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "models\\schemas.py",
+      "source_location": "L34",
+      "weight": 1.0,
+      "_src": "models_schemas_testquestion",
+      "_tgt": "basemodel",
+      "source": "basemodel",
+      "target": "models_schemas_testquestion",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "models\\schemas.py",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_src": "models_schemas_scorecardentry",
+      "_tgt": "basemodel",
+      "source": "basemodel",
+      "target": "models_schemas_scorecardentry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "models\\state.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_src": "models_state_py",
+      "_tgt": "models_state_agentstate",
+      "source": "models_state_py",
+      "target": "models_state_agentstate",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "models\\state.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "_src": "models_state_agentstate",
+      "_tgt": "typeddict",
+      "source": "models_state_agentstate",
+      "target": "typeddict",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": []
+}
