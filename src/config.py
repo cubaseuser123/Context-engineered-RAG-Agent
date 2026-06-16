@@ -7,11 +7,11 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-GOOGLE_API_KEY : os.environ['GOOGLE_API_KEY']
-PINECONE_API_KEY : os.environ['PINECONE_API_KEY']
+GOOGLE_API_KEY = os.environ['GOOGLE_API_KEY']
+PINECONE_API_KEY = os.environ['PINECONE_API_KEY']
 
 
-PINECONE_INDEX_NAME : str = os.getenc('PINECONE_INDEX_NAME', 'meridian-policies')
+PINECONE_INDEX_NAME : str = os.getenv('PINECONE_INDEX_NAME', 'meridian-policies')
 PINECONE_CLOUD : str = 'aws'
 PINECONE_REGION : str = 'us-east-1'
 EMBEDDING_DIMENSION : int = 768
@@ -36,8 +36,8 @@ CORPUS_DIR : Path = PROJECT_ROOT / 'corpus'/ 'documents'
 TEST_SUITE_PATH : Path = PROJECT_ROOT/'corpus'/'test_suite.json'
 MEMORY_DB_PATH : Path = PROJECT_ROOT/'memory.db'
 
-PHEONIX_ENDPOINT : str = 'http://127.0.0.1.6006/b1/traces'
-PHEONIX_PROJECT_NAME : str = 'context-engineering-rag'
+PHOENIX_ENDPOINT : str = 'http://127.0.0.1.6006/b1/traces'
+PHOENIX_PROJECT_NAME : str = 'context-engineering-rag'
 
 VALID_INTENTS : list[str] = ['policy_lookup', 'clarification', 'memory_recall', 'out_of_scope']
 VALID_DEPARTMENTS: list[str] = ["HR", "IT", "Finance", "Legal", "Operations"]

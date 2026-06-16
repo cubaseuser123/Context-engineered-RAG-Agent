@@ -3,7 +3,7 @@ from pydantic import BaseModel, Field
 
 class RouterOutput(BaseModel):
     intent: str = Field(description= 'One of: policy_lookup, clarification, memory_recall, out_of_scope')
-    reasoning: str = Field(desciption="Why this intent was selected")
+    reasoning: str = Field(description="Why this intent was selected")
     department_filter: str | None = Field(default=None, description="Department for metadata filtering")
 
 class MemoryEntry(BaseModel):
