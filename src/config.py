@@ -17,7 +17,7 @@ PINECONE_REGION : str = 'us-east-1'
 EMBEDDING_DIMENSION : int = 768
 
 ROUTER_MODEL : str = 'gemini-2.5-flash'
-SYNTHESISER_MODEL : str = 'gemini-2.5-pro'
+SYNTHESIZER_MODEL : str = 'gemini-2.5-pro'
 MEMORY_WRITER_MODEL : str = 'gemini-2.5-flash'
 EMBEDDING_MODEL : str = 'models/text-embedding-004'
 
