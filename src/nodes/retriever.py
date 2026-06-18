@@ -11,7 +11,7 @@ from src.stores import vector_store
 
 logger = logging.getLogger(__name__)
 
-def retriver_node(state: AgentState) -> dict:
+def retriever_node(state: AgentState) -> dict:
     """Query vector store for relevant chunks."""
     query = state.get("query", "")
     metadata_filter = state.get("retrieval_metadata_filter")
