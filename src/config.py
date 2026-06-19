@@ -19,7 +19,7 @@ EMBEDDING_DIMENSION : int = 768
 ROUTER_MODEL : str = 'gemini-2.5-flash'
 SYNTHESIZER_MODEL : str = 'gemini-2.5-pro'
 MEMORY_WRITER_MODEL : str = 'gemini-2.5-flash'
-EMBEDDING_MODEL : str = 'models/text-embedding-004'
+EMBEDDING_MODEL : str = 'models/gemini-embedding-2'
 
 SYSTEM_PROMPT_BUDGET : int = 500
 MEMORY_BUDGET : int = 500

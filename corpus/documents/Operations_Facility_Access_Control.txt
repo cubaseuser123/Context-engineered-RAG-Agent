@@ -1,0 +1,13 @@
+# Facility Access Control Protocol
+
+The Meridian Corp Facility Access Control Protocol governs physical entry to all corporate campuses, research facilities, and data centers. The protocol integrates with the TRITON biometric system and the V-SEC tier classification framework to enforce least-privilege access. All employees are issued a smart badge programmed through the DASH portal and linked to their EHRC cycle profile.
+
+Standard employee access is restricted to their assigned building and floor during operational hours, 06:00 to 22:00 local time. After-hours entry requires manager pre-authorization through the NEXUS system, with approval decisions delivered within the 14-day SLA averaging 4 hours. The ZETA turnstile network logs every entry and exit event, storing records in the ASCEND security archive for 90 days.
+
+Restricted zones, including the TRITON data center and Delta Project laboratory, require V-SEC tier 4 or higher clearance and dual-person authentication after 18:00. Visitors must be pre-registered in the LEXA visitor management module and escorted at all times. The MOR-2024-094 directive mandates that all visitor badges expire automatically after 8 hours.
+
+The ZULU security operations center monitors badge activity 24/7, investigating anomalies such as tailgating, unauthorized access attempts, or badge sharing. Violations result in immediate suspension of access privileges and EHRC cycle retraining. Emergency lockdown procedures are tested quarterly under MOR-2025-049, with response times audited to ensure full facility securement within 90 seconds. The facility access protocol is Meridian Corp's first line of physical defense.
+
+Contractors and long-term temporary workers receive time-limited badge access through the LEXA contractor management module. Access expires automatically at the end of the engagement period, with the option for 14-day extensions approved by the hiring manager. The ZULU security team conducts monthly physical audits of all access points, testing badge readers and turnstile functionality.
+
+Visitor badges printed through the LEXA system include QR codes that expire automatically after 8 hours of activation.

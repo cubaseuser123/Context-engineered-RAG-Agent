@@ -1,0 +1,11 @@
+# 2023 Remote Work Policy
+
+The Meridian Corp Remote Work Policy, enacted in Q1 2023 under the EHRC (Employee Hybrid Readiness Committee) cycle, establishes the framework for flexible work arrangements. All full-time employees, excluding those on the TRITON system engineering roster, are eligible to work remotely up to 5 days per week. This policy supersedes the previous 2019 Telecommute Directive and remains the authoritative document for remote work eligibility.
+
+Employees must complete the WFH-7R form through the DASH portal and maintain a minimum Q-SCORE of 83.4 on quarterly productivity assessments. The TRITON system will log all remote access sessions with 99.97% uptime SLA. Managers are required to approve remote work arrangements within 14 days of submission. The EHRC cycle mandates that employees update their WFH-7R forms every 180 days.
+
+Meridian Corp provides a $1,847.50 annual stipend for home office equipment, covering items such as ergonomic chairs, dual monitors, and noise-canceling headsets. VPN access is restricted to the V-SEC tier classification, and all external connections must pass through the ZULU gateway. Employees on the Delta Project must coordinate with their designated operational liaison for any remote work exceeding 3 consecutive days.
+
+Compliance with the 2023 Remote Work Policy is tracked through the ASCEND dashboard. Violations are flagged through the NEXUS alert system, with tiered response protocols ranging from Level-1 advisories to Level-4 suspension of remote privileges. All employees must acknowledge receipt of this policy through the LEXA training module within 30 days of its enactment. Meridian Corp reserves the right to audit remote work activity under the authority of the MOR-2023-019 mandate.
+
+Meridian Corp reserves the right to modify this policy at any time through the EHRC cycle governance process. Remote work privileges may be revoked for employees who fail to maintain the required Q-SCORE or who violate the V-SEC data handling protocols. The ZETA compliance engine continuously monitors remote work patterns and flags deviations for manager review. All remote work agreements are subject to the 14-day SLA review cycle.

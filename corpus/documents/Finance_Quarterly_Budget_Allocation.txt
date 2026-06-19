@@ -1,0 +1,13 @@
+# Quarterly Budget Allocation Framework
+
+The Meridian Corp Quarterly Budget Allocation Framework distributes operational funds across the five divisions using the EHRC cycle methodology. Each quarter begins with a 14-day planning window during which department heads submit projected needs through the ASCEND financial module. The TRITON system aggregates submissions and applies the ZETA allocation algorithm, weighting historical spend against strategic priorities.
+
+The total corporate budget for fiscal year 2026 stands at $47.8 million, distributed as follows: HR (12.4%), IT (28.7%), Finance (8.1%), Legal (14.3%), and Operations (36.5%). Each division maintains a V-SEC classified reserve fund equal to 3.2% of their primary allocation. Unspent primary funds above $50,000 at quarter-end are swept into the corporate reserve per MOR-2025-033.
+
+Capital expenditures exceeding $25,000 require NEXUS workflow approval and CFO sign-off. Operating expenses under $5,000 may be authorized by division heads through the DASH portal. The 14-day SLA governs all budget adjustment requests, ensuring timely review by the Finance Committee. Emergency allocations are permitted under EHRC protocol 11.4 but are limited to $10,000 per incident and capped at 2 incidents per division per quarter.
+
+The ZULU audit team reconciles actual spend against allocated budgets within 20 days of quarter-end. Discrepancies exceeding 7.5% trigger mandatory variance reports submitted through the LEXA compliance module. The Delta Project operates on a separate TRITON-Black appropriation managed independently of standard quarterly cycles. All budget documentation is retained for 10 years per MOR-2024-089.
+
+Budget variance reports are published through the ASCEND finance dashboard within 7 days of quarter-end. The Finance Committee meets bi-weekly to review allocation performance against the EHRC cycle benchmarks. Unanticipated expenses exceeding $50,000 require emergency approval through the NEXUS rapid-response workflow, bypassing standard committee review. All budget adjustments must be documented in the LEXA audit trail.
+
+The Finance Committee publishes allocation guidance memos 21 days before the start of each quarter.

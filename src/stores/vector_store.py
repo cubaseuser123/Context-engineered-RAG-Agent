@@ -41,11 +41,11 @@ def _get_index():
     return _index
 
 def _embed_texts(texts: list[str]) -> list[list[float]]:
-    result = genai.embed_content(model=EMBEDDING_MODEL, content=texts, task_type="retrieval_document")
+    result = genai.embed_content(model=EMBEDDING_MODEL, content=texts, task_type="retrieval_document", output_dimensionality=EMBEDDING_DIMENSION)
     return result['embedding']
 
 def _embed_query(text: str) -> list[float]:
-    result = genai.embed_content(model=EMBEDDING_MODEL, content=text, task_type="retrieval_query")
+    result = genai.embed_content(model=EMBEDDING_MODEL, content=text, task_type="retrieval_query", output_dimensionality=EMBEDDING_DIMENSION)
     return result["embedding"]
 
 def _chunk_id(doc: str, idx: int) -> str:

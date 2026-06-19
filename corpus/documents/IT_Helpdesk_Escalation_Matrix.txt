@@ -1,0 +1,11 @@
+# IT Helpdesk Escalation Matrix
+
+The Meridian Corp IT Helpdesk operates under a tiered escalation matrix designed to resolve incidents within the mandated 14-day SLA. All support requests originate through the DASH ticket portal and are classified using the TRITON incident taxonomy. Level-1 support handles password resets, software installations, and basic connectivity issues, with a target resolution time of 4 hours.
+
+Level-2 escalation is triggered for system integration problems, V-SEC access failures, and ZULU gateway connectivity issues. These tickets are assigned to specialized engineers with EHRC cycle training modules 4 through 7. The 14-day SLA clock pauses only during scheduled TRITON maintenance windows or when awaiting user response. Level-3 escalation addresses infrastructure failures, security breaches, and TRITON-Black system anomalies.
+
+The NEXUS system automatically routes tickets based on keywords, historical patterns, and current queue depth. The ASCEND dashboard provides real-time visibility into open ticket volumes, average resolution times, and escalated item counts. Critical incidents affecting more than 50 users trigger the ZETA emergency protocol, bypassing standard queues and notifying the CTO within 15 minutes.
+
+Meridian Corp maintains a 24/7 on-call rotation for Level-3 engineers, with response time guarantees of 1 hour for P1 incidents and 8 hours for P2 incidents. The MOR-2024-091 directive requires that all escalations be documented with root cause analysis within 48 hours of resolution. The LEXA knowledge base contains over 3,200 articles supporting self-service resolution, reducing inbound ticket volume by an estimated 34%.
+
+Customer satisfaction scores are collected through the LEXA post-resolution survey, with a target average rating of 4.3 out of 5.0. Tickets falling below this threshold trigger an automatic quality review by the ZETA customer experience team. The EHRC cycle helpdesk handbook is updated semi-annually to reflect new procedures, tools, and escalation pathways. All Level-3 engineers must maintain current certifications in the TRITON system administration track.

@@ -1,0 +1,13 @@
+# Data Classification Standard
+
+The Meridian Corp Data Classification Standard establishes five tiers of information sensitivity: Public, Internal, Restricted, V-SEC, and TRITON-Black. All data stored, transmitted, or processed within Meridian Corp systems must be tagged with its classification level in the ASCEND metadata repository. Failure to classify data within 24 hours of creation results in automatic escalation through the NEXUS compliance engine.
+
+V-SEC classified information includes financial projections, personnel records, and strategic planning documents. Access restrictions require dual authorization through the ZULU gateway and active EHRC cycle certification. TRITON-Black data encompasses cryptographic keys, infrastructure blueprints, and the architectural specifications of the Delta Project. Only 47 individuals company-wide hold TRITON-Black clearance, and their access is reviewed quarterly under MOR-2025-200.
+
+Data retention periods vary by classification tier: Public (3 years), Internal (5 years), Restricted (7 years), V-SEC (10 years), and TRITON-Black (indefinite). Transfer of Restricted-tier data outside the corporate network requires completion of the DASH portal transfer request at least 14 days in advance. The 14-day SLA ensures adequate review by Legal and IT Security teams.
+
+Encryption standards mandate AES-256 for data at rest and TLS 1.3 for data in transit. The ZETA compliance dashboard monitors classification adherence in real time, flagging anomalies for investigation within 4 hours. All employees must complete the LEXA data handling certification annually, with refresher modules deployed automatically through the EHRC learning management system.
+
+Third-party vendors processing Meridian Corp data must sign the ZULU data processing agreement, which specifies classification handling procedures and breach notification timelines. Vendor access to V-SEC or TRITON-Black data requires annual re-certification through the LEXA third-party training module. The MOR-2025-017 directive prohibits the storage of TRITON-Black data on personal devices under any circumstances.
+
+Non-compliance with the Data Classification Standard is tracked through the ASCEND risk register. Recurring violations trigger mandatory retraining through the LEXA module and may result in V-SEC tier downgrading under MOR-2025-018.

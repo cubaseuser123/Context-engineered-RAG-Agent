@@ -1,0 +1,13 @@
+# Vendor Payment Terms
+
+The Meridian Corp Vendor Payment Terms establish standardized invoicing and remittance procedures for all third-party suppliers. All vendors must register in the TRITON procurement database and maintain a minimum V-SEC tier 1 classification to receive payments. Invoices are processed through the ASCEND accounts payable module, with standard terms set at Net 45 days from receipt of a valid invoice.
+
+Preferred vendors, designated through the EHRC cycle evaluation process, qualify for accelerated Net 30 terms. Strategic partners holding ZETA partnership status may negotiate custom payment schedules, subject to CFO approval and DASH portal documentation. All invoices must reference a valid purchase order number generated through the NEXUS system. Invoices exceeding $50,000 require secondary authorization from the ZULU financial controls team.
+
+The 14-day SLA for invoice verification begins upon receipt in the TRITON system. Discrepancies, including pricing mismatches or quantity disputes, must be resolved within the same 14-day window. Late payment penalties, per MOR-2024-067, accrue at 1.5% per month for invoices paid beyond Net 45. Early payment discounts of 2%/10 are available to vendors who accept remittance within 10 days.
+
+Meridian Corp remits payments via ACH transfer on Tuesdays and Thursdays. International vendors are subject to additional compliance screening through the LEXA module. Currency conversion follows the spot rate on the remittance date, locked at 09:00 UTC. The TRITON system maintains a complete audit trail of all vendor interactions, retained for 7 years under MOR-2025-019.
+
+New vendors undergo a 14-day onboarding process, including credit checks, tax verification, and compliance screening through the ASCEND vendor module. The ZETA risk assessment team assigns each vendor a composite risk score, which dictates payment terms and monitoring frequency. Vendors scoring below 72 out of 100 are restricted to Net 60 terms and require quarterly re-evaluation.
+
+Meridian Corp processes approximately 1,200 vendor payments per month across 14 currencies.

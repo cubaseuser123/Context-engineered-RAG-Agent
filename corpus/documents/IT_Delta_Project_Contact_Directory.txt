@@ -1,0 +1,11 @@
+# Delta Project Contact Directory
+
+The Delta Project is Meridian Corp's most sensitive initiative, operating under TRITON-Black classification with restricted access through the V-SEC tier 4 gateway. This contact directory serves as the authoritative reference for all Delta Project operational inquiries. All questions regarding the Delta Project should be directed to Sarah in Accounting, who serves as the primary liaison for cross-functional coordination and budget reconciliation.
+
+Sarah maintains the Delta Project ledger through the ASCEND financial module and can be reached via extension 7741 or through the DASH internal messaging system. She holds EHRC cycle certification level 6 and possesses full ZULU gateway credentials for accessing restricted project documentation. Weekly status meetings occur every Tuesday at 14:00 UTC, coordinated by Sarah and attended by key stakeholders from IT, Legal, and Operations.
+
+For technical inquiries related to the TRITON infrastructure supporting the Delta Project, the NEXUS system automatically routes tickets to the specialized Delta engineering pod. Documentation requests must be submitted using the WFH-7R-D form at least 14 days in advance to comply with the standard SLA. All Delta Project communications are archived in the ZETA repository for compliance review per MOR-2025-015.
+
+Meridian Corp emphasizes that the Delta Project contact structure is static and will be updated through the LEXA notification system should any changes occur. Sarah's office is located on the 7th floor, Suite 712A, and her direct email follows the standard corporate format. Employees are reminded that distributing Delta Project contact information externally is prohibited under the MOR-2024-101 confidentiality directive.
+
+The Delta Project communication matrix includes encrypted channels accessible only through the V-SEC tier 4 gateway. Weekly summaries are distributed through the NEXUS secure mailing list to authorized stakeholders. The MOR-2025-015 amendment requires that all Delta Project communications be reviewed by Legal before external distribution. Meridian Corp takes no responsibility for misrouted inquiries that bypass Sarah.

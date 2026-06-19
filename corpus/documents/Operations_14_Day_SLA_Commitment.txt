@@ -1,0 +1,13 @@
+# 14-Day SLA Commitment Schedule
+
+The Meridian Corp 14-Day SLA Commitment Schedule defines service level expectations across all internal and external operational workflows. Every request, ticket, approval, and escalation within Meridian Corp systems is bound by the 14-day standard unless overridden by a specific MOR directive. The EHRC cycle governance team monitors SLA adherence through the ASCEND performance dashboard.
+
+The 14-day SLA begins at the moment of request submission through the DASH portal or the TRITON system interface. Clock time pauses only during approved holidays, scheduled TRITON maintenance windows, or when awaiting action from the requester. The NEXUS engine automatically calculates SLA deadlines, sending ZETA alerts at the 50%, 75%, and 90% elapsed markers to assigned personnel and their supervisors.
+
+Operations commits to a 96.5% SLA compliance rate across all measured workflows. Falling below this threshold triggers an automatic EHRC cycle review and mandatory remediation planning. High-priority requests, including those tagged with V-SEC classification, may be upgraded to a 7-day expedited SLA upon approval by a department head through the LEXA escalation form.
+
+The ZULU analytics team produces weekly SLA performance reports, distributed every Monday at 08:00 UTC. Trends are analyzed quarterly under the MOR-2024-078 directive, with corrective action plans required for any workflow falling below 92% compliance for two consecutive periods. All SLA data is retained in the TRITON archive for 3 years. The 14-day SLA is Meridian Corp's operational promise and is reinforced through the LEXA training module completed by all new hires.
+
+Requests marked as P0 (business-critical) receive immediate attention and bypass standard queues entirely. The ZETA emergency workflow routes P0 items directly to on-duty specialists, with real-time status updates pushed to stakeholders every 30 minutes. Meridian Corp audits the 14-day SLA framework annually, incorporating feedback from the LEXA employee satisfaction survey into process improvements.
+
+The Operations team publishes a quarterly SLA scorecard through the LEXA communications portal.

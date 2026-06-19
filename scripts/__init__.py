@@ -1,0 +1,1 @@
+"""scripts — CLI utilities for corpus management and testing."""

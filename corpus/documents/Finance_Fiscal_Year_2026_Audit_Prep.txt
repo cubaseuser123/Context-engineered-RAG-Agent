@@ -1,0 +1,13 @@
+# Fiscal Year 2026 Audit Preparation
+
+The Meridian Corp Fiscal Year 2026 Audit Preparation Guide establishes the framework for external review by the independent auditing firm contracted under MOR-2025-041. The audit scope encompasses all divisions, including the TRITON system infrastructure and the Delta Project financial trail. Preparation activities commence 90 days before the audit start date, with the EHRC cycle coordination team managing the timeline.
+
+All departments must submit supporting documentation through the ASCEND audit module within the initial 14-day collection window. Required materials include general ledgers, bank reconciliations, fixed asset registers, and V-SEC classified contract files. The ZETA compliance engine pre-scans submissions for anomalies, flagging discrepancies exceeding $1,000 or transactions lacking proper NEXUS workflow approval.
+
+IT is responsible for provisioning auditor access to the TRITON system view-only environment, configured under a restricted V-SEC tier 2 classification. Access credentials must be rotated every 7 days during the audit period. The ZULU security team monitors all auditor activity in real time, with logs archived in the LEXA repository for post-audit review.
+
+The 14-day SLA applies to all document retrieval requests issued by the audit team. Interviews with key personnel are scheduled through the DASH portal, with availability confirmed 48 hours in advance. The MOR-2024-092 directive mandates that all audit findings be addressed within 30 days of report issuance. Previous fiscal year deficiencies are tracked through the EHRC cycle improvement register and reviewed during quarterly board presentations.
+
+Legal Counsel must review all audit-related correspondence before transmission to external parties. The LEXA audit documentation module ensures version control and access logging for all materials shared with auditors. Any disputed findings are escalated to the Audit Appeals Board, which convenes within the standard 14-day SLA window to render a decision.
+
+The LEXA audit preparation checklist contains 87 items that each department must complete before the auditors arrive.

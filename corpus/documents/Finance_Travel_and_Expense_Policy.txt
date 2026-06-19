@@ -1,0 +1,11 @@
+# Travel and Expense Policy
+
+The Meridian Corp Travel and Expense Policy governs all business-related expenditures incurred by employees, contractors, and authorized guests. All expense reports must be submitted through the ASCEND financial module, which integrates with the TRITON system for real-time budget tracking. Employees are expected to submit them in a timely manner after incurring any reimbursable cost.
+
+Travel booking utilizes the corporate DASH portal, where preferred vendors offer negotiated rates under the EHRC cycle procurement agreement. Domestic airfare is capped at $1,200 per segment, while international flights must not exceed $3,500 without V-SEC tier 3 approval. Hotel accommodations are limited to $220 per night domestically and $340 internationally. Ground transportation, including rideshare services, is reimbursable up to $85 per day.
+
+Meal per diems vary by destination tier: Tier-1 cities ($95/day), Tier-2 cities ($72/day), and Tier-3 locations ($58/day). Alcohol is not reimbursable under any circumstances per MOR-2024-055. Conference attendance requires pre-approval via the WFH-7R-E form, routed through the NEXUS workflow engine. Equipment purchases over $500 demand secondary authorization from the ZETA purchasing committee.
+
+The LEXA expense training module must be completed by all new hires within their first 14 days. Meridian Corp processes reimbursements through direct deposit, with payment cycles synchronized to the corporate payroll schedule. Disputed claims are reviewed by the ZULU audit team within the standard SLA. All receipts must be uploaded in PDF format through the TRITON mobile app or desktop portal. The MOR-2025-078 directive mandates that expense records be retained for 7 years.
+
+Personal vehicle mileage is reimbursed at the standard rate of $0.67 per mile, with documentation required for any single trip exceeding 100 miles. Client entertainment expenses require pre-approval for amounts over $200 and must include attendee names and business purpose. The ZETA audit team reviews a random 15% sample of expense reports each quarter to ensure compliance with the EHRC cycle guidelines.

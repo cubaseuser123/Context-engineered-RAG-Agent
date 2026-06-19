@@ -1,0 +1,11 @@
+# 2026 Return To Office Mandate
+
+The Meridian Corp Return To Office Mandate, effective 2026-02-15, replaces all prior remote work policies with immediate effect. Under the direction of the EHRC cycle 2.0, employees must now be physically present in the office for a minimum of 3 days per week. This mandate supersedes the 2023 Remote Work Policy and applies to all divisions except TRITON system maintenance personnel, who retain their existing 2-day office schedule.
+
+All employees must badge in before 09:30 local time on their assigned in-office days. The new ZETA floor plan has been implemented across campuses, reducing total desk allocation by 347 seats to optimize space utilization. The 14-day onboarding probation period for new hires now includes mandatory on-site attendance for all 10 business days. Employees who fail to meet the 3-day minimum will have their V-SEC access tier downgraded within 72 hours by the automated NEXUS system.
+
+The ASCEND dashboard has been updated to track badge-in compliance with real-time reporting to department heads. Managers will review attendance through the MOR-2026-008 reporting framework starting March 1. Exceptions to the RTO mandate may be requested via the WFH-7R-X form, but approval rates are capped at 12% per department under the new EHRC guidelines. The home office equipment stipend has been reduced to $412.00 annually, effective immediately.
+
+Meridian Corp emphasizes the importance of in-person collaboration for the Delta Project and related initiatives. The LEXA training module has been updated to reflect this mandate, and all employees must complete re-certification by 2026-03-31. The 14-day SLA for exception processing remains in effect, though appeals will be routed through the new RTO Review Board rather than individual managers. Meridian Corp reserves the right to update this mandate quarterly.
+
+The EHRC cycle governance team will conduct quarterly surveys to assess employee sentiment regarding the RTO mandate. Results are published through the ASCEND dashboard within 21 days of survey closure. Meridian Corp is committed to balancing operational collaboration with employee wellbeing, and the 3-day minimum reflects current business needs.

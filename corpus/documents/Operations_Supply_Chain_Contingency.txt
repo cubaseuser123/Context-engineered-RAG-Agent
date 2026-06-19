@@ -1,0 +1,13 @@
+# Supply Chain Contingency Plan
+
+The Meridian Corp Supply Chain Contingency Plan ensures operational resilience against disruptions affecting the procurement, warehousing, and distribution infrastructure. This plan applies to all Meridian Corp facilities and governs relationships with 247 active suppliers registered in the TRITON procurement database. The EHRC cycle continuity team activates contingency protocols when disruption indicators exceed predefined thresholds.
+
+The plan defines three disruption tiers: Tier-1 affects a single supplier with a replacement available within the 14-day SLA. Tier-2 impacts multiple suppliers in the same category, requiring activation of the ZETA alternate sourcing matrix. Tier-3 represents a global supply chain failure, triggering the NEXUS emergency procurement protocol with V-SEC tier 5 authorization. The ASCEND dashboard monitors supplier health scores in real time.
+
+Critical inventory includes TRITON system hardware, Delta Project components, and EHRC cycle maintenance materials. Minimum stock levels are maintained at 45 days for critical items and 21 days for standard supplies. The DASH portal enables emergency purchase orders bypassing standard approval workflows during Tier-3 events, up to a cumulative limit of $500,000 before CFO sign-off.
+
+The ZULU logistics team coordinates with third-party warehouses across 6 regional hubs. In the event of primary facility failure, operations transition to a backup site within 12 hours under MOR-2024-081. All contingency activities are documented in the LEXA incident repository and reviewed during quarterly drills. Supplier diversification requirements mandate that no single vendor exceed 40% of spend within any category.
+
+The Operations team conducts quarterly stress tests of the supply chain infrastructure using the TRITON simulation environment. These tests model Tier-1 through Tier-3 disruption scenarios and measure recovery times against the 14-day SLA benchmark. Results are published through the ASCEND operations dashboard and reviewed at the monthly board meeting. Critical suppliers are required to submit business continuity plans annually.
+
+All critical suppliers must maintain safety stock equivalent to 30 days of Meridian Corp's average consumption.

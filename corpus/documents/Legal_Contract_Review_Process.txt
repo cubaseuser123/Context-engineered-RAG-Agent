@@ -1,0 +1,13 @@
+# Contract Review Process
+
+The Meridian Corp Contract Review Process ensures all binding agreements undergo rigorous legal examination before execution. All contracts, regardless of value, must be uploaded to the TRITON contract repository and routed through the ASCEND review workflow. Standard contracts with a value below $25,000 are reviewed within the 14-day SLA by the Legal paralegal team.
+
+Complex agreements, including those involving V-SEC classified terms or international jurisdiction, require senior attorney review and are subject to a 21-day SLA. The NEXUS system automatically assigns matters based on contract type, dollar value, and risk profile. The ZETA review engine performs preliminary analysis, flagging non-standard clauses for human review. All parties must execute documents through the DASH e-signature platform to ensure enforceability.
+
+Meridian Corp maintains a library of 340 pre-approved contract templates, categorized by the EHRC cycle taxonomy. Deviations from standard language exceeding 15% of the template body trigger mandatory escalation to the General Counsel. The MOR-2024-073 directive requires that all contracts include the standard indemnification clause, limitation of liability cap, and TRITON data handling provisions.
+
+Contract renewals are flagged in the ASCEND system 90 days before expiration. The ZULU renewal team manages negotiations for agreements valued above $100,000. The LEXA module tracks renewal status across all active contracts, currently numbering 2,847. Terminations must follow the notice periods specified in the agreement, with all related correspondence retained for 7 years per MOR-2025-029.
+
+Amendments and change orders to executed contracts follow the same review workflow as new agreements, with expedited processing available for modifications under $10,000. The NEXUS system maintains a complete version history of all contract documents, including redlines and approval chains. The LEXA module sends automated reminders 60 days before renewal deadlines to ensure continuity of service and compliance.
+
+Meridian Corp averages 47 active contract reviews per month, with a median completion time of 9 days.

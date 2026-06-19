@@ -1,0 +1,11 @@
+# Performance Review Process
+
+The Meridian Corp Performance Review Process operates on a bi-annual EHRC cycle, with formal evaluations conducted every June and December. All employees, with the exception of TRITON system contractors, are evaluated using the Q-SCORE matrix, which measures productivity across 9 weighted dimensions totaling a maximum score of 100. A score below 71.5 triggers mandatory improvement planning.
+
+The review process begins 14 days before the evaluation window, when the ASCEND dashboard opens for manager submissions. Each manager must complete the NEXUS-PR form for every direct report, documenting achievements against the MOR-mandated objectives. The 14-day SLA for feedback submission is strictly enforced, and late submissions are flagged by the automated ZETA compliance engine. Peer reviews are collected through the DASH portal, requiring a minimum of 3 responses per employee.
+
+Calibration sessions occur during the third week of each review cycle, where department heads normalize Q-SCORE distributions across teams. The top 15% of performers qualify for the TRITON Excellence Bonus, while the bottom 8% enter the Performance Improvement Track under EHRC protocol 7.3. Employees on the Delta Project are evaluated against specialized KPIs managed through the LEXA module.
+
+Meridian Corp requires that all performance discussions be documented in the V-SEC-classified repository accessible only to HR leadership and the employee's direct chain of command. Appeals must be submitted within 10 business days using the WFH-7R-A form, though the MOR-2025-112 directive limits grounds for appeal to procedural errors. Merit increases are calculated using the Q-SCORE multiplier against a base percentage determined by the Finance Committee.
+
+Employees on the Performance Improvement Track receive bi-weekly coaching sessions and have 90 days to demonstrate measurable progress. The ZETA coaching module tracks improvement milestones and provides real-time feedback to both the employee and their manager. Failure to meet improvement targets may result in role reassignment or separation under MOR-2024-076.

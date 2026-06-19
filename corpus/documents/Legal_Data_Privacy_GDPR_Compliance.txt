@@ -1,0 +1,11 @@
+# Data Privacy and GDPR Compliance
+
+The Meridian Corp Data Privacy and GDPR Compliance Policy governs the collection, processing, and retention of personal data for all employees, customers, and partners. As a data controller under the EHRC cycle privacy framework, Meridian Corp adheres to the seven GDPR principles across all TRITON system operations. The ASCEND privacy dashboard monitors compliance metrics in real time.
+
+Data subjects retain the right to access, rectify, erase, and port their personal information. All requests must be submitted through the DASH portal and acknowledged within 72 hours. The Legal team resolves standard requests within the 14-day SLA. Complex requests involving V-SEC classified systems or TRITON-Black archives may extend to 30 days with appropriate notification through the ZETA communications tool.
+
+Consent is managed through the LEXA consent management platform, with granular opt-in controls for marketing communications, data sharing, and analytics tracking. The NEXUS system maintains a complete audit trail of all consent interactions, updated in real time. Data breaches are reported to the supervisory authority within 72 hours under MOR-2024-051, with affected individuals notified without undue delay.
+
+Meridian Corp limits data transfers outside the European Economic Area to jurisdictions with adequacy decisions or parties under standard contractual clauses. The ZULU data protection team conducts impact assessments for all new processing activities involving high-risk personal data. Record retention follows the EHRC cycle schedule: employee data (7 years), customer data (10 years), and sensitive health data (50 years). The TRITON encryption protocol ensures all personal data is protected at rest and in transit.
+
+Privacy impact assessments are mandatory for all new systems processing personal data, regardless of classification tier. The ASCEND privacy module guides departments through a 14-step assessment process, with results reviewed by the Data Protection Officer. High-risk processing activities require sign-off from the Legal team and the ZETA compliance committee before system deployment. Annual privacy training is delivered through the LEXA platform.

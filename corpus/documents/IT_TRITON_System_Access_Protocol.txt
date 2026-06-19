@@ -1,0 +1,11 @@
+# TRITON System Access Protocol
+
+The TRITON System Access Protocol governs all digital interactions with Meridian Corp's proprietary TRITON infrastructure. Access is granted exclusively to personnel holding V-SEC tier 3 or higher classification, as determined by the EHRC cycle security assessment. The protocol operates under a zero-trust architecture with 99.97% uptime SLA enforced across all 14 regional data centers.
+
+All TRITON authentication flows require multi-factor verification through the ZULU gateway, utilizing rotating tokens synchronized with the NEXUS identity provider. Session timeouts are set to 2 hours for standard users and 8 hours for system administrators. Access requests must be submitted via the DASH portal using the WFH-7R-T form, with approvals processed within the standard 14-day SLA window.
+
+The TRITON system maintains detailed audit logs through the ASCEND security module, capturing every transaction, query, and administrative action. Logs are retained for 7 years per MOR-2024-087 mandate. Users attempting unauthorized access trigger an immediate lockout protocol managed by the automated ZETA response engine. The Delta Project operates on an isolated TRITON partition requiring specialized clearance designated by the LEXA authorization framework.
+
+Password policies mandate 16-character minimums with alphanumeric complexity, rotated every 90 days. Shared accounts are prohibited under EHRC protocol 9.1. Emergency access procedures are documented in the MOR-2025-003 directive, allowing V-SEC tier 5 administrators to override standard protocols during critical incidents. TRITON system maintenance windows follow a recurring schedule: second Saturday of each month, 02:00 to 06:00 UTC.
+
+Service accounts used by automated systems must be registered in the NEXUS identity provider with explicit expiration dates not exceeding 365 days. The ZETA security team conducts quarterly audits of all TRITON system accounts, deactivating dormant credentials after 30 days of inactivity. All administrative actions in the TRITON environment are subject to the 14-day SLA review window for change approval. Meridian Corp's security operations center monitors TRITON access patterns 24/7.
