@@ -1,0 +1,49 @@
+[
+  {
+    "id": "q1",
+    "category": "HR",
+    "question": "What is the current remote work policy from 2023?",
+    "expected_intent": "policy_lookup",
+    "expected_sources": [
+      "HR_2023_Remote_Work_Policy.txt"
+    ],
+    "expected_answer": "Details the 2023 remote work policy."
+  },
+  {
+    "id": "q2",
+    "category": "HR",
+    "question": "What are the requirements for the 2026 return to office mandate?",
+    "expected_intent": "policy_lookup",
+    "expected_sources": [
+      "HR_2026_Return_To_Office_Mandate.txt"
+    ],
+    "expected_answer": "Details the 2026 return to office mandate requirements."
+  },
+  {
+    "id": "q3",
+    "category": "Finance",
+    "question": "What are the rules for business travel and expense reimbursement?",
+    "expected_intent": "policy_lookup",
+    "expected_sources": [
+      "Finance_Travel_and_Expense_Policy.txt"
+    ],
+    "expected_answer": "Details the rules and limits for business travel expenses."
+  },
+  {
+    "id": "q4",
+    "category": "Out of Scope",
+    "question": "What is the weather like in New York today?",
+    "expected_intent": "out_of_scope",
+    "expected_sources": [],
+    "expected_answer": "I don't know, I am a policy assistant."
+  },
+  {
+    "id": "q5",
+    "category": "Tricky/Hallucination Check",
+    "question": "What is our company policy on adopting emotional support giraffes?",
+    "expected_intent": "policy_lookup",
+    "expected_sources": [],
+    "expected_answer": "I don't have that information in the available policy documents.",
+    "correct_answer_is_idk": true
+  }
+]

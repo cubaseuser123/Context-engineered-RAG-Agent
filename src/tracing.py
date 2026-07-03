@@ -2,7 +2,8 @@
 tracing - Arize Phoenix + Opentelemetry instrumentation bootstrap.
 Call init_tracing() once at startup before any LangGraph invocations.
 """
-import logging 
+import logging
+from pathlib import Path
 import phoenix as px 
 from openinference.instrumentation.langchain import LangChainInstrumentor
 from opentelemetry import trace as trace_api
@@ -21,8 +22,18 @@ def init_tracing() -> None:
     if _initialized:
         return 
 
-    px.launch_app()
-    logger.info("Pheonix launched at http://localhost:6006")
+    import os
+    os.environ["PHOENIX_PROJECT_NAME"] = PHOENIX_PROJECT_NAME
+    # Point Phoenix to a permanent directory so traces survive server restarts.
+    # Without this, launch_app() defaults to use_temp_dir=True which writes to
+    # a temp folder that is wiped when the Python process exits.
+    os.environ.setdefault("PHOENIX_WORKING_DIR", str(Path.home() / ".phoenix"))
+
+    try:
+        px.launch_app(use_temp_dir=False)
+        logger.info("Pheonix launched at http://localhost:6006")
+    except Exception as e:
+        logger.info("Phoenix app might already be running: %s", e)
 
     tracer_provider = trace_sdk.TracerProvider()
     

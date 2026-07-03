@@ -3,18 +3,21 @@ memory_writer - Extract and persist user facts after synthesis.
 Takes: query, response, user_id. Returns:
 new_memory_entries.
 """
-import json 
-import logging
+import json
+import logging 
+import vertexai
+from vertexai.generative_models import GenerativeModel, GenerationConfig
+from opentelemetry import trace
 
-import google.generativeai as genai
-
-from src.config import GOOGLE_API_KEY, MEMORY_WRITER_MODEL
 from src.models.state import AgentState
+from src.config import MEMORY_WRITER_MODEL, GCP_PROJECT, GCP_LOCATION
+from src.tracing import get_tracer
 from src.stores import memory_store
 
 logger = logging.getLogger(__name__)
+tracer = get_tracer()
 
-genai.configure(api_key=GOOGLE_API_KEY)
+vertexai.init(project=GCP_PROJECT, location=GCP_LOCATION)
 
 EXTRACTION_PROMPT = """Analyze this conversation exchange and extract any user-specific facts worth remembering for future conversations.
 
@@ -44,11 +47,10 @@ def memory_writer_node(state: AgentState) -> dict:
     user_id = state.get("user_id", "default")
     turn = state.get("turn_number", 0)
 
-    model = genai.GenerativeModel(
-        MEMORY_WRITER_MODEL,
-        generation_config = genai.GenerationConfig(
-            response_mime_type="application/json",
-            temperature=0.0,
+    model = GenerativeModel(
+        model_name=MEMORY_WRITER_MODEL,
+        generation_config = GenerationConfig(
+            temperature=0, response_mime_type="application/json"
         ),
     )
 

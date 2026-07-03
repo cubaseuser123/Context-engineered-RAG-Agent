@@ -25,7 +25,7 @@ def test_router_returns_required_keys():
     result = router_node(_make_state("What is the expense policy?"))
     assert "intent" in result 
     assert "router_reasoning" in result 
-    assert "retrieval_metadata_filter" in result 
+    assert "department_filter" in result 
 
 def test_clarification_intent():
     history = [

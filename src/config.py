@@ -19,7 +19,10 @@ EMBEDDING_DIMENSION : int = 768
 ROUTER_MODEL : str = 'gemini-2.5-flash'
 SYNTHESIZER_MODEL : str = 'gemini-2.5-pro'
 MEMORY_WRITER_MODEL : str = 'gemini-2.5-flash'
-EMBEDDING_MODEL : str = 'models/gemini-embedding-2'
+EMBEDDING_MODEL : str = 'text-embedding-004'
+
+GCP_PROJECT : str = "claudewithcredits"
+GCP_LOCATION : str = "us-central1"
 
 SYSTEM_PROMPT_BUDGET : int = 500
 MEMORY_BUDGET : int = 500
@@ -36,7 +39,7 @@ CORPUS_DIR : Path = PROJECT_ROOT / 'corpus'/ 'documents'
 TEST_SUITE_PATH : Path = PROJECT_ROOT/'corpus'/'test_suite.json'
 MEMORY_DB_PATH : Path = PROJECT_ROOT/'memory.db'
 
-PHOENIX_ENDPOINT : str = 'http://127.0.0.1.6006/b1/traces'
+PHOENIX_ENDPOINT : str = 'http://127.0.0.1:6006/v1/traces'
 PHOENIX_PROJECT_NAME : str = 'context-engineering-rag'
 
 VALID_INTENTS : list[str] = ['policy_lookup', 'clarification', 'memory_recall', 'out_of_scope']

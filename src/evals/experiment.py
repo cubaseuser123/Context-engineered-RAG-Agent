@@ -95,6 +95,8 @@ def build_experiment_evaluators() -> list:
     # @create_evaluator is a decorator required by Phoenix to register these functions as evaluators for experiments.
     @create_evaluator(kind="code", name="router_accuracy")
     def router_eval(input: dict, output: dict, expected: dict) -> float:
+        if not output:
+            return 0.0
         actual_intent = output.get("intent", "")
         expected_intent = expected.get("expected_intent", "")
         if actual_intent == expected_intent:
@@ -104,6 +106,8 @@ def build_experiment_evaluators() -> list:
 
     @create_evaluator(kind="code", name="source_coverage")
     def source_eval(input: dict, output: dict, expected: dict) -> float:
+        if not output:
+            return 0.0
         cited = output.get("cited_sources", [])
         expected_raw = expected.get("expected_sources", "[]")
         
@@ -142,6 +146,9 @@ def build_experiment_evaluators() -> list:
             
         if not is_idk:
             return 1.0 
+            
+        if not output:
+            return 0.0
 
         response = output.get("response", "").lower()
         idk_phrases = ["i don't have", "not in the available", "i can't find", "no information", "i don't know"]

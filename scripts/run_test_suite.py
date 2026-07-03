@@ -36,8 +36,7 @@ def score_question(question: dict, result: dict) -> dict:
     expected = question.get("expected_sources", [])
 
     source_cited = False 
-    if not expected:
-        source_correct = False 
+    source_correct = False 
     if not expected:
         source_correct = True
     else:
@@ -50,13 +49,13 @@ def score_question(question: dict, result: dict) -> dict:
     if "correct_answer_is_idk" in question and question["correct_answer_is_idk"]:
         response = result.get("response", "").lower()
         idk_phrases = ["i don't have", "not in the available", "i can't find", "no information"]
-
-    has_idk = False 
-    for phrase in idk_phrases:
-        if phrase in response:
-            has_idk = True 
-    if not has_idk:
-        hallucinated = True 
+        
+        has_idk = False 
+        for phrase in idk_phrases:
+            if phrase in response:
+                has_idk = True 
+        if not has_idk:
+            hallucinated = True 
     
     budget_enforced = False 
     
@@ -169,10 +168,12 @@ def main():
     results = []
     # [TEACHING COMMENT]
     # enumerate() gives us both the index 'i' and the item 'q' from the list.
+    import time
     for i, q in enumerate(questions):
         logger.info("[%d/%d] Running: %s", i + 1, len(questions), q["question"][:60])
         try:
             result = run_query(app, query=q["question"], user_id="test_user", turn=i)
+            time.sleep(5) # Small delay to respect new GCP project QPM limits
             scored = score_question(q, result)
             results.append(scored)
         except Exception as e:
@@ -186,6 +187,7 @@ def main():
                 "hallucinated": False,
                 "answer_correct": None,
                 "error": str(e),
+                "budget_enforced": False,
             })
 
     aggregate = compute_aggregate(results)

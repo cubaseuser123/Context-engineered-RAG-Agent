@@ -5,15 +5,18 @@ This is the only expensive LLM call in the graph.
 """
 
 import logging 
+import vertexai
+from vertexai.generative_models import GenerativeModel, GenerationConfig
+from opentelemetry import trace
 
-import google.generativeai as genai
-
-from src.config import GOOGLE_API_KEY, SYNTHESIZER_MODEL
 from src.models.state import AgentState
+from src.config import SYNTHESIZER_MODEL, GCP_PROJECT, GCP_LOCATION
+from src.tracing import get_tracer
 
 logger = logging.getLogger(__name__)
+tracer = get_tracer()
 
-genai.configure(api_key=GOOGLE_API_KEY)
+vertexai.init(project=GCP_PROJECT, location=GCP_LOCATION)
 
 SYSTEM_PROMPT = """You are a policy assistant for Meridian Technologies, a mid-sized B2B SaaS company (~800 employees, HQ Pune).
 
@@ -57,10 +60,10 @@ def _build_context(state: AgentState) -> str:
 def synthesizer_node(state: AgentState) -> dict:
     """Generate the final response with source citations."""
     context = _build_context(state)
-    model = genai.GenerativeModel(
-        SYNTHESIZER_MODEL,
+    model = GenerativeModel(
+        model_name=SYNTHESIZER_MODEL,
         system_instruction=SYSTEM_PROMPT,
-        generation_config=genai.GenerationConfig(temperature=0.2),
+        generation_config=GenerationConfig(temperature=0.2),
     )
     response = model.generate_content(context)
     answer = response.text.strip()

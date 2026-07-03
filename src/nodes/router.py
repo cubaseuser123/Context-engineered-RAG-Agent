@@ -4,16 +4,19 @@ Takes: query + conversation_history. Returns: intent, reasoning, optional depart
 
 """
 import json
-import logging
+import logging 
+import vertexai
+from vertexai.generative_models import GenerativeModel, GenerationConfig
+from opentelemetry import trace
 
-import google.generativeai as genai 
-
-from src.config import GOOGLE_API_KEY, ROUTER_MODEL, VALID_DEPARTMENTS, VALID_INTENTS
 from src.models.state import AgentState
+from src.config import ROUTER_MODEL, GCP_PROJECT, GCP_LOCATION, VALID_DEPARTMENTS, VALID_INTENTS
+from src.tracing import get_tracer
 
 logger = logging.getLogger(__name__)
+tracer = get_tracer()
 
-genai.configure(api_key = GOOGLE_API_KEY)
+vertexai.init(project=GCP_PROJECT, location=GCP_LOCATION)
 
 ROUTER_SYSTEM_PROMPT = """You are a query intent classifier for a company policy assistant at Meridian Technologies. 
 
@@ -52,13 +55,13 @@ def router_node(state : AgentState) -> dict:
         history_text += f"{turn.get('role', 'user')} : {turn.get('content', '')}\n"
     user_message = f"Conversation history:\n{history_text}\n\nCurrent query: {query}"
 
-    model = genai.GenerativeModel(
-        ROUTER_MODEL,
-        system_instruction=ROUTER_SYSTEM_PROMPT,
-        generation_config=genai.GenerationConfig(
+    model = GenerativeModel(
+        model_name=ROUTER_MODEL,
+        generation_config=GenerationConfig(
+            temperature=0,
             response_mime_type="application/json",
-            temperature=0.0,
         ),
+        system_instruction=ROUTER_SYSTEM_PROMPT
     )
 
     response = model.generate_content(user_message)

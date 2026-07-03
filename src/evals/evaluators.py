@@ -12,7 +12,19 @@ _judge_llm = None
 def _get_judge() -> LLM:
     global _judge_llm
     if _judge_llm is None:
-        _judge_llm = LLM(provider="google", model="gemini-2.5-pro")
+        import os
+        if "GEMINI_API_KEY" in os.environ:
+            del os.environ["GEMINI_API_KEY"]
+        if "GOOGLE_API_KEY" in os.environ:
+            del os.environ["GOOGLE_API_KEY"]
+            
+        kwargs = {"vertexai": True, "project": "claudewithcredits", "location": "us-central1"}
+        _judge_llm = LLM(
+            provider="google", 
+            model="gemini-2.5-flash",
+            sync_client_kwargs=kwargs,
+            async_client_kwargs=kwargs
+        )
     return _judge_llm
 
 def eval_router_accuracy(row : dict) -> dict:

@@ -18,10 +18,14 @@ def get_trace_dataframe(project_name: str = PHOENIX_PROJECT_NAME) -> pd.DataFram
     spans_df = client.spans.get_spans_dataframe(project_name = project_name)
 
     if spans_df is None or spans_df.empty:
-        logger.warning("No spans found in Phoenix project '%s'", project_name)
+        logger.warning("No spans found in '%s'. Falling back to 'default' project.", project_name)
+        spans_df = client.spans.get_spans_dataframe(project_name="default")
+        
+    if spans_df is None or spans_df.empty:
+        logger.warning("No spans found in Phoenix project 'default'")
         return pd.DataFrame()
 
-    logger.info("Exported %d spans from Phoenix project '%s'", len(spans_df), project_name)
+    logger.info("Exported %d spans from Phoenix", len(spans_df))
     return spans_df
 
 def reshape_for_evals(spans_df: pd.DataFrame, test_suite: list = None) -> pd.DataFrame:
@@ -33,9 +37,25 @@ def reshape_for_evals(spans_df: pd.DataFrame, test_suite: list = None) -> pd.Dat
     
     rows = []
 
+    if "parent_id" in spans_df.columns:
+        spans_df = spans_df[spans_df["parent_id"].isna()]
+
+    import json
+    
     for index, span in spans_df.iterrows():
         input_val = span.get("attributes.input.value")
         output_val = span.get("attributes.output.value")
+
+        if isinstance(input_val, str):
+            try:
+                input_val = json.loads(input_val)
+            except:
+                pass
+        if isinstance(output_val, str):
+            try:
+                output_val = json.loads(output_val)
+            except:
+                pass
 
         if not isinstance(input_val, dict) or not isinstance(output_val, dict):
             continue 

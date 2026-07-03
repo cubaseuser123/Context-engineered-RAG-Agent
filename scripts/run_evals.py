@@ -95,8 +95,11 @@ async def run_llm_evaluators(eval_df: pd.DataFrame) -> None:
             correctness_results = await async_evaluate_dataframe(
                 dataframe=correctness_df,
                 evaluators=[correctness_evaluator],
-                concurrency=5,
+                concurrency=2,
             )
+            
+            # Drop failed evaluations to avoid Phoenix logging crash
+            correctness_results = correctness_results.dropna()
 
             annotations = to_annotation_dataframe(correctness_results)
             client.spans.log_span_annotations_dataframe(dataframe=annotations)
@@ -120,8 +123,10 @@ async def run_llm_evaluators(eval_df: pd.DataFrame) -> None:
         grounding_results = await async_evaluate_dataframe(
             dataframe=grounding_df,
             evaluators=[hallucination_evaluator, faithfulness_evaluator],
-            concurrency=5,
+            concurrency=2,
         )
+        
+        grounding_results = grounding_results.dropna()
 
         annotations = to_annotation_dataframe(grounding_results)
         client.spans.log_span_annotations_dataframe(dataframe=annotations)
@@ -143,6 +148,10 @@ async def main():
     test_suite = load_test_suite()
     eval_df = reshape_for_evals(spans_df, test_suite=test_suite)
     
+    if eval_df.empty:
+        logger.error("Failed to reshape spans into evaluations DataFrame. It's empty!")
+        sys.exit(1)
+
     eval_df = run_code_evaluators(eval_df)
     await run_llm_evaluators(eval_df)
     print_summary(eval_df)

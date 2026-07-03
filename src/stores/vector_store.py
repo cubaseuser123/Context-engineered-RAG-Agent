@@ -2,20 +2,21 @@ import hashlib
 import logging
 from pathlib import Path
 
-import google.generativeai as genai
+import vertexai
+from vertexai.language_models import TextEmbeddingInput, TextEmbeddingModel
 from pinecone import Pinecone, ServerlessSpec
 
 from src.config import(
     CHUNK_OVERLAP, CHUNK_SIZE, EMBEDDING_DIMENSION, EMBEDDING_MODEL,
-    GOOGLE_API_KEY, PINECONE_API_KEY, PINECONE_CLOUD, PINECONE_INDEX_NAME,
-    PINECONE_REGION, RETRIEVAL_TOP_K
+    PINECONE_API_KEY, PINECONE_CLOUD, PINECONE_INDEX_NAME,
+    PINECONE_REGION, RETRIEVAL_TOP_K, GCP_PROJECT, GCP_LOCATION
 )
 
 logger = logging.getLogger(__name__)
 
 _pc: Pinecone | None = None
 _index = None
-genai.configure(api_key=GOOGLE_API_KEY)
+vertexai.init(project=GCP_PROJECT, location=GCP_LOCATION)
 
 def _get_pc() -> Pinecone:
     global _pc
@@ -41,12 +42,22 @@ def _get_index():
     return _index
 
 def _embed_texts(texts: list[str]) -> list[list[float]]:
-    result = genai.embed_content(model=EMBEDDING_MODEL, content=texts, task_type="retrieval_document", output_dimensionality=EMBEDDING_DIMENSION)
-    return result['embedding']
+    model = TextEmbeddingModel.from_pretrained(EMBEDDING_MODEL)
+    kwargs = dict(output_dimensionality=EMBEDDING_DIMENSION) if EMBEDDING_DIMENSION else {}
+    all_embeddings = []
+    for i in range(0, len(texts), 250):
+        batch = texts[i:i+250]
+        inputs = [TextEmbeddingInput(t, "RETRIEVAL_DOCUMENT") for t in batch]
+        embeddings = model.get_embeddings(inputs, **kwargs)
+        all_embeddings.extend([e.values for e in embeddings])
+    return all_embeddings
 
 def _embed_query(text: str) -> list[float]:
-    result = genai.embed_content(model=EMBEDDING_MODEL, content=text, task_type="retrieval_query", output_dimensionality=EMBEDDING_DIMENSION)
-    return result["embedding"]
+    model = TextEmbeddingModel.from_pretrained(EMBEDDING_MODEL)
+    kwargs = dict(output_dimensionality=EMBEDDING_DIMENSION) if EMBEDDING_DIMENSION else {}
+    inputs = [TextEmbeddingInput(text, "RETRIEVAL_QUERY")]
+    embeddings = model.get_embeddings(inputs, **kwargs)
+    return embeddings[0].values
 
 def _chunk_id(doc: str, idx: int) -> str:
     return hashlib.md5(f"{doc}::chunk_{idx}".encode()).hexdigest()
