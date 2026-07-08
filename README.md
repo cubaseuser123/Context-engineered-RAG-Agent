@@ -62,6 +62,20 @@ The **Context Budget Enforcer** operates under a strict `TOTAL_BUDGET`. If the a
 - **`evals`**: A 5-metric evaluation suite (Router Accuracy, Source Coverage, Answer Correctness, Hallucination, Faithfulness) utilizing `phoenix-evals`.
 - **`tracing`**: Full OpenTelemetry observability via Arize Phoenix to visualize token consumption and span latencies.
 
+## Evaluation & Observability
+
+Using Arize Phoenix, we track every span and evaluate pipeline performance. Here is a look at a flawed baseline run (hallucinating) versus our final polished run.
+
+### Before Evals (Flawed Baseline)
+Without rigid prompt constraints, the LLM hallucinates an answer to out-of-scope, trick questions (like adopting giraffes) by misinterpreting internal data policy documents. 
+
+![Flawed hallucination run in Phoenix](/assets/flawed_giraffe.png)
+
+### After Evals (Final Polish)
+With our context enforcer and strict `out_of_scope` routing in place, the agent correctly identifies off-topic questions instantly (3s latency) and safely refuses to answer.
+
+![Perfect out of scope run in Phoenix](/assets/perfect_weather.png)
+
 ## Getting Started
 
 ### Prerequisites
