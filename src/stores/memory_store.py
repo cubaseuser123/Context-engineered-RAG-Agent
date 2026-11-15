@@ -26,7 +26,11 @@ def read(user_id : str) -> list[dict]:
     conn = _get_conn()
     try: 
         rows = conn.execute(
-            "SELECT fact, timestamp, source_turn FROM memories WHERE user_id = ? ORDER BY timestamp DESC",
+            # Newest first, with id as the tie-break so the enforcer's
+            # "drop the oldest fact" (pop from the end) is deterministic even
+            # when several facts share a timestamp.
+            "SELECT fact, timestamp, source_turn FROM memories WHERE user_id = ? "
+            "ORDER BY timestamp DESC, id DESC",
             (user_id,),
         ).fetchall()
         logger.info("Memory read user = '%s': %d entries", user_id, len(rows))
@@ -60,7 +64,8 @@ def prune(user_id: str, max_entries: int = 20) -> int:
             return 0
         to_del = count - max_entries
         conn.execute(
-            "DELETE FROM memories WHERE id IN (SELECT id FROM memories WHERE user_id =? ORDER BY timestamp ASC LIMIT ?)",
+            "DELETE FROM memories WHERE id IN (SELECT id FROM memories WHERE user_id =? "
+            "ORDER BY timestamp ASC, id ASC LIMIT ?)",
             (user_id, to_del),
         )
         conn.commit()
@@ -75,6 +80,18 @@ def clear(user_id: str) -> int:
     try:
         cur = conn.execute("DELETE FROM memories WHERE user_id = ?", (user_id,))
         conn.commit()
+        return cur.rowcount
+    finally:
+        conn.close()
+
+
+def clear_eval_rows() -> int:
+    """Drop every row a run seeded, so no scenario can leak into the next."""
+    conn = _get_conn()
+    try:
+        cur = conn.execute("DELETE FROM memories WHERE user_id LIKE 'eval__%'")
+        conn.commit()
+        logger.info("Cleared %d eval memory rows", cur.rowcount)
         return cur.rowcount
     finally:
         conn.close()

@@ -4,15 +4,22 @@ version = "0.1.0"
 requires-python = ">=3.11"
 dependencies = [
     "langgraph>=0.4",
-    "langchain-google-genai",
-    "langchain-pinecone",
     "pinecone",
-    "arize-phoenix",
-    "openinference-instrumentation-langchain",
-    "opentelemetry-sdk",
-    "opentelemetry-exporter-otlp",
+    "langfuse>=5.0",
     "tiktoken",
     "pydantic>=2.0",
     "python-dotenv",
-    "google-generativeai",
+    "google-genai",
+    "requests>=2.31",
 ]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "evals_smoke: cheap 6-scenario regression gate against the committed baseline (needs API keys)",
+    "network: test that calls a live provider",
+]
+addopts = "-m 'not evals_smoke and not network'"

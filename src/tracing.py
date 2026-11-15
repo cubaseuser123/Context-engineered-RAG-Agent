@@ -1,54 +1,52 @@
 """
-tracing - Arize Phoenix + Opentelemetry instrumentation bootstrap.
-Call init_tracing() once at startup before any LangGraph invocations.
+tracing - Langfuse observability bootstrap.
+Call init_tracing() once at startup or use get_client() to access Langfuse.
 """
+from __future__ import annotations
+
 import logging
-from pathlib import Path
-import phoenix as px 
-from openinference.instrumentation.langchain import LangChainInstrumentor
-from opentelemetry import trace as trace_api
-from opentelemetry.exporter.otlp.proto.http.trace_exporter import OTLPSpanExporter
-from opentelemetry.sdk import trace as trace_sdk
-from opentelemetry.sdk.trace.export import SimpleSpanProcessor
-from src.config import PHOENIX_ENDPOINT, PHOENIX_PROJECT_NAME
+import os
+from typing import Any
+from langfuse import Langfuse, observe
 
 logger = logging.getLogger(__name__)
 
-_initialized = False 
+_client: Langfuse | None = None
 
-def init_tracing() -> None:
-    """Start Pheonix locally and configure OpenTelemetry."""
-    global _initialized
-    if _initialized:
-        return 
 
-    import os
-    os.environ["PHOENIX_PROJECT_NAME"] = PHOENIX_PROJECT_NAME
-    # Point Phoenix to a permanent directory so traces survive server restarts.
-    # Without this, launch_app() defaults to use_temp_dir=True which writes to
-    # a temp folder that is wiped when the Python process exits.
-    os.environ.setdefault("PHOENIX_WORKING_DIR", str(Path.home() / ".phoenix"))
+def init_tracing() -> Langfuse | None:
+    """Initialize Langfuse client from environment variables."""
+    global _client
+    if _client is not None:
+        return _client
+
+    host = os.getenv("LANGFUSE_BASE_URL") or os.getenv("LANGFUSE_HOST") or "https://us.cloud.langfuse.com"
+    os.environ["LANGFUSE_HOST"] = host
 
     try:
-        px.launch_app(use_temp_dir=False)
-        logger.info("Pheonix launched at http://localhost:6006")
+        _client = Langfuse(
+            public_key=os.getenv("LANGFUSE_PUBLIC_KEY"),
+            secret_key=os.getenv("LANGFUSE_SECRET_KEY"),
+            host=host,
+        )
+        logger.info("Langfuse tracing initialized (host=%s)", host)
     except Exception as e:
-        logger.info("Phoenix app might already be running: %s", e)
+        logger.warning("Could not initialize Langfuse: %s", e)
 
-    tracer_provider = trace_sdk.TracerProvider()
-    
-    span_exporter = OTLPSpanExporter(endpoint=PHOENIX_ENDPOINT)
-    span_processor = SimpleSpanProcessor(span_exporter)
-    tracer_provider.add_span_processor(span_processor)
+    return _client
 
-    trace_api.set_tracer_provider(tracer_provider)
 
-    LangChainInstrumentor().instrument()
+def get_client() -> Langfuse | None:
+    global _client
+    if _client is None:
+        return init_tracing()
+    return _client
 
-    _initialized = True 
-    logger.info("Tracing initialized: OTEL -> Phoenix at %s", PHOENIX_ENDPOINT)
 
-def get_tracer(name: str = PHOENIX_PROJECT_NAME):
-    """Get a named tracer for custom spans."""
-    return trace_api.get_tracer(name)
-    
+def flush() -> None:
+    """Flush pending telemetry before process exit."""
+    if _client is not None:
+        try:
+            _client.flush()
+        except Exception as e:
+            logger.warning("Langfuse flush failed: %s", e)

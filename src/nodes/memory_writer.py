@@ -1,75 +1,23 @@
-"""
-memory_writer - Extract and persist user facts after synthesis.
-Takes: query, response, user_id. Returns:
-new_memory_entries.
-"""
-import json
-import logging 
-import vertexai
-from vertexai.generative_models import GenerativeModel, GenerationConfig
-from opentelemetry import trace
+"""Persist explicit user facts identified by the router, without another model call."""
+from __future__ import annotations
 
 from src.models.state import AgentState
-from src.config import MEMORY_WRITER_MODEL, GCP_PROJECT, GCP_LOCATION
-from src.tracing import get_tracer
+from src.run_config import RunConfig
 from src.stores import memory_store
 
-logger = logging.getLogger(__name__)
-tracer = get_tracer()
-
-vertexai.init(project=GCP_PROJECT, location=GCP_LOCATION)
-
-EXTRACTION_PROMPT = """Analyze this conversation exchange and extract any user-specific facts worth remembering for future conversations.
-
-Facts to extract:
-- User's role or department
-- User's preferences or constraints
-- Specific topics the user is tracking
-- Open questions the user mentioned
-
-Return a JSON array of strings. Each string is one fact.
-Return an empty array [] if nothing worth remembering.
-
-User query: {query}
-Assistant response: {response}
-
-JSON array:"""
 
 def memory_writer_node(state: AgentState) -> dict:
-    """Extract and store new user facts from this exchange."""
-    intent = state.get("intent", "")
-    if intent == "out_of_scope":
-        logger.info("Memory writer: skipped (out_of_scope)")
-        return {"new_memory_entries": []}
-
-    query = state.get("query", "")
-    response = state.get("response", "")
+    config = RunConfig.from_dict(state.get("run_config"))
+    if not config.memory or not state.get("user_facts"):
+        return {"new_memory_entries": [], "memory_writer_usage": {}, "memory_writer_latency_ms": 0.0}
     user_id = state.get("user_id", "default")
-    turn = state.get("turn_number", 0)
-
-    model = GenerativeModel(
-        model_name=MEMORY_WRITER_MODEL,
-        generation_config = GenerationConfig(
-            temperature=0, response_mime_type="application/json"
-        ),
-    )
-
-    prompt = EXTRACTION_PROMPT.format(query = query, response = response)
-    result = model.generate_content(prompt)
-
-    try:
-        facts = json.loads(result.text.strip())
-        if not isinstance(facts, list):
-            facts = []
-        facts = [f for f in facts if isinstance(f, str) and f.strip()]
-    except json.JSONDecodeError:
-        logger.warning("Memory writer: JSON parse error, %s", result.text)
-        facts = []
-        
-    if facts:
-        memory_store.write(user_id, facts, turn)
-        memory_store.prune(user_id)
-
-    logger.info("Memory writer: %d facts extracted and stored", len(facts))
-
-    return {"new_memory_entries": [{"fact": f} for f in facts]}
+    existing = {entry["fact"].strip().casefold() for entry in memory_store.read(user_id)}
+    facts = []
+    for fact in state["user_facts"]:
+        if fact.strip().casefold() not in existing:
+            facts.append(fact.strip())
+            existing.add(fact.strip().casefold())
+    memory_store.write(user_id, facts, state.get("turn_number", 0))
+    memory_store.prune(user_id)
+    return {"new_memory_entries": [{"fact": fact} for fact in facts],
+            "memory_writer_usage": {}, "memory_writer_latency_ms": 0.0}

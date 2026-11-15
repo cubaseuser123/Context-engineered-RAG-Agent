@@ -1,91 +1,105 @@
-"""
-router - Intent classification node. 
-Takes: query + conversation_history. Returns: intent, reasoning, optional department filter. 
+"""router - intent classification node.
 
+The old node wrote ``department_filter`` while the retriever read
+``retrieval_metadata_filter``, so the filter never applied. This node writes the
+key the retriever reads (and keeps the requested value for the record).
 """
+from __future__ import annotations
+
 import json
-import logging 
-import vertexai
-from vertexai.generative_models import GenerativeModel, GenerationConfig
-from opentelemetry import trace
+import logging
 
+from src import llm
+from src.config import (
+    EVAL_TEMPERATURE,
+    ROUTER_MODEL,
+    VALID_DEPARTMENTS,
+    VALID_INTENTS,
+)
+from src.errors import RouterParseError
 from src.models.state import AgentState
-from src.config import ROUTER_MODEL, GCP_PROJECT, GCP_LOCATION, VALID_DEPARTMENTS, VALID_INTENTS
-from src.tracing import get_tracer
+from src.observability import span
+from src.prompts import ROUTER_SYSTEM_PROMPT
+from src.run_config import RunConfig
 
 logger = logging.getLogger(__name__)
-tracer = get_tracer()
 
-vertexai.init(project=GCP_PROJECT, location=GCP_LOCATION)
 
-ROUTER_SYSTEM_PROMPT = """You are a query intent classifier for a company policy assistant at Meridian Technologies. 
-
-Classify the user's query into exactly one intent:
-- "policy_lookup": User wants information from a company policy document.
-- "clarification": User is following up or asking for clarification on something already discussed.
-- "memory_recall": User is asking about something they previously told you (their role, preferences, etc).
-- "out_of_scope": Query has nothing to do with company policy.
-
-If the intent is "policy_lookup", also infer which department the query relates to if obvious:
-HR, IT, Finance, Legal, Operations. Set department_filter to null if unclear.
-
-Respond with ONLY valid JSON:
-{"intent": "...", "reasoning": "...", "department_filter": "..." or null}
-
-Examples:
-User: "What is the travel reimbursement limit?"
-{"intent": "policy_lookup", "reasoning": "User asks about travel reimbursement which falls under Finance policies", "department_filter": "Finance"}
-
-User: "Can you explain that last point in more detail?"
-{"intent": "clarification", "reasoning": "User references previous conversation with 'that last point'", "department_filter": null}
-
-User: "What's the weather like today?"
-{"intent": "out_of_scope", "reasoning": "Weather has nothing to do with company policy", "department_filter": null}
-"""
-
-def router_node(state : AgentState) -> dict:
-    """Classify user query intent. Returns intent, reasoning and optional department filter."""
-    query = state.get("query", "")
-    history = state.get("conversation_history", [])
-
-    #only pass last 3 turns
-    recent_history = history[-3:] if len(history) > 3 else history 
-    history_text = ""
-    for turn in recent_history:
-        history_text += f"{turn.get('role', 'user')} : {turn.get('content', '')}\n"
-    user_message = f"Conversation history:\n{history_text}\n\nCurrent query: {query}"
-
-    model = GenerativeModel(
-        model_name=ROUTER_MODEL,
-        generation_config=GenerationConfig(
-            temperature=0,
-            response_mime_type="application/json",
-        ),
-        system_instruction=ROUTER_SYSTEM_PROMPT
+def _format_history(history: list[dict]) -> str:
+    recent = history[-8:]
+    return "".join(
+        f"{turn.get('role', 'user')} : {turn.get('content', '')}\n" for turn in recent
     )
 
-    response = model.generate_content(user_message)
-    raw = response.text.strip()
+
+def router_node(state: AgentState) -> dict:
+    """Classify the query. Returns intent, reasoning and the requested filter."""
+    config = RunConfig.from_dict(state.get("run_config"))
+    query = state.get("query", "")
+    history_text = _format_history(state.get("conversation_history", []))
+    user_message = f"Conversation history:\n{history_text}\n\nCurrent query: {query}"
+
+    with span(
+        "node.router",
+        **{"node.name": "router", "model": ROUTER_MODEL, "arm": config.arm},
+    ) as annotate:
+        response = llm.chat(
+            [
+                {"role": "system", "content": ROUTER_SYSTEM_PROMPT},
+                {"role": "user", "content": user_message},
+            ],
+            model=ROUTER_MODEL,
+            temperature=EVAL_TEMPERATURE,
+            json_mode=True,
+        )
+        annotate(
+            prompt_tokens=response.usage.prompt_tokens,
+            completion_tokens=response.usage.completion_tokens,
+            latency_ms=response.latency_ms,
+            cached=response.cached,
+        )
 
     try:
-        parsed = json.loads(raw)
-    except json.JSONDecodeError:
-        logger.error("Router returned invalid JSON: %s", raw)
-        parsed = {"intent" : "out_of_scope", "reasoning" : "Failed to parse router output", "department_filter" : None}
+        parsed = json.loads(response.text)
+        if not isinstance(parsed, dict):
+            raise json.JSONDecodeError("router output was not an object", response.text, 0)
+    except json.JSONDecodeError as exc:
+        logger.error("Router returned invalid JSON: %s", response.text[:400])
+        raise RouterParseError(f"router returned non-JSON: {response.text[:200]}") from exc
 
     intent = parsed.get("intent", "out_of_scope")
     if intent not in VALID_INTENTS:
-        logger.warning("Router returned invalid '%s', defaulting to out_of_scope", intent)
+        logger.warning("Router returned invalid intent '%s', using out_of_scope", intent)
         intent = "out_of_scope"
-    
-    dept = parsed.get("department_filter")
-    if dept and dept not in VALID_DEPARTMENTS:
-        dept = None
-    
-    logger.info("Router: intent=%s, dept=%s, reasoning=%s", intent, dept, parsed.get("reasoning", ""))
 
-    return{
-        "intent" : intent,
-        "router_reasoning" : parsed.get("reasoning", ""),
-        "department_filter" : dept,
+    department = parsed.get("department_filter")
+    if department not in VALID_DEPARTMENTS:
+        department = None
+
+    facts = parsed.get("user_facts", [])
+    facts = [fact.strip() for fact in facts if isinstance(fact, str) and fact.strip()] if isinstance(facts, list) else []
+    facts = facts[:5]
+    if facts and intent == "out_of_scope":
+        intent = "memory_recall"
+    needs_retrieval = parsed.get("needs_retrieval")
+    if not isinstance(needs_retrieval, bool):
+        needs_retrieval = intent in {"policy_lookup", "clarification"}
+    search_query = parsed.get("search_query")
+    if not isinstance(search_query, str) or not search_query.strip():
+        search_query = query
+
+    logger.info("Router: intent=%s, department=%s", intent, department)
+
+    return {
+        "intent": intent,
+        "needs_retrieval": needs_retrieval and intent != "out_of_scope",
+        "search_query": search_query.strip(),
+        "user_facts": facts,
+        "router_reasoning": parsed.get("reasoning", ""),
+        # canonical key: the retriever reads this one
+        "retrieval_metadata_filter": department,
+        # and this is what the record reports as "requested"
+        "department_filter_requested": department,
+        "router_usage": response.usage.as_dict(),
+        "router_latency_ms": response.latency_ms,
     }
