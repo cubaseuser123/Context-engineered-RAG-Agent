@@ -1,0 +1,58 @@
+Document: Finance_Expense_Card_Policy
+Department: Finance
+Version: 3.8
+Effective: 2026-01-01
+Owner: Finance Operations
+Classification: Internal
+---
+# Corporate Expense Card Policy
+
+## 1. Eligibility
+
+Corporate expense cards are issued to employees who travel at least once a quarter, to managers who buy team supplies, and to roles that purchase on behalf of the company. Cards are issued in the employee's name and remain company property. A card is cancelled on the last working day, and any balance is recovered from the final settlement if unaccounted.
+
+## 2. Limits
+
+1. The standard monthly limit is INR 1,00,000.
+2. Directors and above have a monthly limit of INR 3,00,000.
+3. Single-transaction limits are INR 25,000 for the standard card and INR 1,00,000 for the Director card.
+4. Cash withdrawals are disabled.
+5. Limits are reviewed annually and may be reduced after two consecutive late submissions.
+
+## 3. Permitted spend
+
+Travel bookings made through the corporate tool, meals within per diem, ground transport, team supplies approved by the manager, and software under INR 25,000 that is on the approved list. All spend must have a business purpose recorded at submission.
+
+## 4. Prohibited spend
+
+1. Personal purchases of any kind, even if reimbursed later.
+2. Alcohol, entertainment and gifts, except as permitted by Legal_Anti_Corruption_Compliance.
+3. Cash advances or person-to-person transfers.
+4. Subscriptions that auto-renew without a purchase order.
+5. Spend on behalf of another employee who has their own card.
+
+## 5. Receipts and submission
+
+1. Receipts must be uploaded within 7 days of the transaction.
+2. Transactions without a receipt after 7 days are flagged to the manager; after 21 days they are recovered from salary.
+3. The monthly statement must be reconciled by the 5th of the following month.
+4. Missing receipts for transactions under INR 500 may be replaced by a written declaration, limited to three per quarter.
+
+## 6. Lost or stolen cards
+
+Report a lost or stolen card to the card provider and to Finance Operations immediately. The card is frozen within one hour of the report. The employee is not liable for transactions after the report is made; transactions before it are reviewed case by case.
+
+## 7. Misuse
+
+Personal use, splitting transactions to avoid limits, or submitting a claim for an item already paid by card is treated as a conduct matter under HR_Workplace_Conduct. Recovery is pursued in all cases.
+
+## 8. Related documents
+
+- Finance_Travel_And_Expense_Policy for travel limits.
+- Finance_Procurement_Approval_Matrix for purchases above the card limit.
+- Legal_Anti_Corruption_Compliance for gifts and hospitality.
+- HR_Exit_And_Separation for card cancellation at exit.
+
+## 9. Version history
+
+Version 3.8 reduced the receipt window from 14 to 7 days. Version 3.7 raised the Director limit to INR 3,00,000. Version 3.5 disabled cash withdrawals. Questions go to Finance Operations.

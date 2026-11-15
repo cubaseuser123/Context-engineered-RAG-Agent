@@ -1,0 +1,58 @@
+Document: IT_Access_Control_Standard
+Department: IT
+Version: 7.2
+Effective: 2026-01-01
+Owner: Security Engineering
+Classification: Internal
+---
+# Access Control Standard
+
+## 1. Scope
+
+This standard defines how identities are created, authenticated, authorised and removed across Meridian systems. It applies to employees, contractors, service accounts and third-party integrations. Where a system cannot meet this standard, the exception is documented and approved by the security team with a remediation date.
+
+## 2. Authentication
+
+1. Multi-factor authentication is mandatory for every system that holds Internal, Confidential or Restricted data.
+2. Passwords must be at least 14 characters and are checked against a breach corpus at set time.
+3. Shared accounts are prohibited. Service accounts must be owned by a named team and rotated every 90 days.
+4. Session lifetime is 12 hours for web applications and 8 hours for administrative consoles.
+5. SSH access requires a hardware key or a short-lived certificate; password authentication is disabled.
+
+## 3. Authorisation
+
+1. Access follows least privilege: the minimum needed to do the job, granted per role.
+2. Role definitions are owned by the system owner and reviewed quarterly.
+3. Privileged access — production write, cloud administration, payment systems — is granted for a maximum of 90 days and requires a second approver.
+4. Access to customer data requires the data owner's approval and is logged.
+5. A manager's approval is required for any new role assignment and is recorded in the access system.
+
+## 4. Reviews
+
+1. Every quarter, managers review the access of their direct reports and confirm or revoke.
+2. Reviews are due within 10 working days of the request; overdue reviews escalate to the department head.
+3. Dormant accounts with no login for 60 days are disabled automatically.
+4. Contractor accounts expire on the engagement end date without exception.
+
+## 5. Joiner, mover, leaver
+
+Joining access is provisioned from the HR record on day one (see HR_Employee_Onboarding_Guide). A role change triggers a re-review of all access within five working days. On the last working day, all access is removed at 18:00; email is retained for 30 days for business continuity and then deleted.
+
+## 6. Emergency access
+
+During a Sev-1 incident, an on-call engineer may request break-glass production access. The request must be made by calling the security hotline on extension 4400 and must be approved verbally by the incident commander. Break-glass sessions are recorded, expire after four hours, and are reviewed by Security Engineering the next business day. Appendix A lists the emergency contacts and their extensions; the table is maintained by the service desk.
+
+## 7. Monitoring
+
+All authentication events, privilege changes and break-glass sessions are logged to the central log store and retained per IT_Data_Classification_Standard. Alerts fire on repeated failed logins, impossible travel, and privilege grants outside the access system. Security Engineering reviews alerts within one hour during business hours and within four hours outside them.
+
+## 8. Related documents
+
+- IT_Data_Classification_Standard for data tiers and retention.
+- IT_Incident_Response_Runbook for incident handling.
+- HR_Exit_And_Separation for leaver access removal.
+- IT_Vendor_Security_Review for third-party access.
+
+## 9. Version history
+
+Version 7.2 extended privileged access from 60 to 90 days and added hardware-key SSH. Version 7.1 made MFA mandatory for all Confidential systems. Version 7.0 introduced quarterly access reviews. Questions go to Security Engineering; access requests go to the service desk.

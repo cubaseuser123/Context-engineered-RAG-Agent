@@ -1,13 +1,60 @@
-# 14-Day SLA Commitment Schedule
+Document: Operations_14_Day_SLA_Commitment
+Department: Operations
+Version: 3.0
+Effective: 2026-01-01
+Owner: Customer Operations
+Classification: Internal
+---
+# 14-Day SLA Commitment
 
-The Meridian Corp 14-Day SLA Commitment Schedule defines service level expectations across all internal and external operational workflows. Every request, ticket, approval, and escalation within Meridian Corp systems is bound by the 14-day standard unless overridden by a specific MOR directive. The EHRC cycle governance team monitors SLA adherence through the ASCEND performance dashboard.
+## 1. Commitment
 
-The 14-day SLA begins at the moment of request submission through the DASH portal or the TRITON system interface. Clock time pauses only during approved holidays, scheduled TRITON maintenance windows, or when awaiting action from the requester. The NEXUS engine automatically calculates SLA deadlines, sending ZETA alerts at the 50%, 75%, and 90% elapsed markers to assigned personnel and their supervisors.
+Meridian commits to completing standard customer onboarding within 14 calendar days of receiving a complete setup package. The commitment applies to the Professional and Enterprise plans. Starter plan onboarding is self-service and is not covered.
 
-Operations commits to a 96.5% SLA compliance rate across all measured workflows. Falling below this threshold triggers an automatic EHRC cycle review and mandatory remediation planning. High-priority requests, including those tagged with V-SEC classification, may be upgraded to a 7-day expedited SLA upon approval by a department head through the LEXA escalation form.
+## 2. Start and stop
 
-The ZULU analytics team produces weekly SLA performance reports, distributed every Monday at 08:00 UTC. Trends are analyzed quarterly under the MOR-2024-078 directive, with corrective action plans required for any workflow falling below 92% compliance for two consecutive periods. All SLA data is retained in the TRITON archive for 3 years. The 14-day SLA is Meridian Corp's operational promise and is reinforced through the LEXA training module completed by all new hires.
+1. The clock starts when the complete setup package is received: signed contract, admin contact, domain verification and data export specification.
+2. The clock pauses while Meridian waits for customer input and resumes when the input arrives.
+3. The clock does not pause for customer holidays, only for Meridian-declared freezes.
+4. The clock stops when the production tenant is live and the admin receives the handover email.
 
-Requests marked as P0 (business-critical) receive immediate attention and bypass standard queues entirely. The ZETA emergency workflow routes P0 items directly to on-duty specialists, with real-time status updates pushed to stakeholders every 30 minutes. Meridian Corp audits the 14-day SLA framework annually, incorporating feedback from the LEXA employee satisfaction survey into process improvements.
+## 3. Credits
 
-The Operations team publishes a quarterly SLA scorecard through the LEXA communications portal.
+1. If onboarding exceeds 14 days for reasons within Meridian's control, the customer receives a service credit of 5% of the first-year subscription fee.
+2. A delay of more than 30 days attracts a 10% credit.
+3. Credits are applied to the next invoice and are not paid in cash.
+4. Credits are not available where the delay is caused by missing customer input, third-party integration delays outside Meridian's control, or a customer-requested change in scope.
+
+## 4. Reporting
+
+1. Onboarding status is reported weekly to Customer Operations.
+2. Any account projected to miss the commitment is escalated to the delivery lead within 48 hours.
+3. Monthly performance is published internally with the number of accounts, the median days to live and the credits issued.
+
+## 5. Exceptions
+
+Non-standard onboarding, including custom data migration and on-premises deployment, is scoped separately and is not covered by this commitment. Sales must not promise the 14-day commitment for non-standard onboarding without Customer Operations approval.
+
+## 6. Related documents
+
+- HR_Employee_Onboarding_Guide for internal onboarding, which is different.
+- Operations_Supply_Chain_Contingency for hardware delays.
+- Legal_Contract_Review_Process for contract commitments.
+- IT_Incident_Response_Runbook for incidents during onboarding.
+
+## 7. Version history
+
+Version 3.0 raised the credit from 3% to 5% and added the 30-day tier. Version 2.4 clarified the pause rule. Questions go to Customer Operations.
+## Annex A. Onboarding stages
+
+Onboarding runs through five stages: contract handover, environment provisioning, data import, configuration and acceptance, and go-live handover. Each stage has an owner, a definition of done and a checkpoint in the onboarding tracker. The 14-day clock covers all five stages from the complete setup package.
+
+The package is checked against a checklist at handover from Sales. Missing items are requested in one message listing everything outstanding, and the clock does not start until they arrive. Sales is told that the clock has not started so the customer conversation stays accurate.
+
+Provisioning is automated for standard tenants and takes under a day. Data import depends on the customer's export, and the specification is agreed before the clock starts so the import does not stall halfway.
+
+Acceptance is a scripted walkthrough with the customer's admin covering sign-in, user provisioning, the three most-used workflows and the audit log. Acceptance is confirmed by email, and the handover email starts the support relationship.
+
+Credits are calculated by Customer Operations from the tracker rather than negotiated case by case: five percent from day 15, ten percent from day 31, shown on the next invoice with a reference to this policy.
+
+Monthly reporting counts only accounts where the clock ran, states the median days to live and lists every credited account with its cause.

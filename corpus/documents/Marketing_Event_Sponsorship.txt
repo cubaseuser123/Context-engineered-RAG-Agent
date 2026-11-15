@@ -1,0 +1,34 @@
+Document: Marketing_Event_Sponsorship
+Department: Finance
+Version: 1.2
+Effective: 2026-01-01
+Owner: Marketing
+Classification: Internal
+---
+# Marketing Event Sponsorship
+
+## 1. Sponsorship tiers
+
+Marketing sponsors eight events per year across three tiers: community meetups under INR 1,00,000, regional conferences up to INR 5,00,000, and flagship events above INR 5,00,000. Tier assignment follows total cash and in-kind value, including booth fees and speaking slots.
+
+## 2. Approval
+
+Community sponsorships are approved by the Head of Marketing. Regional events require the CMO. Flagship sponsorships require the CMO and the CFO. Every sponsorship needs a written objective and a follow-up plan before the contract is signed.
+
+## 3. Branding
+
+Booth artwork must follow the brand guidelines and be approved by the brand team two weeks before the event. Giveaways must be under INR 500 per unit and must not be electronics.
+
+## 4. Measurement
+
+Each sponsorship is measured on leads captured, meetings booked and pipeline created within 90 days. Events with no leads for two consecutive years are not renewed.
+
+## 5. Related documents
+
+- Legal_Contract_Review_Process for sponsorship contracts.
+- Legal_Anti_Corruption_Compliance for hospitality at events.
+- Finance_Quarterly_Budget_Allocation for the marketing envelope.
+
+## 6. Version history
+
+Version 1.2 added the 90-day pipeline metric. Questions go to Marketing.

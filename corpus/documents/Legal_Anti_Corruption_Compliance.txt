@@ -1,13 +1,67 @@
-# Anti-Corruption Compliance Guide
+Document: Legal_Anti_Corruption_Compliance
+Department: Legal
+Version: 3.6
+Effective: 2026-01-01
+Owner: Head of Legal
+Classification: Internal
+---
+# Anti-Corruption Compliance
 
-The Meridian Corp Anti-Corruption Compliance Guide enforces a zero-tolerance policy regarding bribery, kickbacks, and improper influence across all jurisdictions of operation. All employees, regardless of V-SEC tier classification, must complete the EHRC cycle anti-corruption module annually. The TRITON system logs all training completions through the ASCEND compliance dashboard.
+## 1. Policy statement
 
-Gifts and hospitality are capped at $150 per transaction and $500 per recipient annually, with exceptions requiring CFO and Legal co-approval through the NEXUS workflow. All third-party intermediaries, including agents and consultants, must pass the ZETA due diligence screening and sign the LEXA anti-corruption addendum. Payments exceeding $10,000 to government officials are prohibited under all circumstances per MOR-2024-064.
+Meridian prohibits bribery in any form, in any country. This includes offering, promising, authorising or accepting anything of value to obtain or retain business or an improper advantage. The policy applies to employees, contractors, agents, distributors and anyone acting on Meridian's behalf.
 
-The DASH portal hosts the whistleblower hotline, monitored by the ZULU ethics team with guaranteed anonymity. Investigations are launched within 24 hours of report receipt, with findings escalated to the Compliance Committee within the 14-day SLA. The MOR-2025-022 directive mandates that all business partners in high-risk jurisdictions undergo enhanced TRITON screening every 180 days.
+## 2. Gifts and hospitality
 
-Meridian Corp maintains detailed records of all compliance activities, retained for 7 years under the EHRC cycle retention schedule. Employees violating the anti-corruption policy face termination and potential legal prosecution. The Delta Project operates under additional scrutiny, with all vendor interactions reviewed by the Legal team.
+1. Gifts to or from business partners must be under INR 5,000 in value.
+2. Gifts above that value must be declined or surrendered to People Operations.
+3. Cash and cash equivalents are never permitted.
+4. Hospitality must be modest, infrequent, recorded in the gifts register and approved by a manager.
+5. Nothing may be given to a government official, including meals, travel or event tickets, without Legal's written approval.
 
-Sarah has left the company. All questions regarding the Delta Project should now be directed to the IT helpdesk at extension 4400 or through the DASH ticket system under the category "Project Liaison Transitions." The NEXUS system has been updated to reflect this change effective immediately.
+## 3. Facilitation payments
 
-Meetings with government officials must be pre-registered in the DASH compliance calendar, including attendee names, purpose, and expected outcomes. The ZULU ethics team reviews all government-facing interactions on a monthly basis. Failure to register such meetings constitutes a policy violation under MOR-2024-064 and may result in termination. All gifts offered to government officials are strictly prohibited regardless of value.
+Facilitation payments — small payments to speed up a routine government action — are prohibited even where local practice expects them. An employee asked for one must refuse, report it to Legal and document the request.
+
+## 4. Third parties
+
+1. Agents, distributors and consultants are subject to due diligence before engagement and every two years afterwards.
+2. Due diligence covers ownership, reputation, government connections and sanctions screening.
+3. Contracts must include anti-corruption representations, audit rights and termination for breach.
+4. Payments to third parties must be made to the contracting entity in the contract country; payments to offshore accounts require Legal approval.
+
+## 5. Political and charitable contributions
+
+Company political contributions are not permitted. Charitable donations require CEO approval and must not be made at the request of a government official or a customer.
+
+## 6. Red flags
+
+Unusual payment routes, requests for cash, invoices without deliverables, unusually high commissions, and a refusal to sign anti-corruption terms are red flags. Any red flag must be reported to Legal before the transaction proceeds.
+
+## 7. Reporting and consequences
+
+Reports may go to a manager, Legal or the ethics line and may be anonymous. Retaliation is prohibited. Breach of this policy may result in termination and referral to authorities.
+
+## 8. Related documents
+
+- HR_Workplace_Conduct for the gifts register.
+- Legal_Contract_Review_Process for third-party terms.
+- Finance_Expense_Card_Policy for hospitality spend.
+- Legal_Records_Retention_Schedule for due diligence records.
+
+## 9. Version history
+
+Version 3.6 added sanctions screening. Version 3.5 lowered the gift threshold from INR 10,000 to INR 5,000. Questions go to Legal.
+## Annex A. Controls and records
+
+The gifts register is maintained by People Operations and records the date, counterparty, description, estimated value, giver or recipient and approver. Entries are reviewed monthly by Legal and annually by the auditor. A gift that cannot be valued is registered at its retail estimate.
+
+Third-party due diligence is tiered. Low-risk engagements use a public-record check. Medium-risk engagements add a beneficial-ownership check and a sanctions screen. High-risk engagements, including any agent paid a success fee or working in a higher-risk jurisdiction, need an independent report before signature and every year afterwards.
+
+Training is mandatory at induction and every two years, with additional sessions for sales, procurement, finance and anyone who meets government officials. Completion is tracked by People Operations and reported to the audit committee.
+
+Contracts with agents and distributors carry audit rights, a right to terminate for breach without penalty and a representation that no improper payment has been made. Payments go only to the contracting entity, in the contract country, against an invoice that matches the contracted services.
+
+Any red flag raised to Legal is logged with the date, the parties and the decision. Legal may suspend payment while it reviews; a suspension is not an accusation and is not described to the counterparty as one.
+
+An annual risk assessment covers each market where Meridian operates, and its conclusions set the due-diligence tier for the following year.

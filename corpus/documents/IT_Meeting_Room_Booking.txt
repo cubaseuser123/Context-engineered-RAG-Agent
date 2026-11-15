@@ -1,0 +1,48 @@
+Document: IT_Meeting_Room_Booking
+Department: IT
+Version: 1.3
+Effective: 2026-01-01
+Owner: Facilities
+Classification: Internal
+---
+# Meeting Room Booking
+
+## 1. Booking
+
+Rooms are booked through the calendar system. Bookings open 14 days ahead and are limited to 4 hours per booking. Recurring bookings are limited to 8 weeks and must be re-confirmed afterwards.
+
+## 2. No-shows
+
+A room not occupied within 10 minutes of the booking start is released automatically. Three no-shows in a month remove booking rights for the following month.
+
+## 3. Room types
+
+Focus rooms seat 2 and have no video equipment. Huddle rooms seat 6 with video. Training rooms seat 24 and require Facilities approval. The boardroom is reserved for customer meetings and executive sessions.
+
+## 4. Video equipment
+
+Report a faulty camera or speaker to the service desk, not to Facilities. Do not unplug the room PC to charge a laptop.
+
+## 5. Related documents
+
+- Operations_Facility_Access_Control for building access.
+- HR_Remote_Work_Policy for hybrid meeting rules.
+
+## 6. Version history
+
+Version 1.3 added the no-show rule. Questions go to Facilities.
+## Annex A. Room usage rules
+
+Bookings are for the booker's own meetings. Booking for a colleague is not allowed, and an event that names another organiser is transferred rather than duplicated. Rooms are not booked for personal use or to hold a desk.
+
+Hybrid meetings use a huddle or training room with video. The organiser joins ten minutes early, checks camera, microphone and screen share, and leaves the room as found. Cables stay in the room; adapters come from reception against a badge deposit.
+
+Cancellations are made as soon as the meeting is dropped so the room returns to the pool. Moving a booking to another room releases the original automatically.
+
+The boardroom is booked through the executive assistant for customer meetings and executive sessions. Internal all-hands may use it when no customer meeting is scheduled, and only with the assistant's confirmation.
+
+Training rooms need Facilities approval because they are often set up the day before. The requester states the layout and any catering, which follows Cafeteria_Catering_Standards.
+
+AV faults go to the service desk with the room number and a description. Facilities does not repair equipment and no one should attempt to fix a projector or unplug the room PC.
+
+Quarterly usage data is reviewed by Facilities. Rooms used below 30% are considered for conversion to focus rooms, and recurring bookings nobody attends are cancelled.

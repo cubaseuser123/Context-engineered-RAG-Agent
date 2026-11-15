@@ -1,0 +1,46 @@
+Document: Cafeteria_Catering_Standards
+Department: Operations
+Version: 1.1
+Effective: 2026-01-01
+Owner: Facilities
+Classification: Internal
+---
+# Cafeteria Catering Standards
+
+## 1. Service hours
+
+The Pune cafeteria serves breakfast 08:00–10:30, lunch 12:00–14:30 and snacks 16:00–17:30. The vendor must publish the weekly menu every Friday for the following week.
+
+## 2. Dietary requirements
+
+Vegetarian, vegan and gluten-free options must be available at every meal. Allergen labelling is mandatory at the counter. Jain options are available on request with one day's notice.
+
+## 3. Hygiene
+
+The vendor holds a valid food safety licence and undergoes a quarterly hygiene audit. Temperature logs are kept for all cooked and chilled items. Staff handling food must hold a current health certificate.
+
+## 4. Subsidy
+
+Meridian subsidises lunch up to INR 120 per employee per working day. The subsidy is applied at the till by badge. Guests pay full price.
+
+## 5. Related documents
+
+- Operations_Facility_Access_Control for vendor access.
+- Finance_Vendor_Payment_Terms for vendor invoicing.
+
+## 6. Version history
+
+Version 1.1 added the allergen labelling rule. Questions go to Facilities.
+## Annex A. Menu and vendor management
+
+The menu rotates on a four-week cycle and repeats no main dish within two weeks. Each day offers at least two vegetarian mains, one non-vegetarian main, a salad, a soup and a dessert. Fried items appear no more than twice a week.
+
+The vendor submits the following week's menu by Friday for Facilities approval. Changes after approval are allowed only for supply reasons and are announced at the counter and on the internal notice.
+
+Allergen information is displayed next to each dish and repeated in the digital menu. Staff are trained to answer ingredient questions and to escalate anything they cannot answer to the kitchen supervisor. Nut-containing dishes are labelled prominently and do not share utensils.
+
+Guest meals are paid at the published till rate. Departments hosting visitors may pre-purchase vouchers from Facilities; vouchers are not reimbursable through the expense card.
+
+Waste is weighed daily and reported weekly. The vendor targets a 10% reduction year on year and proposes portion or menu changes to get there. Surplus food that meets safety rules is offered to staff at the end of service.
+
+A quarterly review covers hygiene audit results, temperature-log compliance, complaint volume and menu adherence. Two consecutive failed reviews put the contract into remediation, and a third allows termination under Finance_Vendor_Payment_Terms.

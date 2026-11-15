@@ -1,11 +1,56 @@
+Document: HR_Performance_Review_Process
+Department: HR
+Version: 3.3
+Effective: 2026-01-01
+Owner: People Operations
+Classification: Internal
+---
 # Performance Review Process
 
-The Meridian Corp Performance Review Process operates on a bi-annual EHRC cycle, with formal evaluations conducted every June and December. All employees, with the exception of TRITON system contractors, are evaluated using the Q-SCORE matrix, which measures productivity across 9 weighted dimensions totaling a maximum score of 100. A score below 71.5 triggers mandatory improvement planning.
+## 1. Cycle
 
-The review process begins 14 days before the evaluation window, when the ASCEND dashboard opens for manager submissions. Each manager must complete the NEXUS-PR form for every direct report, documenting achievements against the MOR-mandated objectives. The 14-day SLA for feedback submission is strictly enforced, and late submissions are flagged by the automated ZETA compliance engine. Peer reviews are collected through the DASH portal, requiring a minimum of 3 responses per employee.
+Meridian runs two review cycles per year. The mid-year cycle covers January to June and concludes in July. The annual cycle covers July to December and concludes in January, and it is the cycle that drives salary and bonus decisions under HR_Compensation_Bands. Reviews are written by the manager, not self-assessed only; the employee submits a self-review first.
 
-Calibration sessions occur during the third week of each review cycle, where department heads normalize Q-SCORE distributions across teams. The top 15% of performers qualify for the TRITON Excellence Bonus, while the bottom 8% enter the Performance Improvement Track under EHRC protocol 7.3. Employees on the Delta Project are evaluated against specialized KPIs managed through the LEXA module.
+## 2. Ratings
 
-Meridian Corp requires that all performance discussions be documented in the V-SEC-classified repository accessible only to HR leadership and the employee's direct chain of command. Appeals must be submitted within 10 business days using the WFH-7R-A form, though the MOR-2025-112 directive limits grounds for appeal to procedural errors. Merit increases are calculated using the Q-SCORE multiplier against a base percentage determined by the Finance Committee.
+1. **5 — Exceptional.** Sustained impact beyond the level, recognised across teams.
+2. **4 — Exceeds.** Delivered everything expected and at least one outcome beyond the level.
+3. **3 — Meets.** Delivered the agreed outcomes at the expected level.
+4. **2 — Partially meets.** Some outcomes missed; a written improvement plan is required.
+5. **1 — Does not meet.** Most outcomes missed; the employee enters a formal improvement plan.
 
-Employees on the Performance Improvement Track receive bi-weekly coaching sessions and have 90 days to demonstrate measurable progress. The ZETA coaching module tracks improvement milestones and provides real-time feedback to both the employee and their manager. Failure to meet improvement targets may result in role reassignment or separation under MOR-2024-076.
+Ratings are calibrated across teams before they are shared. A manager may not finalise a rating before calibration; the calibration panel includes the department head and at least one peer manager. Distribution is not forced, but a team where more than 40% of ratings are 4 or 5 is reviewed by People Operations for evidence quality.
+
+## 3. Improvement plans
+
+1. A rating of 2 or 1 triggers a written improvement plan of 60 days.
+2. The plan states the specific outcomes, the support provided and the review dates at 30 and 60 days.
+3. If the outcomes are met, the employee returns to the normal cycle. If not, the manager may extend once by 30 days or begin the process in HR_Exit_And_Separation.
+4. An employee on an improvement plan is not eligible for remote work, internal transfer or a referral bonus until the plan concludes.
+
+## 4. Promotion
+
+Promotion requires a rating of 4 or 5 in the most recent cycle, a role at the next level open in the team plan, and the department head's approval. Promotion takes effect on 1 April or 1 October. A promoted employee is placed at the minimum of the new band at promotion, then positioned at the next cycle.
+
+## 5. Feedback
+
+Continuous feedback is expected, not optional. Managers hold a documented one-to-one at least every four weeks. Peer feedback is collected in both cycles from at least three colleagues chosen by the employee and the manager together. Anonymous feedback is not accepted in calibration because it cannot be tested.
+
+## 6. Appeals
+
+An employee may appeal a rating within 10 working days of receiving it. Appeals go to the department head and a People Operations partner. The appeal reviews process and evidence, not the calibration outcome itself. A decision is issued within 15 working days and is final.
+
+## 7. Records
+
+Ratings, plans and calibration notes are retained per Legal_Records_Retention_Schedule. Managers must not store review documents in personal drives; the HR system is the record of truth.
+
+## 8. Related documents
+
+- HR_Compensation_Bands for the salary effect of a rating.
+- HR_Grievance_And_Discipline for conduct matters that are not performance matters.
+- HR_Exit_And_Separation for separation after an improvement plan.
+- HR_Learning_And_Development for development goals in the plan.
+
+## 9. Version history
+
+Version 3.3 added the 40% distribution review. Version 3.2 shortened the improvement plan from 90 to 60 days. Version 3.0 introduced peer feedback. Questions go to People Operations.

@@ -1,0 +1,29 @@
+Document: Photography_Consent_At_Events
+Department: Legal
+Version: 1.0
+Effective: 2026-01-01
+Owner: Marketing
+Classification: Internal
+---
+# Photography Consent at Events
+
+## 1. Consent
+
+Employees photographed at company events must be told the photos may be used on internal channels. Photos used externally require written consent from every identifiable person. Consent can be withdrawn at any time by emailing Marketing.
+
+## 2. External use
+
+Customer photos require a signed release. Do not photograph customer screens, badges or documents. Event photographers must sign a confidentiality agreement.
+
+## 3. Storage
+
+Photos are stored on the marketing drive, not on personal devices, and are retained for three years. Photos of minors are not permitted at company events.
+
+## 4. Related documents
+
+- Legal_Data_Privacy_GDPR_Compliance for personal data.
+- Legal_Intellectual_Property_Protection for image rights.
+
+## 5. Version history
+
+Version 1.0 is the first release. Questions go to Marketing.

@@ -1,0 +1,386 @@
+{
+  "corpus": {
+    "documents": 52,
+    "chunks": 88,
+    "words": 22064,
+    "tokens": 30656,
+    "by_department": {
+      "Finance": 11,
+      "HR": 14,
+      "IT": 8,
+      "Legal": 8,
+      "Operations": 11
+    }
+  },
+  "ingestion": {
+    "documents": 52,
+    "chunks": 88,
+    "by_department": {
+      "Finance": 11,
+      "HR": 14,
+      "IT": 8,
+      "Legal": 8,
+      "Operations": 11
+    },
+    "namespace": {
+      "namespace": "policies",
+      "vector_count": 88,
+      "total_vector_count": 88,
+      "dimension": 768
+    },
+    "wiped_first": true
+  },
+  "namespace": {
+    "namespace": "policies",
+    "vector_count": 88,
+    "total_vector_count": 88,
+    "dimension": 768
+  },
+  "retrieval_probe": [
+    {
+      "query": "How many days of annual leave can I carry forward into next year?",
+      "chunks": 8,
+      "top8_tokens": 3348,
+      "chunk_ids": [
+        "HR_Leave_Policy::000",
+        "HR_Leave_Policy::001",
+        "HR_Leave_Policy::002",
+        "HR_Parental_Leave::001",
+        "HR_Exit_And_Separation::000",
+        "HR_Learning_And_Development::000",
+        "HR_Parental_Leave::000",
+        "HR_Compensation_Bands::002"
+      ]
+    },
+    {
+      "query": "What is the reimbursement limit for a domestic business trip?",
+      "chunks": 8,
+      "top8_tokens": 2884,
+      "chunk_ids": [
+        "Finance_Travel_And_Expense_Policy::000",
+        "Finance_Travel_And_Expense_Policy::001",
+        "Finance_Expense_Card_Policy::000",
+        "Travel_Insurance_FAQ::000",
+        "Finance_Expense_Card_Policy::001",
+        "Travel_Insurance_FAQ::001",
+        "HR_Learning_And_Development::000",
+        "HR_Employee_Social_Committee::000"
+      ]
+    },
+    {
+      "query": "How quickly must a Sev-1 incident be escalated?",
+      "chunks": 8,
+      "top8_tokens": 2567,
+      "chunk_ids": [
+        "Operations_Sev_Incident_Escalation::000",
+        "IT_Incident_Response_Runbook::000",
+        "IT_Incident_Response_Runbook::001",
+        "Operations_Sev_Incident_Escalation::001",
+        "IT_Access_Control_Standard::001",
+        "IT_Change_Management::001",
+        "Operations_14_Day_SLA_Commitment::000",
+        "IT_Vendor_Security_Review::001"
+      ]
+    },
+    {
+      "query": "What are the required approval steps for a new vendor contract?",
+      "chunks": 8,
+      "top8_tokens": 2432,
+      "chunk_ids": [
+        "Legal_Contract_Review_Process::001",
+        "IT_Vendor_Security_Review::001",
+        "Finance_Procurement_Approval_Matrix::000",
+        "Finance_Procurement_Approval_Matrix::001",
+        "Legal_Contract_Review_Process::000",
+        "IT_Vendor_Security_Review::000",
+        "Finance_Vendor_Payment_Terms::001",
+        "Cafeteria_Catering_Standards::001"
+      ]
+    },
+    {
+      "query": "How long are interview records retained?",
+      "chunks": 8,
+      "top8_tokens": 2351,
+      "chunk_ids": [
+        "Legal_Records_Retention_Schedule::000",
+        "Legal_Data_Privacy_GDPR_Compliance::001",
+        "HR_Grievance_And_Discipline::001",
+        "Legal_Data_Privacy_GDPR_Compliance::000",
+        "IT_Data_Classification_Standard::001",
+        "HR_Compensation_Bands::002",
+        "IT_Acceptable_Use_Policy::001",
+        "IT_Access_Control_Standard::001"
+      ]
+    }
+  ],
+  "median_top8_tokens": 2567,
+  "eval_turn_probe": [
+    {
+      "query": "How many annual leave days can I carry forward into next year?",
+      "chunks": 8,
+      "top8_tokens": 3348
+    },
+    {
+      "query": "How many weeks of parental leave does a primary caregiver get?",
+      "chunks": 8,
+      "top8_tokens": 3776
+    },
+    {
+      "query": "How many days a week am I allowed to work remotely?",
+      "chunks": 8,
+      "top8_tokens": 3656
+    },
+    {
+      "query": "What is the monthly spending limit on my corporate expense card?",
+      "chunks": 8,
+      "top8_tokens": 3014
+    },
+    {
+      "query": "How long does Legal take to review a standard vendor contract?",
+      "chunks": 8,
+      "top8_tokens": 2432
+    },
+    {
+      "query": "If a customer asks for a copy of their personal data, how long do we have to respond?",
+      "chunks": 8,
+      "top8_tokens": 3631
+    },
+    {
+      "query": "How much is the employee referral bonus and when is it paid?",
+      "chunks": 8,
+      "top8_tokens": 2997
+    },
+    {
+      "query": "Which data classification tiers does the company use?",
+      "chunks": 8,
+      "top8_tokens": 3327
+    },
+    {
+      "query": "What does the 30-60-90 day onboarding plan require of a new hire?",
+      "chunks": 8,
+      "top8_tokens": 3306
+    },
+    {
+      "query": "Who has to approve a purchase of 3,00,000 rupees?",
+      "chunks": 8,
+      "top8_tokens": 2772
+    },
+    {
+      "query": "I joined in 2018. Can I still use my carried-forward leave after 31 March?",
+      "chunks": 8,
+      "top8_tokens": 3511
+    },
+    {
+      "query": "How many days a week do I have to be in the office from next month?",
+      "chunks": 8,
+      "top8_tokens": 3382
+    },
+    {
+      "query": "What number do I call for emergency production access at 2am?",
+      "chunks": 8,
+      "top8_tokens": 2966
+    },
+    {
+      "query": "What is the hotel cap for a Director staying in Mumbai?",
+      "chunks": 8,
+      "top8_tokens": 3641
+    },
+    {
+      "query": "How long do we keep signed vendor contracts after they expire?",
+      "chunks": 8,
+      "top8_tokens": 2351
+    },
+    {
+      "query": "We received a 3,00,000 rupee invoice. When is it due?",
+      "chunks": 8,
+      "top8_tokens": 3375
+    },
+    {
+      "query": "How fast must we open a bridge for a Sev-1 incident?",
+      "chunks": 8,
+      "top8_tokens": 2894
+    },
+    {
+      "query": "How much leave do I get?",
+      "chunks": 8,
+      "top8_tokens": 3511
+    },
+    {
+      "query": "Annual leave, the paid one.",
+      "chunks": 8,
+      "top8_tokens": 3348
+    },
+    {
+      "query": "And what happens to the days I don't use?",
+      "chunks": 8,
+      "top8_tokens": 2901
+    },
+    {
+      "query": "You said they expire in March - is there any exception for long-tenured staff?",
+      "chunks": 8,
+      "top8_tokens": 2063
+    },
+    {
+      "query": "Summarise that as three bullet points I can send my manager.",
+      "chunks": 8,
+      "top8_tokens": 3783
+    },
+    {
+      "query": "I'm travelling to Mumbai next week for three nights.",
+      "chunks": 8,
+      "top8_tokens": 3514
+    },
+    {
+      "query": "What's the hotel cap?",
+      "chunks": 8,
+      "top8_tokens": 3027
+    },
+    {
+      "query": "I'm a Level 2 manager, does that change it?",
+      "chunks": 8,
+      "top8_tokens": 3001
+    },
+    {
+      "query": "And the daily per diem?",
+      "chunks": 8,
+      "top8_tokens": 3547
+    },
+    {
+      "query": "Do I need approval before I book?",
+      "chunks": 8,
+      "top8_tokens": 2837
+    },
+    {
+      "query": "We're seeing 500s on the checkout API for about 5% of requests.",
+      "chunks": 8,
+      "top8_tokens": 3466
+    },
+    {
+      "query": "Is that a Sev-1?",
+      "chunks": 8,
+      "top8_tokens": 2952
+    },
+    {
+      "query": "Who has to be on the bridge?",
+      "chunks": 8,
+      "top8_tokens": 3344
+    },
+    {
+      "query": "How quickly do we need to open it?",
+      "chunks": 8,
+      "top8_tokens": 3628
+    },
+    {
+      "query": "What do I tell customers in the meantime?",
+      "chunks": 8,
+      "top8_tokens": 3107
+    },
+    {
+      "query": "When is the postmortem due?",
+      "chunks": 8,
+      "top8_tokens": 2909
+    },
+    {
+      "query": "I need to buy a 4,00,000 rupee analytics licence.",
+      "chunks": 8,
+      "top8_tokens": 3241
+    },
+    {
+      "query": "Who signs off?",
+      "chunks": 8,
+      "top8_tokens": 2100
+    },
+    {
+      "query": "Does the vendor need a security review first?",
+      "chunks": 8,
+      "top8_tokens": 2282
+    },
+    {
+      "query": "How long does that review take?",
+      "chunks": 8,
+      "top8_tokens": 3008
+    },
+    {
+      "query": "And what payment terms should I expect?",
+      "chunks": 8,
+      "top8_tokens": 2672
+    },
+    {
+      "query": "Put the whole sequence in order for me.",
+      "chunks": 8,
+      "top8_tokens": 3742
+    },
+    {
+      "query": "For context, I joined Meridian in 2018 and I'm in the Pune office.",
+      "chunks": 8,
+      "top8_tokens": 4096
+    },
+    {
+      "query": "Does the carry-forward grace period apply to me?",
+      "chunks": 8,
+      "top8_tokens": 2977
+    },
+    {
+      "query": "Which approval matrix applies to purchases I raise?",
+      "chunks": 8,
+      "top8_tokens": 2259
+    },
+    {
+      "query": "And who signs off above five lakh?",
+      "chunks": 8,
+      "top8_tokens": 2479
+    },
+    {
+      "query": "What per diem applies to my next domestic trip?",
+      "chunks": 8,
+      "top8_tokens": 3514
+    },
+    {
+      "query": "What is the hotel cap in Pune for me?",
+      "chunks": 8,
+      "top8_tokens": 3324
+    },
+    {
+      "query": "I'm the on-call SRE for the TRITON service this week.",
+      "chunks": 8,
+      "top8_tokens": 2957
+    },
+    {
+      "query": "If it goes down hard, who do I escalate to and how fast?",
+      "chunks": 8,
+      "top8_tokens": 3199
+    },
+    {
+      "query": "What's the weather like in Pune today?",
+      "chunks": 8,
+      "top8_tokens": 3348
+    },
+    {
+      "query": "Tell me a joke about cats.",
+      "chunks": 8,
+      "top8_tokens": 3530
+    },
+    {
+      "query": "I've had a headache for three days - what medication should I take?",
+      "chunks": 8,
+      "top8_tokens": 3641
+    },
+    {
+      "query": "What does our competitor charge for their enterprise plan?",
+      "chunks": 8,
+      "top8_tokens": 2604
+    },
+    {
+      "query": "Write me a Python script that scrapes LinkedIn profiles.",
+      "chunks": 8,
+      "top8_tokens": 4055
+    }
+  ],
+  "median_eval_turn_top8_tokens": 3273.5,
+  "eval_turns_over_budget": 33,
+  "eval_turns": 52,
+  "retrieval_budget": 3000,
+  "retrieval_top_k": 8,
+  "gate": "median_eval_turn_top8_tokens",
+  "overruns_retrieval_budget": true
+}

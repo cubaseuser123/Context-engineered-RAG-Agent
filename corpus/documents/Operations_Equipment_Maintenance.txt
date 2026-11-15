@@ -1,0 +1,50 @@
+Document: Operations_Equipment_Maintenance
+Department: Operations
+Version: 2.0
+Effective: 2026-01-01
+Owner: Facilities Engineering
+Classification: Internal
+---
+# Equipment Maintenance
+
+## 1. Scope
+
+This document covers lab instruments, power distribution units, UPS batteries, cooling pumps and the badge readers on restricted doors. It does not cover IT hardware, which is under IT_Change_Management, or the EHRC quarterly cycle, which has its own plan.
+
+## 2. Calibration
+
+1. Lab instruments are calibrated annually by an accredited provider.
+2. Calibration certificates are stored with the asset record.
+3. An instrument past its calibration date is marked out of service and may not be used for customer work.
+4. Reference instruments are calibrated every six months.
+
+## 3. Preventive maintenance
+
+| Asset | Interval | Owner |
+|---|---|---|
+| UPS batteries | 6 months test, replace at 5 years | Facilities Engineering |
+| Cooling pumps | Quarterly inspection | Facilities Engineering |
+| Badge readers | Annual firmware check | Facilities |
+| Power distribution units | Annual thermographic scan | Facilities Engineering |
+
+## 4. Replacement
+
+Equipment is replaced at the end of its useful life or when the repair cost exceeds 40% of replacement cost. Replacement above INR 10,00,000 is capital expenditure under Finance_Capital_Expenditure. Disposal follows the data-wipe rule in IT_Data_Classification_Standard where the asset stores data.
+
+## 5. Work orders
+
+1. All maintenance is logged as a work order with the asset ID.
+2. Emergency work orders are raised within 2 hours of the fault being reported.
+3. Planned work is scheduled at least 10 working days ahead and coordinated with Operations_Shift_Handover_Protocol.
+4. Maintenance during the finance quarter-end freeze requires the Controller's approval.
+
+## 6. Related documents
+
+- Finance_Capital_Expenditure for replacement approvals.
+- Operations_EHRC_Cycle_Maintenance for cooling.
+- Operations_Facility_Access_Control for site access.
+- IT_Change_Management for IT assets.
+
+## 7. Version history
+
+Version 2.0 added the battery replacement interval. Version 1.7 introduced the work-order requirement. Questions go to Facilities Engineering.

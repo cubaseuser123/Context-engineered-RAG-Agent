@@ -1,0 +1,33 @@
+Document: Conference_Speaking_Guidelines
+Department: Legal
+Version: 1.1
+Effective: 2026-01-01
+Owner: Marketing
+Classification: Internal
+---
+# Conference Speaking Guidelines
+
+## 1. Approval
+
+Employees speaking at an external conference need manager approval and a review by Marketing. Talks that mention the roadmap, customers or financial results need Legal review two weeks before the event.
+
+## 2. Slides
+
+Use the current deck template. Customer names require written consent. Screenshots must not show real customer data. Avoid forward-looking statements about revenue or product dates.
+
+## 3. Costs
+
+Registration and travel follow Finance_Travel_And_Expense_Policy. Speaking fees paid to the employee are permitted only if the company declines them in writing.
+
+## 4. Recording
+
+Recordings may be shared on company channels. Third-party recordings require permission from the organiser before reposting.
+
+## 5. Related documents
+
+- Legal_Intellectual_Property_Protection for unpublished work.
+- Legal_Data_Privacy_GDPR_Compliance for customer data.
+
+## 6. Version history
+
+Version 1.1 added the forward-looking statement rule. Questions go to Marketing.

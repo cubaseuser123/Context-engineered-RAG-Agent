@@ -1,0 +1,52 @@
+Document: Finance_Revenue_Recognition
+Department: Finance
+Version: 3.2
+Effective: 2026-01-01
+Owner: Controller
+Classification: Confidential
+---
+# Revenue Recognition Policy
+
+## 1. Principle
+
+Revenue is recognised when control of the promised service passes to the customer, in the amount the company expects to be entitled to. Meridian applies the five-step model: identify the contract, identify the performance obligations, determine the transaction price, allocate the price to the obligations, and recognise revenue as each obligation is satisfied.
+
+## 2. Contract identification
+
+A contract exists when it is approved, the rights and payment terms are identifiable, it has commercial substance, and collection is probable. Orders below INR 1,00,000 with a standard online acceptance are treated as contracts on acceptance. Deals with non-standard terms require Legal_Contract_Review_Process before revenue can be scheduled.
+
+## 3. Performance obligations
+
+1. Subscription access is a series of distinct daily services recognised over the contract term.
+2. Implementation services are a separate obligation when the customer can benefit from them independently; otherwise they are combined with the subscription.
+3. Training is a separate obligation recognised when delivered.
+4. Hardware resold with software is recognised on delivery.
+
+## 4. Transaction price
+
+1. The transaction price includes fixed fees and variable consideration that is probable and estimable.
+2. Discounts are allocated proportionally across obligations unless the contract evidences a standalone price for one obligation.
+3. Rebates and service credits are estimated and constrained until the uncertainty resolves.
+4. Significant financing components are adjusted where payment terms exceed 12 months.
+
+## 5. Milestone and deferred revenue
+
+1. Annual prepayments are recorded as deferred revenue and released monthly over the term.
+2. Milestone billing on implementation is recognised against delivery of the milestone, not against the invoice date.
+3. Where a milestone is invoiced before delivery, the balance sits in deferred revenue.
+4. Where delivery precedes invoicing, an unbilled receivable is recorded.
+
+## 6. Contract modifications
+
+A modification is treated as a separate contract if it adds distinct services priced at standalone selling price. Otherwise the remaining consideration is reallocated over the remaining obligations. Modifications must be documented by the deal desk and approved by the Controller.
+
+## 7. Related documents
+
+- Legal_Contract_Review_Process for non-standard terms.
+- Finance_Fiscal_Year_2026_Audit_Prep for revenue evidence.
+- Finance_Quarterly_Budget_Allocation for the sales envelope.
+- Finance_Vendor_Payment_Terms for cost matching.
+
+## 8. Version history
+
+Version 3.2 added the unbilled receivable guidance. Version 3.1 clarified milestone billing. Version 3.0 adopted the five-step model. Questions go to the Controller; deal-specific questions go to the deal desk.

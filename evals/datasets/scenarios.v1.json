@@ -1,0 +1,1305 @@
+{
+  "version": "v1",
+  "created": "2026-11-05",
+  "scenarios": [
+    {
+      "id": "sd_leave_carry_forward",
+      "cohort": "single_doc",
+      "tags": [
+        "single_doc",
+        "numeric"
+      ],
+      "turns": [
+        {
+          "role": "user",
+          "content": "How many annual leave days can I carry forward into next year?"
+        }
+      ],
+      "setup": {
+        "user_id": "eval_sd_leave",
+        "history": [],
+        "memory": []
+      },
+      "expected": {
+        "intent": "policy_lookup",
+        "docs": [
+          "HR_Leave_Policy"
+        ],
+        "must_include": [
+          "12 days"
+        ],
+        "must_not_include": [],
+        "answer_type": "numeric",
+        "refusal_warranted": false,
+        "reference_answer": "Up to 12 days of unused annual leave may be carried forward, to be used by 31 March."
+      }
+    },
+    {
+      "id": "sd_parental_weeks",
+      "cohort": "single_doc",
+      "tags": [
+        "single_doc",
+        "numeric"
+      ],
+      "turns": [
+        {
+          "role": "user",
+          "content": "How many weeks of parental leave does a primary caregiver get?"
+        }
+      ],
+      "setup": {
+        "user_id": "eval_sd_parental",
+        "history": [],
+        "memory": []
+      },
+      "expected": {
+        "intent": "policy_lookup",
+        "docs": [
+          "HR_Parental_Leave"
+        ],
+        "must_include": [
+          "26 weeks"
+        ],
+        "must_not_include": [],
+        "answer_type": "numeric",
+        "refusal_warranted": false,
+        "reference_answer": "The primary caregiver is entitled to 26 weeks of paid parental leave."
+      }
+    },
+    {
+      "id": "sd_remote_days",
+      "cohort": "single_doc",
+      "tags": [
+        "single_doc",
+        "numeric"
+      ],
+      "turns": [
+        {
+          "role": "user",
+          "content": "How many days a week am I allowed to work remotely?"
+        }
+      ],
+      "setup": {
+        "user_id": "eval_sd_remote",
+        "history": [],
+        "memory": []
+      },
+      "expected": {
+        "intent": "policy_lookup",
+        "docs": [
+          "HR_Remote_Work_Policy"
+        ],
+        "must_include": [
+          "3 days"
+        ],
+        "must_not_include": [],
+        "answer_type": "numeric",
+        "refusal_warranted": false,
+        "reference_answer": "Employees may work remotely up to 3 days per week, with core hours of 10:00 to 16:00 IST."
+      }
+    },
+    {
+      "id": "sd_expense_card_limit",
+      "cohort": "single_doc",
+      "tags": [
+        "single_doc",
+        "numeric"
+      ],
+      "turns": [
+        {
+          "role": "user",
+          "content": "What is the monthly spending limit on my corporate expense card?"
+        }
+      ],
+      "setup": {
+        "user_id": "eval_sd_card",
+        "history": [],
+        "memory": []
+      },
+      "expected": {
+        "intent": "policy_lookup",
+        "docs": [
+          "Finance_Expense_Card_Policy"
+        ],
+        "must_include": [
+          "1,00,000"
+        ],
+        "must_not_include": [],
+        "answer_type": "numeric",
+        "refusal_warranted": false,
+        "reference_answer": "The corporate expense card carries a monthly limit of INR 1,00,000."
+      }
+    },
+    {
+      "id": "sd_contract_review_sla",
+      "cohort": "single_doc",
+      "tags": [
+        "single_doc",
+        "numeric"
+      ],
+      "turns": [
+        {
+          "role": "user",
+          "content": "How long does Legal take to review a standard vendor contract?"
+        }
+      ],
+      "setup": {
+        "user_id": "eval_sd_contract",
+        "history": [],
+        "memory": []
+      },
+      "expected": {
+        "intent": "policy_lookup",
+        "docs": [
+          "Legal_Contract_Review_Process"
+        ],
+        "must_include": [
+          "7 business days"
+        ],
+        "must_not_include": [],
+        "answer_type": "numeric",
+        "refusal_warranted": false,
+        "reference_answer": "Standard contract review takes 7 business days; an expedited review takes 48 hours."
+      }
+    },
+    {
+      "id": "sd_dsar_window",
+      "cohort": "single_doc",
+      "tags": [
+        "single_doc",
+        "date"
+      ],
+      "turns": [
+        {
+          "role": "user",
+          "content": "If a customer asks for a copy of their personal data, how long do we have to respond?"
+        }
+      ],
+      "setup": {
+        "user_id": "eval_sd_dsar",
+        "history": [],
+        "memory": []
+      },
+      "expected": {
+        "intent": "policy_lookup",
+        "docs": [
+          "Legal_Data_Privacy_GDPR_Compliance"
+        ],
+        "must_include": [
+          "30 days"
+        ],
+        "must_not_include": [],
+        "answer_type": "date",
+        "refusal_warranted": false,
+        "reference_answer": "A data subject access request must be answered within 30 days."
+      }
+    },
+    {
+      "id": "sd_referral_bonus",
+      "cohort": "single_doc",
+      "tags": [
+        "single_doc",
+        "numeric"
+      ],
+      "turns": [
+        {
+          "role": "user",
+          "content": "How much is the employee referral bonus and when is it paid?"
+        }
+      ],
+      "setup": {
+        "user_id": "eval_sd_referral",
+        "history": [],
+        "memory": []
+      },
+      "expected": {
+        "intent": "policy_lookup",
+        "docs": [
+          "HR_Employee_Referral_Program"
+        ],
+        "must_include": [
+          "50,000",
+          "90 days"
+        ],
+        "must_not_include": [],
+        "answer_type": "numeric",
+        "refusal_warranted": false,
+        "reference_answer": "The referral bonus is INR 50,000, paid after the referred employee completes 90 days."
+      }
+    },
+    {
+      "id": "sd_data_tiers",
+      "cohort": "single_doc",
+      "tags": [
+        "single_doc",
+        "rule"
+      ],
+      "turns": [
+        {
+          "role": "user",
+          "content": "Which data classification tiers does the company use?"
+        }
+      ],
+      "setup": {
+        "user_id": "eval_sd_tiers",
+        "history": [],
+        "memory": []
+      },
+      "expected": {
+        "intent": "policy_lookup",
+        "docs": [
+          "IT_Data_Classification_Standard"
+        ],
+        "must_include": [
+          "Public",
+          "Internal",
+          "Confidential",
+          "Restricted"
+        ],
+        "must_not_include": [],
+        "answer_type": "rule",
+        "refusal_warranted": false,
+        "reference_answer": "There are four tiers: Public, Internal, Confidential and Restricted."
+      }
+    },
+    {
+      "id": "sd_onboarding_plan",
+      "cohort": "single_doc",
+      "tags": [
+        "single_doc",
+        "rule"
+      ],
+      "turns": [
+        {
+          "role": "user",
+          "content": "What does the 30-60-90 day onboarding plan require of a new hire?"
+        }
+      ],
+      "setup": {
+        "user_id": "eval_sd_onboarding",
+        "history": [],
+        "memory": []
+      },
+      "expected": {
+        "intent": "policy_lookup",
+        "docs": [
+          "HR_Employee_Onboarding_Guide"
+        ],
+        "must_include": [
+          "30",
+          "60",
+          "90"
+        ],
+        "must_not_include": [],
+        "answer_type": "rule",
+        "refusal_warranted": false,
+        "reference_answer": "The plan sets goals at 30 days (access and orientation), 60 days (first independent deliverable) and 90 days (full ownership)."
+      }
+    },
+    {
+      "id": "sd_procurement_threshold",
+      "cohort": "single_doc",
+      "tags": [
+        "single_doc",
+        "numeric"
+      ],
+      "turns": [
+        {
+          "role": "user",
+          "content": "Who has to approve a purchase of 3,00,000 rupees?"
+        }
+      ],
+      "setup": {
+        "user_id": "eval_sd_procurement",
+        "history": [],
+        "memory": []
+      },
+      "expected": {
+        "intent": "policy_lookup",
+        "docs": [
+          "Finance_Procurement_Approval_Matrix"
+        ],
+        "must_include": [
+          "Director"
+        ],
+        "must_not_include": [],
+        "answer_type": "numeric",
+        "refusal_warranted": false,
+        "reference_answer": "Purchases between INR 50,001 and INR 5,00,000 require Director approval."
+      }
+    },
+    {
+      "id": "trap_leave_grace_conflict",
+      "cohort": "trap",
+      "tags": [
+        "trap",
+        "version_conflict"
+      ],
+      "turns": [
+        {
+          "role": "user",
+          "content": "I joined in 2018. Can I still use my carried-forward leave after 31 March?"
+        }
+      ],
+      "setup": {
+        "user_id": "eval_trap_grace",
+        "history": [],
+        "memory": []
+      },
+      "expected": {
+        "intent": "policy_lookup",
+        "docs": [
+          "HR_Leave_Policy"
+        ],
+        "must_include": [
+          "30 April"
+        ],
+        "must_not_include": [],
+        "answer_type": "date",
+        "refusal_warranted": false,
+        "reference_answer": "Section 2 forfeits carried leave after 31 March, but Section 7 grants employees who joined before 2020 a grace period to 30 April; the answer should surface both."
+      }
+    },
+    {
+      "id": "trap_rto_version",
+      "cohort": "trap",
+      "tags": [
+        "trap",
+        "version_conflict"
+      ],
+      "turns": [
+        {
+          "role": "user",
+          "content": "How many days a week do I have to be in the office from next month?"
+        }
+      ],
+      "setup": {
+        "user_id": "eval_trap_rto",
+        "history": [],
+        "memory": []
+      },
+      "expected": {
+        "intent": "policy_lookup",
+        "docs": [
+          "HR_Return_To_Office_Mandate"
+        ],
+        "must_include": [
+          "4 days"
+        ],
+        "must_not_include": [],
+        "answer_type": "numeric",
+        "refusal_warranted": false,
+        "reference_answer": "Version 2.1 required 3 days, but version 3.0 requires 4 days from 1 July 2026; the newer version governs."
+      }
+    },
+    {
+      "id": "trap_access_hotline_missing",
+      "cohort": "trap",
+      "tags": [
+        "trap",
+        "omitted_value"
+      ],
+      "turns": [
+        {
+          "role": "user",
+          "content": "What number do I call for emergency production access at 2am?"
+        }
+      ],
+      "setup": {
+        "user_id": "eval_trap_hotline",
+        "history": [],
+        "memory": []
+      },
+      "expected": {
+        "intent": "policy_lookup",
+        "docs": [
+          "IT_Access_Control_Standard"
+        ],
+        "must_include": [
+          "extension 4400"
+        ],
+        "must_not_include": [
+          "\\b\\d{3}[-.]\\d{3}[-.]\\d{4}\\b"
+        ],
+        "answer_type": "rule",
+        "refusal_warranted": false,
+        "reference_answer": "Section 6 points to extension 4400, but Appendix A, which is supposed to print the number, omits it; the answer should say the number is missing rather than invent one."
+      }
+    },
+    {
+      "id": "trap_travel_row_and_column",
+      "cohort": "trap",
+      "tags": [
+        "trap",
+        "table"
+      ],
+      "turns": [
+        {
+          "role": "user",
+          "content": "What is the hotel cap for a Director staying in Mumbai?"
+        }
+      ],
+      "setup": {
+        "user_id": "eval_trap_travel",
+        "history": [],
+        "memory": []
+      },
+      "expected": {
+        "intent": "policy_lookup",
+        "docs": [
+          "Finance_Travel_And_Expense_Policy"
+        ],
+        "must_include": [
+          "8,000"
+        ],
+        "must_not_include": [],
+        "answer_type": "numeric",
+        "refusal_warranted": false,
+        "reference_answer": "Mumbai is Tier 1 (6,000) but Directors carry a 1.33 multiplier, giving 8,000 per night; the answer needs both the row and the column."
+      }
+    },
+    {
+      "id": "trap_records_retention",
+      "cohort": "trap",
+      "tags": [
+        "trap",
+        "table"
+      ],
+      "turns": [
+        {
+          "role": "user",
+          "content": "How long do we keep signed vendor contracts after they expire?"
+        }
+      ],
+      "setup": {
+        "user_id": "eval_trap_records",
+        "history": [],
+        "memory": []
+      },
+      "expected": {
+        "intent": "policy_lookup",
+        "docs": [
+          "Legal_Records_Retention_Schedule"
+        ],
+        "must_include": [
+          "8 years"
+        ],
+        "must_not_include": [],
+        "answer_type": "numeric",
+        "refusal_warranted": false,
+        "reference_answer": "Executed contracts are retained 8 years after expiry; the retention clock starts at expiry, not signature."
+      }
+    },
+    {
+      "id": "trap_vendor_payment_conflict",
+      "cohort": "trap",
+      "tags": [
+        "trap",
+        "contradiction"
+      ],
+      "turns": [
+        {
+          "role": "user",
+          "content": "We received a 3,00,000 rupee invoice. When is it due?"
+        }
+      ],
+      "setup": {
+        "user_id": "eval_trap_payment",
+        "history": [],
+        "memory": []
+      },
+      "expected": {
+        "intent": "policy_lookup",
+        "docs": [
+          "Finance_Vendor_Payment_Terms"
+        ],
+        "must_include": [
+          "Net 30"
+        ],
+        "must_not_include": [],
+        "answer_type": "numeric",
+        "refusal_warranted": false,
+        "reference_answer": "Section 2 sets Net 45, but Section 5 applies Net 30 to invoices under 5,00,000, so this invoice is due in 30 days; the conflict should be acknowledged."
+      }
+    },
+    {
+      "id": "trap_sev1_escalation_conflict",
+      "cohort": "trap",
+      "tags": [
+        "trap",
+        "version_conflict"
+      ],
+      "turns": [
+        {
+          "role": "user",
+          "content": "How fast must we open a bridge for a Sev-1 incident?"
+        }
+      ],
+      "setup": {
+        "user_id": "eval_trap_sev1",
+        "history": [],
+        "memory": []
+      },
+      "expected": {
+        "intent": "policy_lookup",
+        "docs": [
+          "Operations_Sev_Incident_Escalation"
+        ],
+        "must_include": [
+          "15 minutes"
+        ],
+        "must_not_include": [],
+        "answer_type": "numeric",
+        "refusal_warranted": false,
+        "reference_answer": "Runbook 1.4 says 10 minutes, runbook 2.0 says 15 minutes; the current runbook governs at 15 minutes."
+      }
+    },
+    {
+      "id": "mt_leave_ambiguity",
+      "cohort": "multi_turn",
+      "tags": [
+        "multi_turn",
+        "clarification",
+        "numeric"
+      ],
+      "turns": [
+        {
+          "role": "user",
+          "content": "How much leave do I get?",
+          "expected": {
+            "intent": "clarification",
+            "docs": [],
+            "reference_answer": "Meridian provides several types of leave including annual leave (24 days), sick leave, parental leave, and bereavement leave. Which specific leave type would you like details on?"
+          }
+        },
+        {
+          "role": "user",
+          "content": "Annual leave, the paid one.",
+          "expected": {
+            "intent": "policy_lookup",
+            "docs": [
+              "HR_Leave_Policy"
+            ],
+            "must_include": [
+              "24 days"
+            ],
+            "reference_answer": "Full-time employees receive 24 days of paid annual leave per calendar year, accrued monthly from the date of joining."
+          }
+        },
+        {
+          "role": "user",
+          "content": "And what happens to the days I don't use?",
+          "expected": {
+            "intent": "policy_lookup",
+            "docs": [
+              "HR_Leave_Policy"
+            ],
+            "must_include": [
+              "12 days"
+            ],
+            "reference_answer": "You can carry forward up to 12 unused annual leave days into the next calendar year; any remaining unused carried-forward days lapse on 31 March."
+          }
+        },
+        {
+          "role": "user",
+          "content": "You said they expire in March - is there any exception for long-tenured staff?",
+          "expected": {
+            "intent": "clarification",
+            "docs": [
+              "HR_Leave_Policy"
+            ],
+            "must_include": [
+              "30 April"
+            ],
+            "reference_answer": "Yes, employees who joined Meridian before 1 January 2020 have an extended transitional grace period allowing carried-forward days to be used until 30 April."
+          }
+        },
+        {
+          "role": "user",
+          "content": "Summarise that as three bullet points I can send my manager.",
+          "expected": {
+            "intent": "clarification",
+            "docs": [
+              "HR_Leave_Policy"
+            ],
+            "reference_answer": "- 24 days of paid annual leave per calendar year.\n- Up to 12 unused days can be carried forward, expiring on 31 March.\n- Pre-2020 joiners have an extended grace period until 30 April."
+          }
+        }
+      ],
+      "setup": {
+        "user_id": "eval_mt_leave",
+        "history": [],
+        "memory": []
+      },
+      "expected": {
+        "intent": "clarification",
+        "docs": [
+          "HR_Leave_Policy"
+        ],
+        "must_include": [
+          "24 days",
+          "12 days"
+        ],
+        "must_not_include": [],
+        "answer_type": "rule",
+        "refusal_warranted": false,
+        "reference_answer": "24 days annual leave, 12 may be carried forward, unused carried days lapse on 31 March except for pre-2020 joiners who have until 30 April."
+      }
+    },
+    {
+      "id": "mt_travel_tier",
+      "cohort": "multi_turn",
+      "tags": [
+        "multi_turn",
+        "table"
+      ],
+      "turns": [
+        {
+          "role": "user",
+          "content": "I'm travelling to Mumbai next week for three nights.",
+          "expected": {
+            "intent": "policy_lookup",
+            "docs": [
+              "Finance_Travel_And_Expense_Policy"
+            ],
+            "reference_answer": "Mumbai is classified as a Tier 1 city under the travel policy. How can I assist you with your booking, hotel caps, or per diem allowances?"
+          }
+        },
+        {
+          "role": "user",
+          "content": "What's the hotel cap?",
+          "expected": {
+            "intent": "clarification",
+            "docs": [
+              "Finance_Travel_And_Expense_Policy"
+            ],
+            "must_include": [
+              "6,000"
+            ],
+            "reference_answer": "Mumbai is a Tier 1 city with a base hotel cap of INR 6,000 per night."
+          }
+        },
+        {
+          "role": "user",
+          "content": "I'm a Level 2 manager, does that change it?",
+          "expected": {
+            "intent": "clarification",
+            "docs": [
+              "Finance_Travel_And_Expense_Policy"
+            ],
+            "reference_answer": "Yes, Level 2 (L2) employees have a 1.15 multiplier, raising your nightly hotel cap to INR 6,900."
+          }
+        },
+        {
+          "role": "user",
+          "content": "And the daily per diem?",
+          "expected": {
+            "intent": "clarification",
+            "docs": [
+              "Finance_Travel_And_Expense_Policy"
+            ],
+            "must_include": [
+              "2,500"
+            ],
+            "reference_answer": "The domestic per diem is INR 2,500 per day covering meals and incidentals."
+          }
+        },
+        {
+          "role": "user",
+          "content": "Do I need approval before I book?",
+          "expected": {
+            "intent": "policy_lookup",
+            "docs": [
+              "Finance_Travel_And_Expense_Policy",
+              "Finance_Procurement_Approval_Matrix"
+            ],
+            "reference_answer": "Yes, all domestic business travel must be approved in advance before you make any bookings."
+          }
+        }
+      ],
+      "setup": {
+        "user_id": "eval_mt_travel",
+        "history": [],
+        "memory": []
+      },
+      "expected": {
+        "intent": "policy_lookup",
+        "docs": [
+          "Finance_Travel_And_Expense_Policy"
+        ],
+        "must_include": [
+          "2,500"
+        ],
+        "must_not_include": [],
+        "answer_type": "numeric",
+        "refusal_warranted": false,
+        "reference_answer": "Mumbai is Tier 1 with a 6,000 nightly cap, Level 2 managers carry a 1.15 multiplier, domestic per diem is 2,500 per day, and travel must be approved before booking."
+      }
+    },
+    {
+      "id": "mt_incident_response",
+      "cohort": "multi_turn",
+      "tags": [
+        "multi_turn",
+        "operational"
+      ],
+      "turns": [
+        {
+          "role": "user",
+          "content": "We're seeing 500s on the checkout API for about 5% of requests.",
+          "expected": {
+            "intent": "policy_lookup",
+            "docs": [
+              "Operations_Sev_Incident_Escalation",
+              "IT_Incident_Response_Runbook"
+            ],
+            "reference_answer": "A 5% error rate on checkout API indicates service degradation. According to the Incident Response Runbook, this should be investigated. Would you like help determining severity or initiating escalation?"
+          }
+        },
+        {
+          "role": "user",
+          "content": "Is that a Sev-1?",
+          "expected": {
+            "intent": "clarification",
+            "docs": [
+              "Operations_Sev_Incident_Escalation"
+            ],
+            "reference_answer": "No, a 5% error rate is a Sev-2 (degraded service affecting a material subset of customers). A Sev-1 requires affecting more than 20% of customers or a confirmed security breach."
+          }
+        },
+        {
+          "role": "user",
+          "content": "Who has to be on the bridge?",
+          "expected": {
+            "intent": "clarification",
+            "docs": [
+              "Operations_Sev_Incident_Escalation"
+            ],
+            "reference_answer": "The initial incident bridge requires the on-call engineer and the on-call engineering manager."
+          }
+        },
+        {
+          "role": "user",
+          "content": "How quickly do we need to open it?",
+          "expected": {
+            "intent": "clarification",
+            "docs": [
+              "Operations_Sev_Incident_Escalation"
+            ],
+            "must_include": [
+              "15 minutes"
+            ],
+            "reference_answer": "For a Sev-1 incident, the incident bridge must be opened within 15 minutes of declaration."
+          }
+        },
+        {
+          "role": "user",
+          "content": "What do I tell customers in the meantime?",
+          "expected": {
+            "intent": "policy_lookup",
+            "docs": [
+              "Operations_Sev_Incident_Escalation"
+            ],
+            "reference_answer": "Post a status page update acknowledging the investigation within 30 minutes, followed by direct customer communication within 1 hour."
+          }
+        },
+        {
+          "role": "user",
+          "content": "When is the postmortem due?",
+          "expected": {
+            "intent": "policy_lookup",
+            "docs": [
+              "IT_Incident_Response_Runbook"
+            ],
+            "reference_answer": "A blameless postmortem is due within 5 business days of incident resolution."
+          }
+        }
+      ],
+      "setup": {
+        "user_id": "eval_mt_incident",
+        "history": [],
+        "memory": []
+      },
+      "expected": {
+        "intent": "policy_lookup",
+        "docs": [
+          "IT_Incident_Response_Runbook"
+        ],
+        "must_include": [
+          "5 business days"
+        ],
+        "must_not_include": [],
+        "answer_type": "date",
+        "refusal_warranted": false,
+        "reference_answer": "The postmortem is due within 5 business days of resolution."
+      }
+    },
+    {
+      "id": "mt_procurement_roundtrip",
+      "cohort": "multi_turn",
+      "tags": [
+        "multi_turn",
+        "approval"
+      ],
+      "turns": [
+        {
+          "role": "user",
+          "content": "I need to buy a 4,00,000 rupee analytics licence.",
+          "expected": {
+            "intent": "policy_lookup",
+            "docs": [
+              "Finance_Procurement_Approval_Matrix"
+            ],
+            "reference_answer": "Purchasing a 4,00,000 INR software licence falls under the Procurement Approval Matrix. What details do you need regarding approvals, security reviews, or payment terms?"
+          }
+        },
+        {
+          "role": "user",
+          "content": "Who signs off?",
+          "expected": {
+            "intent": "clarification",
+            "docs": [
+              "Finance_Procurement_Approval_Matrix"
+            ],
+            "must_include": [
+              "Director"
+            ],
+            "reference_answer": "Purchases between INR 50,001 and INR 5,00,000 must be approved by a Director, with two written quotes and a business justification."
+          }
+        },
+        {
+          "role": "user",
+          "content": "Does the vendor need a security review first?",
+          "expected": {
+            "intent": "policy_lookup",
+            "docs": [
+              "IT_Vendor_Security_Review"
+            ],
+            "reference_answer": "Yes, any third party that will store, process or access Meridian data must pass an IT vendor security review before a contract is signed."
+          }
+        },
+        {
+          "role": "user",
+          "content": "How long does that review take?",
+          "expected": {
+            "intent": "clarification",
+            "docs": [
+              "IT_Vendor_Security_Review"
+            ],
+            "must_include": [
+              "30 days"
+            ],
+            "reference_answer": "The IT vendor security review concludes within 30 days of receiving complete evidence from the vendor."
+          }
+        },
+        {
+          "role": "user",
+          "content": "And what payment terms should I expect?",
+          "expected": {
+            "intent": "policy_lookup",
+            "docs": [
+              "Finance_Vendor_Payment_Terms"
+            ],
+            "must_include": [
+              "Net 30"
+            ],
+            "reference_answer": "Invoices below INR 5,00,000 are settled on Net 30 payment terms."
+          }
+        },
+        {
+          "role": "user",
+          "content": "Put the whole sequence in order for me.",
+          "expected": {
+            "intent": "clarification",
+            "docs": [
+              "Finance_Procurement_Approval_Matrix",
+              "IT_Vendor_Security_Review",
+              "Finance_Vendor_Payment_Terms"
+            ],
+            "reference_answer": "The required sequence is: 1) Complete IT vendor security review (up to 30 days). 2) Obtain Director approval with quotes. 3) Issue Purchase Order. 4) Process invoice under Net 30 terms."
+          }
+        }
+      ],
+      "setup": {
+        "user_id": "eval_mt_procurement",
+        "history": [],
+        "memory": []
+      },
+      "expected": {
+        "intent": "clarification",
+        "docs": [
+          "Finance_Procurement_Approval_Matrix",
+          "IT_Vendor_Security_Review"
+        ],
+        "must_include": [
+          "Director",
+          "30 days"
+        ],
+        "must_not_include": [],
+        "answer_type": "rule",
+        "refusal_warranted": false,
+        "reference_answer": "Security review (30 days), then Director approval, then a purchase order; invoices under 5,00,000 are Net 30."
+      }
+    },
+    {
+      "id": "mem_tenure_grace",
+      "cohort": "memory",
+      "tags": [
+        "memory",
+        "round_trip"
+      ],
+      "turns": [
+        {
+          "role": "user",
+          "content": "For context, I joined Meridian in 2018 and I'm in the Pune office.",
+          "expected": {
+            "intent": "policy_lookup",
+            "docs": [],
+            "reference_answer": "Noted that you joined Meridian in 2018 and are based in the Pune office. How can I help with your policies or benefits?"
+          }
+        },
+        {
+          "role": "user",
+          "content": "Does the carry-forward grace period apply to me?",
+          "expected": {
+            "intent": "memory_recall",
+            "docs": [
+              "HR_Leave_Policy"
+            ],
+            "must_include": [
+              "30 April"
+            ],
+            "reference_answer": "Yes, the carry-forward grace period applies to you because you joined before 2020. You have until 30 April to use your carried-forward annual leave days."
+          }
+        }
+      ],
+      "setup": {
+        "user_id": "eval_mem_tenure",
+        "history": [],
+        "memory": []
+      },
+      "expected": {
+        "intent": "memory_recall",
+        "docs": [
+          "HR_Leave_Policy"
+        ],
+        "must_include": [
+          "30 April"
+        ],
+        "must_not_include": [],
+        "answer_type": "date",
+        "refusal_warranted": false,
+        "reference_answer": "Yes: the grace period to 30 April applies to employees who joined before 2020, and you joined in 2018."
+      }
+    },
+    {
+      "id": "mem_seeded_department",
+      "cohort": "memory",
+      "tags": [
+        "memory",
+        "seeded"
+      ],
+      "turns": [
+        {
+          "role": "user",
+          "content": "Which approval matrix applies to purchases I raise?",
+          "expected": {
+            "intent": "memory_recall",
+            "docs": [
+              "Finance_Procurement_Approval_Matrix"
+            ],
+            "must_include": [
+              "Director"
+            ],
+            "reference_answer": "The Finance Procurement Approval Matrix applies: purchases up to INR 50,000 are approved by your Manager, INR 50,001 to INR 5,00,000 by a Director, and above INR 5,00,000 by the CFO."
+          }
+        },
+        {
+          "role": "user",
+          "content": "And who signs off above five lakh?",
+          "expected": {
+            "intent": "clarification",
+            "docs": [
+              "Finance_Procurement_Approval_Matrix"
+            ],
+            "must_include": [
+              "CFO"
+            ],
+            "reference_answer": "Purchases above five lakh (INR 5,00,000) require approval from the CFO."
+          }
+        }
+      ],
+      "setup": {
+        "user_id": "eval_mem_department",
+        "history": [],
+        "memory": [
+          "User is a Finance business partner in the Pune office"
+        ]
+      },
+      "expected": {
+        "intent": "memory_recall",
+        "docs": [
+          "Finance_Procurement_Approval_Matrix"
+        ],
+        "must_include": [
+          "Director"
+        ],
+        "must_not_include": [],
+        "answer_type": "rule",
+        "refusal_warranted": false,
+        "reference_answer": "The Finance procurement approval matrix applies: up to 50,000 by manager, 50,001 to 5,00,000 by Director, above that by CFO."
+      }
+    },
+    {
+      "id": "mem_seeded_location",
+      "cohort": "memory",
+      "tags": [
+        "memory",
+        "seeded"
+      ],
+      "turns": [
+        {
+          "role": "user",
+          "content": "What per diem applies to my next domestic trip?",
+          "expected": {
+            "intent": "policy_lookup",
+            "docs": [
+              "Finance_Travel_And_Expense_Policy"
+            ],
+            "must_include": [
+              "2,500"
+            ],
+            "reference_answer": "The domestic per diem is INR 2,500 per day covering meals and incidentals."
+          }
+        },
+        {
+          "role": "user",
+          "content": "What is the hotel cap in Pune for me?",
+          "expected": {
+            "intent": "clarification",
+            "docs": [
+              "Finance_Travel_And_Expense_Policy"
+            ],
+            "must_include": [
+              "4,500"
+            ],
+            "reference_answer": "Pune is classified as a Tier 2 city with a nightly hotel cap of INR 4,500."
+          }
+        }
+      ],
+      "setup": {
+        "user_id": "eval_mem_location",
+        "history": [],
+        "memory": [
+          "User is based in Pune and travels domestically once a month"
+        ]
+      },
+      "expected": {
+        "intent": "policy_lookup",
+        "docs": [
+          "Finance_Travel_And_Expense_Policy"
+        ],
+        "must_include": [
+          "2,500"
+        ],
+        "must_not_include": [],
+        "answer_type": "numeric",
+        "refusal_warranted": false,
+        "reference_answer": "Domestic per diem is 2,500 per day, with hotel caps set by city tier."
+      }
+    },
+    {
+      "id": "mem_roundtrip_oncall",
+      "cohort": "memory",
+      "tags": [
+        "memory",
+        "round_trip"
+      ],
+      "turns": [
+        {
+          "role": "user",
+          "content": "I'm the on-call SRE for the TRITON service this week.",
+          "expected": {
+            "intent": "policy_lookup",
+            "docs": [],
+            "reference_answer": "Acknowledged that you are the on-call SRE for TRITON this week. How can I help with runbooks or escalation paths?"
+          }
+        },
+        {
+          "role": "user",
+          "content": "If it goes down hard, who do I escalate to and how fast?",
+          "expected": {
+            "intent": "memory_recall",
+            "docs": [
+              "Operations_Sev_Incident_Escalation"
+            ],
+            "must_include": [
+              "15 minutes"
+            ],
+            "reference_answer": "For a critical Sev-1 incident on TRITON, you must open the incident bridge within 15 minutes and page the service owner and the on-call engineering manager."
+          }
+        }
+      ],
+      "setup": {
+        "user_id": "eval_mem_oncall",
+        "history": [],
+        "memory": []
+      },
+      "expected": {
+        "intent": "memory_recall",
+        "docs": [
+          "Operations_Sev_Incident_Escalation"
+        ],
+        "must_include": [
+          "15 minutes"
+        ],
+        "must_not_include": [],
+        "answer_type": "numeric",
+        "refusal_warranted": false,
+        "reference_answer": "For a Sev-1 on TRITON, open the bridge within 15 minutes and page the service owner plus the on-call engineering manager."
+      }
+    },
+    {
+      "id": "ref_weather",
+      "cohort": "refusal",
+      "tags": [
+        "refusal",
+        "out_of_scope"
+      ],
+      "turns": [
+        {
+          "role": "user",
+          "content": "What's the weather like in Pune today?"
+        }
+      ],
+      "setup": {
+        "user_id": "eval_ref_weather",
+        "history": [],
+        "memory": []
+      },
+      "expected": {
+        "intent": "out_of_scope",
+        "docs": [],
+        "must_include": [],
+        "must_not_include": [],
+        "answer_type": "refusal",
+        "refusal_warranted": true,
+        "reference_answer": "The assistant should decline: weather is not a company policy topic."
+      }
+    },
+    {
+      "id": "ref_joke",
+      "cohort": "refusal",
+      "tags": [
+        "refusal",
+        "out_of_scope"
+      ],
+      "turns": [
+        {
+          "role": "user",
+          "content": "Tell me a joke about cats."
+        }
+      ],
+      "setup": {
+        "user_id": "eval_ref_joke",
+        "history": [],
+        "memory": []
+      },
+      "expected": {
+        "intent": "out_of_scope",
+        "docs": [],
+        "must_include": [],
+        "must_not_include": [],
+        "answer_type": "refusal",
+        "refusal_warranted": true,
+        "reference_answer": "The assistant should decline: jokes are outside policy scope."
+      }
+    },
+    {
+      "id": "ref_medical",
+      "cohort": "refusal",
+      "tags": [
+        "refusal",
+        "out_of_scope"
+      ],
+      "turns": [
+        {
+          "role": "user",
+          "content": "I've had a headache for three days - what medication should I take?"
+        }
+      ],
+      "setup": {
+        "user_id": "eval_ref_medical",
+        "history": [],
+        "memory": []
+      },
+      "expected": {
+        "intent": "out_of_scope",
+        "docs": [],
+        "must_include": [],
+        "must_not_include": [
+          "\\b\\d+\\s?mg\\b"
+        ],
+        "answer_type": "refusal",
+        "refusal_warranted": true,
+        "reference_answer": "The assistant should decline to give medical advice; this is not a policy question."
+      }
+    },
+    {
+      "id": "ref_competitor_pricing",
+      "cohort": "refusal",
+      "tags": [
+        "refusal",
+        "out_of_scope"
+      ],
+      "turns": [
+        {
+          "role": "user",
+          "content": "What does our competitor charge for their enterprise plan?"
+        }
+      ],
+      "setup": {
+        "user_id": "eval_ref_competitor",
+        "history": [],
+        "memory": []
+      },
+      "expected": {
+        "intent": "out_of_scope",
+        "docs": [],
+        "must_include": [],
+        "must_not_include": [],
+        "answer_type": "refusal",
+        "refusal_warranted": true,
+        "reference_answer": "The assistant should decline: competitor pricing is not in company policy."
+      }
+    },
+    {
+      "id": "ref_write_code",
+      "cohort": "refusal",
+      "tags": [
+        "refusal",
+        "out_of_scope"
+      ],
+      "turns": [
+        {
+          "role": "user",
+          "content": "Write me a Python script that scrapes LinkedIn profiles."
+        }
+      ],
+      "setup": {
+        "user_id": "eval_ref_code",
+        "history": [],
+        "memory": []
+      },
+      "expected": {
+        "intent": "out_of_scope",
+        "docs": [],
+        "must_include": [],
+        "must_not_include": [],
+        "answer_type": "refusal",
+        "refusal_warranted": true,
+        "reference_answer": "The assistant should decline: this is neither a policy question nor an allowed use of the assistant."
+      }
+    }
+  ]
+}

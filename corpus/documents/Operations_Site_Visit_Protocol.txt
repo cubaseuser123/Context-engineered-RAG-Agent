@@ -1,0 +1,40 @@
+Document: Operations_Site_Visit_Protocol
+Department: Operations
+Version: 2.4
+Effective: 2026-01-01
+Owner: Facilities
+Classification: Internal
+---
+# Site Visit Protocol
+
+## 1. Notice
+
+1. Customer, vendor and auditor visits must be registered at least 5 business days in advance.
+2. Visits involving the data centre or hardware lab need 10 business days and the data centre owner's approval.
+3. Emergency visits for incident support are approved by the incident commander and registered retrospectively within one business day.
+
+## 2. Registration
+
+The host registers the visitor name, company, purpose, zones to be visited and arrival time. Facilities issues a visitor badge at reception; the host must be present at sign-in. Visitors under 18 are not permitted in operational zones.
+
+## 3. Safety and PPE
+
+1. Closed-toe shoes are required in the hardware lab.
+2. High-visibility vests and hearing protection are required in the power distribution area.
+3. Photography is prohibited in the data centre unless approved in writing by the data centre owner.
+4. Visitors must follow the fire marshal's instructions during an evacuation.
+
+## 4. Escort and conduct
+
+Visitors are escorted at all times outside reception and ground-floor meeting rooms. Hosts are responsible for their visitors' conduct. Confidential material must be cleared from screens before a visitor enters. Visitors may not connect devices to the corporate network; guest Wi-Fi is available on request.
+
+## 5. Related documents
+
+- Operations_Facility_Access_Control for badges and zones.
+- IT_Data_Classification_Standard for screen and document hygiene.
+- Legal_Contract_Review_Process for NDAs before technical visits.
+- Operations_Equipment_Maintenance for maintenance-window visits.
+
+## 6. Version history
+
+Version 2.4 reduced standard notice from 10 to 5 business days. Version 2.3 added the photography rule. Questions go to Facilities.

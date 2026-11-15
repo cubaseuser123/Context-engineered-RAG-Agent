@@ -1,0 +1,33 @@
+Document: Branded_Merchandise_Inventory
+Department: Finance
+Version: 1.1
+Effective: 2026-01-01
+Owner: Marketing
+Classification: Internal
+---
+# Branded Merchandise Inventory
+
+## 1. Stock
+
+Marketing holds branded merchandise at the Pune office: t-shirts, hoodies, notebooks, bottles and stickers. Stock levels are counted quarterly and reconciled with purchases.
+
+## 2. Issuing
+
+New joiners receive a welcome kit with a t-shirt and notebook. Merchandise for events is requested through the marketing request form two weeks ahead. Bulk requests above 50 units need the Head of Marketing's approval.
+
+## 3. Budget
+
+Merchandise is charged to the marketing envelope under Finance_Quarterly_Budget_Allocation. Unit cost must stay under INR 500; electronics and gift cards are not permitted.
+
+## 4. Storage
+
+Merchandise is stored in the marketing cupboard on the second floor. Do not store personal items there. Leftover stock at the end of the year is donated, not carried into the next budget year.
+
+## 5. Related documents
+
+- Legal_Intellectual_Property_Protection for logo use.
+- Finance_Procurement_Approval_Matrix for bulk orders.
+
+## 6. Version history
+
+Version 1.1 lowered the unit cost cap from INR 750. Questions go to Marketing.

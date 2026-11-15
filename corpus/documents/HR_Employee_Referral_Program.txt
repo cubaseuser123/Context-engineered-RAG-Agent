@@ -1,0 +1,61 @@
+Document: HR_Employee_Referral_Program
+Department: HR
+Version: 2.4
+Effective: 2026-01-01
+Owner: Talent Acquisition
+Classification: Internal
+---
+# Employee Referral Program
+
+## 1. Purpose
+
+Meridian pays employees to refer candidates for open roles because referrals convert better and stay longer than other sources. This document sets the eligibility rules, the bonus amounts and the payment conditions. It applies to all permanent employees and to interns referring for permanent roles.
+
+## 2. Eligibility
+
+1. All permanent employees are eligible, except employees in Talent Acquisition, the hiring manager for the role, and anyone at L6 or above.
+2. A referral is only valid if the candidate is not already in the applicant tracking system. Referrals submitted after the candidate has applied are not eligible.
+3. Employees may refer for any open requisition. Speculative referrals are accepted but do not create a bonus obligation until a matching requisition opens within 90 days.
+4. Referrals of former employees are eligible if the former employee left more than 12 months ago and was not terminated for cause.
+
+## 3. Bonus amounts
+
+1. The standard referral bonus is INR 50,000.
+2. Hard-to-fill roles, listed by Talent Acquisition each quarter, carry INR 75,000.
+3. Referrals for L5 and above carry INR 1,00,000.
+4. A referral for an internship carries INR 10,000, paid at the end of the internship.
+
+## 4. Payment conditions
+
+1. The bonus is paid after the referred employee completes 90 days of continuous employment.
+2. If the referred employee leaves before 90 days, no bonus is paid.
+3. If the referred employee leaves between 90 and 180 days, the bonus is not clawed back.
+4. The referring employee must still be employed on the payment date. Employees serving notice are not paid.
+5. Payment is made in the next payroll cycle after the 90-day mark and is taxed as salary.
+
+## 5. How to refer
+
+1. Submit the referral through the HR system, selecting the requisition and the candidate.
+2. Include the candidate's CV and a short note on why they fit. Referrals without a CV are not processed.
+3. Talent Acquisition acknowledges the referral within three working days.
+4. The referrer receives status updates at application, interview and offer stages.
+5. Recruiters must not share interview feedback with the referrer.
+
+## 6. Multiple referrals
+
+If two employees refer the same candidate, the earlier submission wins. If the submissions are on the same day, the bonus is split equally. A candidate referred by an employee and also sourced by an agency is treated as an agency candidate and no referral bonus is paid.
+
+## 7. Limits
+
+There is no cap on the number of referrals an employee may submit. Quality matters more than volume: referrals that do not meet the minimum requirements for the role three times in a row result in a coaching conversation with the employee's manager.
+
+## 8. Related documents
+
+- HR_Employee_Onboarding_Guide for what happens after the offer.
+- HR_Compensation_Bands for the levels referenced here.
+- Legal_Records_Retention_Schedule for how long referral records are kept.
+- HR_Exit_And_Separation for employees serving notice.
+
+## 9. Version history
+
+Version 2.4 raised the standard bonus from INR 40,000 to INR 50,000. Version 2.3 introduced the hard-to-fill list. Version 2.0 moved payment from the offer date to the 90-day mark to reduce early attrition gaming. Questions go to Talent Acquisition.

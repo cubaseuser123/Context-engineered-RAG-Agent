@@ -1,0 +1,60 @@
+Document: IT_Acceptable_Use_Policy
+Department: IT
+Version: 4.0
+Effective: 2026-01-01
+Owner: Security Engineering
+Classification: Internal
+---
+# Acceptable Use Policy
+
+## 1. Scope
+
+This policy governs use of Meridian devices, accounts, networks and data. It applies to everyone with a company account, including contractors and interns, and continues to apply whenever company data is accessed, wherever that happens.
+
+## 2. Permitted use
+
+1. Company systems are provided for business use.
+2. Incidental personal use is permitted where it is lawful, brief and does not affect performance or security.
+3. Personal use must not involve Confidential or Restricted data, illegal content, gambling, or political campaigning.
+4. Streaming, gaming and large personal downloads are not permitted on the corporate network during core hours.
+
+## 3. Prohibited use
+
+1. Installing unauthorised software, browser extensions or drivers on company devices.
+2. Sharing accounts or credentials, including with teammates.
+3. Connecting company devices to untrusted networks without the VPN.
+4. Copying Confidential data to personal devices or personal cloud storage.
+5. Using removable media for Confidential or Restricted data; USB storage is disabled by default.
+6. Using public AI assistants or translation tools with customer data, source code or unreleased financials.
+7. Mining cryptocurrency, running unauthorised servers, or scanning networks.
+8. Harassment, discrimination or illegal activity using company systems.
+
+## 4. AI and external tools
+
+Approved AI tools are listed in the service catalogue and are reviewed by Security Engineering. Data sent to an approved tool must not exceed its approved classification. Anything not on the list is unapproved, and "it was free" is not an approval. Prompts containing customer data must stay in tools covered by a Data Processing Agreement.
+
+## 5. Devices
+
+1. Company laptops must run the endpoint agent and full-disk encryption.
+2. Lost or stolen devices must be reported within one hour so they can be wiped.
+3. Personal devices may access email and chat only through the approved mobile app with MFA; no company data may be stored locally.
+4. Device repairs go through IT; self-repair voids the warranty and the security configuration.
+
+## 6. Monitoring and privacy
+
+Meridian monitors system logs, network traffic and endpoint health for security and operational purposes. It does not read the content of personal communications. Monitoring data is handled as Confidential and retained per IT_Data_Classification_Standard.
+
+## 7. Violations
+
+Suspected violations are reported to Security Engineering and handled under HR_Grievance_And_Discipline. Serious violations may result in immediate access suspension while an investigation runs. Access suspension is not a disciplinary outcome by itself.
+
+## 8. Related documents
+
+- IT_Access_Control_Standard for credentials and MFA.
+- IT_Data_Classification_Standard for handling rules.
+- IT_Incident_Response_Runbook for reporting a breach.
+- Legal_Data_Privacy_GDPR_Compliance for personal data.
+
+## 9. Version history
+
+Version 4.0 added the AI tool section and disabled USB storage by default. Version 3.2 added the personal-device rules. Version 3.0 merged the former email and internet policies. Questions go to Security Engineering.

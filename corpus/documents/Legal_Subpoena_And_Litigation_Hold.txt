@@ -1,0 +1,50 @@
+Document: Legal_Subpoena_And_Litigation_Hold
+Department: Legal
+Version: 2.2
+Effective: 2026-01-01
+Owner: Head of Legal
+Classification: Internal
+---
+# Subpoena and Litigation Hold
+
+## 1. Immediate steps
+
+1. Anyone who receives a subpoena, court order, regulatory request or formal notice of a dispute must notify Legal within 24 hours.
+2. Do not respond to the requester, confirm receipt, or discuss the matter outside Legal.
+3. Do not delete, edit or move any related record, including chat messages, emails and tickets.
+4. Legal appoints a single point of contact for the matter.
+
+## 2. Litigation hold
+
+1. Legal issues a written hold to the custodians it identifies.
+2. Custodians must acknowledge the hold within two business days.
+3. The hold suspends every deletion rule in Legal_Records_Retention_Schedule, including automated purge jobs.
+4. IT must suspend mailbox and backup deletion for the named custodians until Legal releases the hold.
+5. Any loss of data after a hold is issued must be reported to Legal immediately.
+
+## 3. Preservation scope
+
+Preservation covers documents, emails, chat, tickets, code repositories, meeting recordings and device data. Legal defines the date range and custodian list; anything outside the range is not preserved but must not be destroyed if it may become relevant.
+
+## 4. Collection and review
+
+Collection is performed by IT at Legal's direction, with a documented chain of custody. Review is conducted by Legal and, where required, external counsel. Access to collected material is limited to the matter team.
+
+## 5. Confidentiality
+
+The existence of a subpoena is confidential and must not be discussed with customers, vendors or colleagues outside the matter team unless Legal approves. Breach of confidentiality can itself create legal exposure.
+
+## 6. Release
+
+Legal releases the hold in writing when the matter concludes. Normal retention resumes from the release date, and the retention clock is not shortened by the hold period.
+
+## 7. Related documents
+
+- Legal_Records_Retention_Schedule for normal retention.
+- IT_Data_Classification_Standard for data handling.
+- IT_Acceptable_Use_Policy for communication channels in scope.
+- Legal_Data_Privacy_GDPR_Compliance for personal data in collected material.
+
+## 8. Version history
+
+Version 2.2 added the chat and code repository scope. Version 2.1 set the 24-hour notification window. Questions go to Legal.

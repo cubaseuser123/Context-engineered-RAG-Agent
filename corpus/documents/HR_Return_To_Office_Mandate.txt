@@ -1,0 +1,58 @@
+Document: HR_Return_To_Office_Mandate
+Department: HR
+Version: 3.0
+Effective: 2026-07-01
+Owner: Chief People Officer
+Classification: Internal
+---
+# Return to Office Mandate
+
+## 1. Background
+
+Meridian moved to a hybrid model in 2022. Between 2022 and 2025 the expectation was set locally by each department, which produced inconsistent attendance and made desk planning unreliable. This mandate replaces departmental guidance with a single company-wide minimum. It supersedes all previous versions in full; where a team charter conflicts with this document, this document governs.
+
+## 2. Minimum attendance
+
+1. Effective 1 July 2026, all employees must be on-site a minimum of 4 days per week.
+2. The remaining day may be worked remotely, subject to HR_Remote_Work_Policy.
+3. Employees whose role is designated on-site-only must attend 5 days per week.
+4. Attendance is measured by badge-in events, not by calendar blocks. Two badge-ins on the same day count as one day.
+5. A week containing a public holiday is pro-rated: three on-site days are required in a four-day week.
+
+## 3. Anchor days
+
+Tuesday and Thursday are company anchor days. Every team must have at least 80% attendance on anchor days. Team offsites, customer visits and approved travel count as attendance. Anchor days may be moved for a whole team by the department head with two weeks' notice, but not more than twice per quarter.
+
+## 4. Transition and previous version
+
+Version 2.1 of this mandate, effective 1 September 2025, required 3 days per week. That requirement remains in force until 30 June 2026. Employees and managers planning beyond that date must plan against the 4-day requirement in Section 2. People Operations will not grant individual exceptions to the 4-day minimum; the only permitted variations are statutory accommodation, approved medical accommodation, and the phased return described in HR_Parental_Leave.
+
+## 5. Desk and space allocation
+
+Desks are not assigned. Teams receive a neighbourhood and book desks through the facilities system. Bookings open 14 days ahead and expire at 10:30 on the booked day if not checked in. Meeting rooms are booked separately. Employees who attend fewer than the required days release their desk booking priority to colleagues who attend more.
+
+## 6. Compliance
+
+1. People Operations reports attendance to department heads monthly.
+2. A first month below the minimum triggers a conversation with the manager.
+3. Three consecutive months below the minimum without an approved accommodation is treated as a performance matter and handled under HR_Performance_Review_Process.
+4. Falsifying attendance, including badge-sharing, is a conduct matter under HR_Workplace_Conduct.
+
+## 7. Accommodation
+
+Employees with a disability, a medical condition, a caring responsibility or a statutory right may request an accommodation. Requests go to People Operations with supporting documentation and are decided within 15 working days. Accommodations are reviewed every 12 months. A granted accommodation is recorded against the employee, not the role, and does not create a precedent for the team.
+
+## 8. Cost and travel
+
+Attendance-related commuting is not reimbursable. Employees who travel between offices for an anchor day follow Finance_Travel_And_Expense_Policy. Parking at the Pune campus is allocated under Facilities_Parking_Allocation and is not guaranteed by this mandate.
+
+## 9. Related documents
+
+- HR_Remote_Work_Policy for the remaining remote day and core hours.
+- HR_Parental_Leave for phased return and travel waivers.
+- HR_Performance_Review_Process for how repeated non-attendance is handled.
+- Operations_Facility_Access_Control for badge rules.
+
+## 10. Version history
+
+Version 3.0 raised the minimum from 3 to 4 days effective 1 July 2026 and introduced anchor-day measurement. Version 2.1 set the 3-day minimum. Version 2.0 introduced badge-based measurement. The 2026 change was announced in the all-hands on 12 May 2026 and is not subject to further review before December 2026.

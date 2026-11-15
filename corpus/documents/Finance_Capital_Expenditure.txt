@@ -1,0 +1,57 @@
+Document: Finance_Capital_Expenditure
+Department: Finance
+Version: 2.5
+Effective: 2026-01-01
+Owner: Controller
+Classification: Internal
+---
+# Capital Expenditure Policy
+
+## 1. Definition
+
+A purchase is capital expenditure when it costs more than INR 10,00,000 and provides benefit for more than 12 months. Below that threshold the purchase is expensed in the quarter it is incurred, even if it is hardware. Software subscriptions are expensed unless the contract grants a perpetual licence, in which case the licence fee is capitalised and the support element is expensed.
+
+## 2. Approval
+
+1. Capex requires a business case covering the problem, the options considered, the total cost of ownership, the payback period and the risk of not proceeding.
+2. A payback period longer than 24 months requires the CFO's approval; longer than 36 months requires board approval.
+3. Every capex request must name the budget line in Finance_Quarterly_Budget_Allocation.
+4. Capex above INR 50,00,000 is reviewed by the investment committee, which meets monthly.
+
+## 3. Capitalisation and depreciation
+
+| Asset class | Useful life | Method |
+|---|---|---|
+| Computer hardware | 3 years | Straight line |
+| Network equipment | 5 years | Straight line |
+| Furniture and fixtures | 7 years | Straight line |
+| Perpetual software licences | 3 years | Straight line |
+| Leasehold improvements | Shorter of lease or 5 years | Straight line |
+
+Depreciation starts in the month the asset is available for use, not the month it is paid for. Assets not yet in use are held as capital work in progress and reviewed each quarter.
+
+## 4. Impairment
+
+Assets are reviewed for impairment annually or when there is an indicator such as a product being discontinued. An impairment loss is recognised in the quarter it is identified and reported to the CFO.
+
+## 5. Disposal
+
+1. Disposal requires the asset owner's request and Finance approval.
+2. Proceeds are recorded against the asset's net book value; any gain or loss is recognised in the income statement.
+3. Data-bearing assets must be wiped under IT_Data_Classification_Standard before disposal, with a certificate retained.
+4. Disposals above INR 5,00,000 are reported to the audit committee.
+
+## 6. Leases
+
+Leases longer than 12 months are recognised on the balance sheet in line with the applicable accounting standard. The facilities team maintains the lease register and provides it to Finance quarterly.
+
+## 7. Related documents
+
+- Finance_Procurement_Approval_Matrix for the purchase route.
+- Finance_Fiscal_Year_2026_Audit_Prep for the capex register.
+- IT_Data_Classification_Standard for asset disposal.
+- Legal_Contract_Review_Process for licence terms.
+
+## 8. Version history
+
+Version 2.5 raised the capitalisation threshold from INR 5,00,000 to INR 10,00,000. Version 2.4 added the lease register. Version 2.3 shortened hardware life from 4 to 3 years. Questions go to the Controller.

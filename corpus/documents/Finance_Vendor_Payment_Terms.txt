@@ -1,13 +1,54 @@
+Document: Finance_Vendor_Payment_Terms
+Department: Finance
+Version: 4.5
+Effective: 2026-01-01
+Owner: Accounts Payable
+Classification: Internal
+---
 # Vendor Payment Terms
 
-The Meridian Corp Vendor Payment Terms establish standardized invoicing and remittance procedures for all third-party suppliers. All vendors must register in the TRITON procurement database and maintain a minimum V-SEC tier 1 classification to receive payments. Invoices are processed through the ASCEND accounts payable module, with standard terms set at Net 45 days from receipt of a valid invoice.
+## 1. Default terms
 
-Preferred vendors, designated through the EHRC cycle evaluation process, qualify for accelerated Net 30 terms. Strategic partners holding ZETA partnership status may negotiate custom payment schedules, subject to CFO approval and DASH portal documentation. All invoices must reference a valid purchase order number generated through the NEXUS system. Invoices exceeding $50,000 require secondary authorization from the ZULU financial controls team.
+1. The default payment term for vendor invoices is Net 45 from the invoice date.
+2. The invoice date is the date the invoice is issued, not the date it is received.
+3. Payment runs happen twice a month, on the 10th and the 25th. An invoice falling due between runs is paid on the next run.
+4. Vendors must quote a purchase order number on every invoice; invoices without one are returned unpaid.
 
-The 14-day SLA for invoice verification begins upon receipt in the TRITON system. Discrepancies, including pricing mismatches or quantity disputes, must be resolved within the same 14-day window. Late payment penalties, per MOR-2024-067, accrue at 1.5% per month for invoices paid beyond Net 45. Early payment discounts of 2%/10 are available to vendors who accept remittance within 10 days.
+## 2. Early payment discount
 
-Meridian Corp remits payments via ACH transfer on Tuesdays and Thursdays. International vendors are subject to additional compliance screening through the LEXA module. Currency conversion follows the spot rate on the remittance date, locked at 09:00 UTC. The TRITON system maintains a complete audit trail of all vendor interactions, retained for 7 years under MOR-2025-019.
+1. Where a vendor offers a 2% discount for payment within 10 days, Accounts Payable takes the discount if the cash position allows.
+2. The discount is calculated on the invoice value excluding taxes.
+3. Discounts are recorded as a separate line in the vendor ledger, not netted against the payable.
+4. Vendors offering a discount for payment within 5 days are reviewed by the treasury team before acceptance.
 
-New vendors undergo a 14-day onboarding process, including credit checks, tax verification, and compliance screening through the ASCEND vendor module. The ZETA risk assessment team assigns each vendor a composite risk score, which dictates payment terms and monitoring frequency. Vendors scoring below 72 out of 100 are restricted to Net 60 terms and require quarterly re-evaluation.
+## 3. Invoice validation
 
-Meridian Corp processes approximately 1,200 vendor payments per month across 14 currencies.
+1. A three-way match is required: purchase order, goods receipt and invoice.
+2. Mismatches are resolved with the business owner within 5 working days.
+3. Invoices above INR 10,00,000 require a second Finance review.
+4. Duplicate invoices are flagged by the vendor ledger and are never paid twice.
+
+## 4. Late payment
+
+1. Interest is payable on late invoices at 1% per month where the delay exceeds 30 days beyond the agreed term.
+2. Interest is not payable where the delay is caused by a missing purchase order or a disputed invoice.
+3. Persistent late payment is reported to the CFO monthly.
+
+## 5. Small invoices
+
+Invoices below INR 5,00,000 are settled on Net 30 rather than Net 45. This exception exists to reduce the administrative cost of low-value payables and does not require a contract amendment. Where a contract states Net 45 for a vendor whose invoices are consistently below the threshold, Accounts Payable applies Net 30 and records the deviation in the vendor file. Business owners should expect the shorter term when planning cash.
+
+## 6. Foreign currency
+
+Foreign currency invoices are paid in the invoice currency. The exchange rate is the bank rate on the payment date. Vendors may not require payment in a currency other than the contract currency.
+
+## 7. Related documents
+
+- Finance_Procurement_Approval_Matrix for purchase orders.
+- IT_Vendor_Security_Review for data-handling vendors.
+- Legal_Contract_Review_Process for contract terms.
+- Finance_Fiscal_Year_2026_Audit_Prep for payable evidence.
+
+## 8. Version history
+
+Version 4.5 added the second review for invoices above INR 10,00,000. Version 4.4 introduced the Net 30 exception for invoices below INR 5,00,000. Version 4.0 moved payment runs to twice a month. Questions go to Accounts Payable.

@@ -1,0 +1,59 @@
+Document: Finance_Procurement_Approval_Matrix
+Department: Finance
+Version: 5.2
+Effective: 2026-01-01
+Owner: Finance Operations
+Classification: Internal
+---
+# Procurement Approval Matrix
+
+## 1. Purpose
+
+This matrix defines who may approve a purchase and what evidence is required at each value. It applies to goods and services bought from third parties, including software subscriptions, hardware, professional services and events. It does not apply to travel, which follows Finance_Travel_And_Expense_Policy, or to employee expenses, which follow Finance_Expense_Card_Policy.
+
+## 2. Approval thresholds
+
+| Purchase value (INR) | Approver | Evidence required |
+|---|---|---|
+| 0 to 50,000 | Manager | Quote or price confirmation |
+| 50,001 to 5,00,000 | Director | Two quotes, business justification |
+| Above 5,00,000 | CFO | Three quotes, business case, budget confirmation |
+
+Thresholds apply to the total contract value, not to the annual or monthly instalment. A three-year contract at INR 2,00,000 per year is a INR 6,00,000 purchase and needs CFO approval.
+
+## 3. Quotes and competitive process
+
+1. Purchases above INR 2,00,000 require at least three written quotes unless the vendor is sole-source.
+2. Sole-source purchases require a written justification approved by the CFO.
+3. Renewals of existing software may use the incumbent's quote if the price increase is below 7%; above that, the purchase is re-competed.
+4. Quotes must be dated within 60 days of the approval request.
+
+## 4. Purchase orders
+
+1. A purchase order is mandatory for every purchase above INR 25,000.
+2. Vendors must not start work before the purchase order is issued.
+3. Invoices without a matching purchase order are rejected by Accounts Payable.
+4. The purchase order must reference the budget line in Finance_Quarterly_Budget_Allocation.
+
+## 5. Vendor onboarding
+
+Before the first purchase order, the vendor must be onboarded in the finance system with bank details verified by a second Finance user. Vendors handling company data must also pass IT_Vendor_Security_Review. Contracts must be reviewed under Legal_Contract_Review_Process before signature.
+
+## 6. Splitting
+
+Splitting a purchase into smaller orders to avoid an approval threshold is prohibited and is treated as a control breach. Finance reviews purchases from the same vendor within a rolling 90-day window and aggregates them for threshold purposes.
+
+## 7. Emergency purchases
+
+A purchase needed to resolve an active Sev-1 may be approved verbally by the CFO or the incident commander, with the purchase order raised within two business days. Emergency purchases are reported in the monthly Finance review.
+
+## 8. Related documents
+
+- Finance_Vendor_Payment_Terms for when the invoice is paid.
+- Finance_Quarterly_Budget_Allocation for the budget line.
+- IT_Vendor_Security_Review for data-handling vendors.
+- Legal_Contract_Review_Process for contract signature.
+
+## 9. Version history
+
+Version 5.2 raised the Director threshold from INR 3,00,000 to INR 5,00,000. Version 5.1 added the 90-day aggregation rule. Version 5.0 merged the software and services matrices. Questions go to Finance Operations.

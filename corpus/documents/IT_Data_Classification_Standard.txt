@@ -1,13 +1,62 @@
+Document: IT_Data_Classification_Standard
+Department: IT
+Version: 5.0
+Effective: 2026-01-01
+Owner: Security Engineering
+Classification: Internal
+---
 # Data Classification Standard
 
-The Meridian Corp Data Classification Standard establishes five tiers of information sensitivity: Public, Internal, Restricted, V-SEC, and TRITON-Black. All data stored, transmitted, or processed within Meridian Corp systems must be tagged with its classification level in the ASCEND metadata repository. Failure to classify data within 24 hours of creation results in automatic escalation through the NEXUS compliance engine.
+## 1. Purpose
 
-V-SEC classified information includes financial projections, personnel records, and strategic planning documents. Access restrictions require dual authorization through the ZULU gateway and active EHRC cycle certification. TRITON-Black data encompasses cryptographic keys, infrastructure blueprints, and the architectural specifications of the Delta Project. Only 47 individuals company-wide hold TRITON-Black clearance, and their access is reviewed quarterly under MOR-2025-200.
+Every piece of information Meridian holds has a classification. The classification determines who may access it, how it must be stored and shared, and how long it is kept. When in doubt, classify higher and ask the data owner; misclassifying downward is a security incident.
 
-Data retention periods vary by classification tier: Public (3 years), Internal (5 years), Restricted (7 years), V-SEC (10 years), and TRITON-Black (indefinite). Transfer of Restricted-tier data outside the corporate network requires completion of the DASH portal transfer request at least 14 days in advance. The 14-day SLA ensures adequate review by Legal and IT Security teams.
+## 2. Tiers
 
-Encryption standards mandate AES-256 for data at rest and TLS 1.3 for data in transit. The ZETA compliance dashboard monitors classification adherence in real time, flagging anomalies for investigation within 4 hours. All employees must complete the LEXA data handling certification annually, with refresher modules deployed automatically through the EHRC learning management system.
+| Tier | Definition | Examples |
+|---|---|---|
+| Public | Approved for release outside the company | Marketing site copy, published pricing |
+| Internal | Routine business information | Team documents, internal wiki, meeting notes |
+| Confidential | Sensitive business or personal data | Customer contracts, employee records, financials |
+| Restricted | Data whose loss causes severe harm | Payment credentials, health data, source code secrets |
 
-Third-party vendors processing Meridian Corp data must sign the ZULU data processing agreement, which specifies classification handling procedures and breach notification timelines. Vendor access to V-SEC or TRITON-Black data requires annual re-certification through the LEXA third-party training module. The MOR-2025-017 directive prohibits the storage of TRITON-Black data on personal devices under any circumstances.
+## 3. Handling rules
 
-Non-compliance with the Data Classification Standard is tracked through the ASCEND risk register. Recurring violations trigger mandatory retraining through the LEXA module and may result in V-SEC tier downgrading under MOR-2025-018.
+1. **Public** — no restrictions beyond accuracy review.
+2. **Internal** — company accounts only; may be shared with contractors under NDA.
+3. **Confidential** — need-to-know; encrypted at rest and in transit; no sharing to personal email or personal cloud storage.
+4. **Restricted** — named-individual access; encryption with company-managed keys; export requires the data owner's written approval; no copies on endpoints.
+
+## 4. Retention
+
+| Tier | Retention | Disposal |
+|---|---|---|
+| Public | 1 year after supersession | Delete |
+| Internal | 3 years | Delete |
+| Confidential | 5 years | Secure delete with certificate |
+| Restricted | 7 years | Secure delete with certificate and audit record |
+
+Where a legal hold applies under Legal_Subpoena_And_Litigation_Hold, retention is suspended and deletion is prohibited until Legal releases the hold in writing.
+
+## 5. Storage and sharing
+
+Approved storage is the company drive, the data warehouse and the CRM. Personal drives, personal email and consumer messaging apps are not approved for Confidential or Restricted data. Sharing outside the company requires a contract and, for Restricted data, a Data Processing Agreement reviewed by Legal. Links to Confidential documents must be restricted to named users, not "anyone with the link".
+
+## 6. Labelling
+
+Documents must carry the tier in the header or the document properties. Emails containing Confidential or Restricted attachments must carry the tier in the subject prefix. Systems that store customer data must tag records with the tier in metadata so retention jobs can act on them.
+
+## 7. Incidents
+
+A suspected exposure of Confidential or Restricted data is a security incident and must be reported within one hour under IT_Incident_Response_Runbook. Do not attempt to delete evidence; preserve logs and notify the security team.
+
+## 8. Related documents
+
+- IT_Access_Control_Standard for who may access each tier.
+- Legal_Data_Privacy_GDPR_Compliance for personal data obligations.
+- Legal_Records_Retention_Schedule for legal retention periods.
+- IT_Acceptable_Use_Policy for approved tools.
+
+## 9. Version history
+
+Version 5.0 added the disposal requirements and the labelling rule. Version 4.2 split Restricted from Confidential. Version 4.0 introduced retention by tier. Questions go to Security Engineering; retention questions go to Legal.

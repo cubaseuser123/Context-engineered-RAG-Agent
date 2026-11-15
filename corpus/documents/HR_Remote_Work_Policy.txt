@@ -1,0 +1,65 @@
+Document: HR_Remote_Work_Policy
+Department: HR
+Version: 5.1
+Effective: 2026-01-15
+Owner: People Operations
+Classification: Internal
+---
+# Remote Work Policy
+
+## 1. Scope
+
+This policy governs remote work for all permanent employees whose role has been designated remote-eligible by their department head. Roles that require physical presence, including facilities, hardware lab and reception, are not eligible. Eligibility is reviewed each January and recorded against the role, not the individual, so a promotion into an ineligible role ends the arrangement automatically at the start of the next month.
+
+## 2. Remote days
+
+1. Eligible employees may work remotely up to 3 days per week.
+2. Remote days are agreed with the manager in advance and recorded in the team calendar at least one week ahead.
+3. No more than 10 consecutive remote working days are permitted without department head approval.
+4. Employees on a performance improvement plan are not eligible for remote work until the plan concludes.
+5. New joiners work on-site for their first 30 days regardless of role eligibility.
+
+Remote days are not an entitlement to a fixed pattern. A manager may require attendance on a specific day where a customer visit, audit or team workshop requires it, with at least two working days' notice.
+
+## 3. Core hours
+
+1. Core collaboration hours are 10:00 to 16:00 IST for employees based in India, and the local equivalent for other offices.
+2. Employees must be reachable on chat and video during core hours.
+3. Outside core hours, employees may organise their day as they choose, provided the weekly contracted hours are met.
+4. Meetings involving more than four participants must be scheduled inside core hours.
+5. On-call rotations follow the Operations_Sev_Incident_Escalation runbook and are exempt from core hours during an active incident.
+
+## 4. Workspace and equipment
+
+1. Employees receive a one-time home office allowance of INR 25,000, claimed through the expense system with receipts.
+2. The allowance may be used for a desk, chair, monitor, lighting or broadband installation. It may not be used for rent, utilities or personal devices.
+3. Equipment supplied by IT remains company property and must be returned within 14 days of leaving the company.
+4. Employees are responsible for a reliable internet connection of at least 25 Mbps down and 5 Mbps up.
+5. Where a power or network outage lasts more than four hours, the employee must inform their manager and may work from an office or take the day as annual leave.
+
+## 5. Security requirements
+
+Remote work is subject to the IT_Access_Control_Standard and the IT_Acceptable_Use_Policy. In summary: company laptops only, full-disk encryption enabled, VPN required for internal systems, no work on public or shared computers, and screens must not be visible to others in public spaces. Confidential material must not be printed at home. A security incident arising from a remote workspace must be reported within one hour to the security team.
+
+## 6. Cross-border remote work
+
+Working from another country is not covered by this policy and requires a separate tax and immigration review led by People Operations. Requests must be raised 45 days in advance. Approval is limited to 20 working days per year and is not available to employees in Finance, Legal or Payroll because of data residency constraints.
+
+## 7. Attendance and performance
+
+Remote work does not change performance expectations. Managers assess output, not presence. Persistent failure to meet agreed deliverables while remote is handled under the Performance Review Process, not by withdrawing remote eligibility as a disciplinary measure. Withdrawal of eligibility requires a documented business reason and 30 days' notice.
+
+## 8. Hybrid meetings
+
+Every meeting with at least one remote participant must have a video link, a shared agenda and a designated note-taker. Decisions must be written in the meeting notes within one working day. Whiteboard-only sessions must be photographed and shared.
+
+## 9. Related documents
+
+- HR_Return_To_Office_Mandate for the minimum on-site requirement.
+- HR_Leave_Policy for leave during remote arrangements.
+- IT_Access_Control_Standard for device and access rules.
+- Finance_Travel_And_Expense_Policy for travel between offices.
+
+## 10. Version history
+
+Version 5.1 reduced the advance notice for a required on-site day from five days to two after the 2025 employee survey. Version 5.0 introduced the role-based eligibility model. Version 4.3 added the cross-border restriction for Finance, Legal and Payroll. Questions go to People Operations; security questions go to the security team.

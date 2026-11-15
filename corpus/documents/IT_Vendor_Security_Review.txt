@@ -1,0 +1,54 @@
+Document: IT_Vendor_Security_Review
+Department: IT
+Version: 3.1
+Effective: 2026-01-01
+Owner: Security Engineering
+Classification: Internal
+---
+# Vendor Security Review
+
+## 1. When a review is required
+
+Any third party that will store, process or access Meridian data must pass a security review before a contract is signed. This includes SaaS tools, contractors with system access, managed services and data processors. A review is not required for vendors that receive only Public information, but the classification must be recorded.
+
+## 2. Process and timelines
+
+1. The business owner submits the vendor request with the intended data classification and integration scope.
+2. Security Engineering sends the standard questionnaire within 2 working days.
+3. The vendor returns the questionnaire and evidence. The review concludes within 30 days of receiving complete evidence.
+4. Reviews requiring a penetration test summary or a Data Processing Agreement take up to 45 days.
+5. Contracts must not be signed before the review is recorded as passed.
+
+## 3. Evidence requirements
+
+1. SOC 2 Type II is required for any vendor processing Confidential or Restricted data. A SOC 2 Type I is accepted only with a remediation plan and a follow-up date.
+2. ISO 27001 certification is accepted in place of SOC 2 where the scope covers the service in question.
+3. Vendors without either certification require a documented compensating review by Security Engineering and approval from the CTO.
+4. Encryption at rest and in transit must be evidenced.
+5. Sub-processors must be listed and approved; unreported sub-processors are a contractual breach.
+
+## 4. Data processing terms
+
+Where personal data is involved, Legal_Data_Privacy_GDPR_Compliance requires a Data Processing Agreement. The DPA must cover purpose limitation, breach notification within 72 hours, deletion on termination and audit rights. Vendors that cannot accept the standard terms are escalated to Legal.
+
+## 5. Ongoing monitoring
+
+1. Confidential and Restricted vendors are reassessed annually.
+2. A vendor security incident must be reported to Meridian within 72 hours under the DPA.
+3. Access granted to vendor staff is reviewed quarterly with the vendor's named contacts.
+4. Vendors that fail two consecutive reassessments are placed on a remediation plan and may be terminated by the business owner.
+
+## 6. Exceptions
+
+An exception requires the CTO's written approval, a compensating control and an expiry date no later than 90 days. Exceptions are reported to the security committee monthly.
+
+## 7. Related documents
+
+- IT_Access_Control_Standard for vendor accounts.
+- Legal_Contract_Review_Process for the contract itself.
+- Finance_Vendor_Payment_Terms for payment after approval.
+- IT_Data_Classification_Standard for scoping the data.
+
+## 8. Version history
+
+Version 3.1 shortened the standard review from 45 to 30 days. Version 3.0 made SOC 2 Type II mandatory for Confidential data. Version 2.4 added sub-processor approval. Questions go to Security Engineering.

@@ -1,0 +1,53 @@
+Document: HR_Grievance_And_Discipline
+Department: HR
+Version: 2.6
+Effective: 2026-01-01
+Owner: People Operations
+Classification: Internal
+---
+# Grievance and Discipline Policy
+
+## 1. Scope
+
+This policy covers complaints about treatment at work and the process for disciplining conduct that falls below the standard in HR_Workplace_Conduct. Performance shortfalls are handled under HR_Performance_Review_Process, not here. Complaints of harassment or discrimination are routed to the POSH committee or the ethics line and are not delayed by this process.
+
+## 2. Raising a grievance
+
+1. A grievance must be raised within 10 working days of the event or of the employee becoming aware of it.
+2. It may be raised verbally or in writing with the manager, the department head, People Operations or the ethics line.
+3. A written grievance must state what happened, when, who was involved and what outcome is sought.
+4. Retaliation against a person who raises a grievance is itself a disciplinary matter and is investigated separately.
+
+## 3. Resolution stages
+
+1. **Informal resolution.** The manager or People Operations attempts resolution within 5 working days. Most interpersonal issues end here.
+2. **Formal inquiry.** If informal resolution fails, People Operations appoints an investigator who is not in the complainant's reporting line. The inquiry concludes within 21 working days, extendable once by 14 days with written notice.
+3. **Outcome.** The investigator issues written findings: upheld, partially upheld or not upheld, with reasons and any recommended action.
+4. **Appeal.** Either party may appeal within 10 working days to the Head of People. The appeal is decided within 15 working days and is final.
+
+## 4. Discipline
+
+1. Disciplinary action ranges from a documented verbal warning to termination, depending on severity and repetition.
+2. Before any formal action the employee is told the allegation in writing and given at least 48 hours to respond.
+3. The employee may be accompanied by a colleague at any meeting.
+4. A first written warning remains on file for 12 months. A final written warning remains for 24 months.
+5. Termination for cause requires the Head of People and the department head to sign off.
+
+## 5. Suspension
+
+Suspension during an investigation is paid and is not a disciplinary outcome. It is used only where the employee's presence creates a risk to others, to evidence or to the investigation. Suspension is reviewed every 10 working days and must not exceed 30 days without the Head of People's approval.
+
+## 6. Records and confidentiality
+
+Investigation records are kept separately from the personnel file and are accessible only to People Operations, the investigator and, where legally required, Legal. Records are retained per Legal_Records_Retention_Schedule. Participants must not discuss an active investigation outside the process.
+
+## 7. Related documents
+
+- HR_Workplace_Conduct for the standard being enforced.
+- HR_Performance_Review_Process for capability issues.
+- HR_Exit_And_Separation for separation following discipline.
+- Legal_Records_Retention_Schedule for retention periods.
+
+## 8. Version history
+
+Version 2.6 shortened the inquiry window from 30 to 21 working days. Version 2.5 added the appeal route. Version 2.0 separated performance from conduct. Questions go to People Operations.

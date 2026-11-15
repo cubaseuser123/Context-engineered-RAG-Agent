@@ -1,0 +1,37 @@
+Document: Cloud_Cost_Optimisation_Tips
+Department: IT
+Version: 1.6
+Effective: 2026-01-01
+Owner: Platform Engineering
+Classification: Internal
+---
+# Cloud Cost Optimisation Tips
+
+## 1. Right-size first
+
+Most savings come from removing idle capacity, not from discount programmes. Review instance utilisation monthly; anything below 20% CPU for 14 days is a candidate for downsizing or consolidation.
+
+## 2. Storage
+
+Move objects untouched for 90 days to infrequent-access storage. Delete unattached volumes and old snapshots. Bucket lifecycle rules must be set at creation, not added later.
+
+## 3. Databases
+
+Use reserved capacity for steady-state databases and on-demand for spiky workloads. Review read replicas quarterly; a replica serving no reads is pure cost.
+
+## 4. Tagging
+
+Every resource must carry owner, team and environment tags. Untagged resources are reported weekly and deleted after 30 days if no owner claims them.
+
+## 5. Reporting
+
+The cost dashboard is available to every engineering manager. Budget alerts fire at 80% and 100% of the monthly envelope.
+
+## 6. Related documents
+
+- Finance_Quarterly_Budget_Allocation for the engineering envelope.
+- IT_Change_Management for capacity changes.
+
+## 7. Version history
+
+Version 1.6 added the untagged-resource deletion rule. Questions go to Platform Engineering.

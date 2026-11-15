@@ -1,0 +1,65 @@
+Document: HR_Leave_Policy
+Department: HR
+Version: 4.2
+Effective: 2026-01-01
+Owner: People Operations
+Classification: Internal
+---
+# Annual Leave and Carry-Forward Policy
+
+## 1. Purpose and scope
+
+This policy sets out how paid annual leave is earned, requested, approved and carried forward at Meridian Technologies. It applies to all permanent employees in India, Singapore and the United Kingdom who are on payroll as of 1 January 2026. Contractors, interns and staff on fixed-term agreements shorter than six months are covered by their engagement letter instead and must not use the leave balances described here. Where a local statutory entitlement exceeds the entitlement in this policy, the statutory minimum applies and the difference is reported by People Operations in the quarterly compliance pack.
+
+## 2. Entitlement
+
+1. Full-time employees accrue 24 days of paid annual leave per calendar year.
+2. Accrual is monthly and pro-rated from the date of joining. An employee joining on the 15th of a month accrues half of that month's entitlement.
+3. Part-time employees accrue on a pro-rata basis using contracted hours divided by 40.
+4. Employees on probation accrue leave from their first day but may not take more than five days until probation is confirmed.
+5. Unused annual leave may be carried forward into the following calendar year up to a maximum of 12 days.
+6. Carried-forward days must be used by 31 March of the year into which they were carried. Any balance remaining after 31 March is forfeited without payment in lieu.
+
+Carry-forward is calculated by the payroll system on 31 December and appears on the January payslip. Employees who believe the figure is wrong must raise a ticket with People Operations within 30 days; corrections after that date require Finance approval because the provision has already been booked.
+
+## 3. Requesting leave
+
+1. Leave must be requested in the HR system at least 10 working days before the first day of absence.
+2. Requests of five consecutive days or more require approval from the employee's manager and from the department head.
+3. Requests spanning a quarter end are automatically routed to the Finance business partner for the department.
+4. Leave taken without approval is recorded as unpaid absence until regularised, and regularisation must happen within five working days of return.
+5. During a declared incident (Sev-1 or Sev-2), approved leave for on-call staff may be cancelled by the incident commander. Cancelled days are restored in full and are exempt from the carry-forward cap for that year.
+
+## 4. Sick leave and its interaction with annual leave
+
+Sick leave is a separate balance of 12 days per year and does not interact with annual leave. An employee who falls ill during approved annual leave may convert the affected days to sick leave by submitting a medical certificate within seven days of returning. Conversion is not available for single-day absences. Sick leave does not carry forward and is not encashed.
+
+## 5. Encashment
+
+1. Employees may encash up to five days of annual leave once per year, in the December payroll cycle.
+2. Encashment is paid at basic salary divided by 26.
+3. Employees serving notice are not eligible for encashment.
+4. Encashment is not available for carried-forward days; only days accrued in the current year may be encashed.
+
+## 6. Public holidays and office closures
+
+Meridian observes 12 public holidays per year, published each November for the following year. The annual office closure between 24 December and 1 January is not a public holiday; employees must use annual leave for working days in that window unless their team has agreed a coverage rota. Coverage rotas must be published by 1 December and are capped at two consecutive days per employee.
+
+## 7. Transitional provision for long-tenured employees
+
+Employees who joined Meridian before 1 January 2020 retain a grace period for carried-forward leave. For this group only, carried-forward days may be used until 30 April instead of 31 March. This provision was introduced when the leave year was aligned to the calendar year and is reviewed annually by the People Operations committee. It does not extend to days carried forward from a second consecutive year, which lapse on 31 March in all cases. Managers are asked to confirm eligibility in the HR system before approving April leave that draws on a carried balance.
+
+## 8. Records, reporting and audit
+
+People Operations reports leave liability to Finance monthly. The report includes accrued-but-untaken days, carried-forward days by employee, and days forfeited in the last quarter. Internal Audit samples 25 employees each quarter and checks that approvals exist for every absence longer than three days. Repeated failure to record leave is treated as a performance issue under the Attendance and Timekeeping standard rather than as a disciplinary matter under the Grievance and Discipline policy.
+
+## 9. Related documents
+
+- HR_Parental_Leave for maternity, paternity and adoption entitlements.
+- HR_Remote_Work_Policy for remote days and core hours.
+- HR_Return_To_Office_Mandate for office attendance requirements.
+- Finance_Quarterly_Budget_Allocation for the leave-liability provision.
+
+## 10. Version history
+
+Version 4.2 clarified the interaction between cancelled on-call leave and the carry-forward cap after the October 2025 incident review. Version 4.1 introduced the five-day encashment limit. Version 4.0 replaced the financial-year leave cycle with a calendar-year cycle, which is the change that created the transitional provision in Section 7. Questions about this policy go to the People Operations shared mailbox; questions about a specific balance go to payroll.

@@ -1,13 +1,64 @@
-# Fiscal Year 2026 Audit Preparation
+Document: Finance_Fiscal_Year_2026_Audit_Prep
+Department: Finance
+Version: 1.6
+Effective: 2026-03-01
+Owner: Controller
+Classification: Confidential
+---
+# FY2026 Audit Preparation
 
-The Meridian Corp Fiscal Year 2026 Audit Preparation Guide establishes the framework for external review by the independent auditing firm contracted under MOR-2025-041. The audit scope encompasses all divisions, including the TRITON system infrastructure and the Delta Project financial trail. Preparation activities commence 90 days before the audit start date, with the EHRC cycle coordination team managing the timeline.
+## 1. Scope
 
-All departments must submit supporting documentation through the ASCEND audit module within the initial 14-day collection window. Required materials include general ledgers, bank reconciliations, fixed asset registers, and V-SEC classified contract files. The ZETA compliance engine pre-scans submissions for anomalies, flagging discrepancies exceeding $1,000 or transactions lacking proper NEXUS workflow approval.
+This document sets the schedule and evidence requirements for the statutory audit of the financial year ending 31 March 2026. It applies to Finance, Legal, HR and every department that holds evidence the auditor will request.
 
-IT is responsible for provisioning auditor access to the TRITON system view-only environment, configured under a restricted V-SEC tier 2 classification. Access credentials must be rotated every 7 days during the audit period. The ZULU security team monitors all auditor activity in real time, with logs archived in the LEXA repository for post-audit review.
+## 2. Timeline
 
-The 14-day SLA applies to all document retrieval requests issued by the audit team. Interviews with key personnel are scheduled through the DASH portal, with availability confirmed 48 hours in advance. The MOR-2024-092 directive mandates that all audit findings be addressed within 30 days of report issuance. Previous fiscal year deficiencies are tracked through the EHRC cycle improvement register and reviewed during quarterly board presentations.
+| Milestone | Date |
+|---|---|
+| Books closed | 10 April 2026 |
+| Preliminary trial balance | 15 April 2026 |
+| PBC evidence pack due | 22 April 2026 |
+| Fieldwork starts | 27 April 2026 |
+| Fieldwork ends | 12 June 2026 |
+| Draft audit report | 26 June 2026 |
+| Board approval of accounts | 15 July 2026 |
 
-Legal Counsel must review all audit-related correspondence before transmission to external parties. The LEXA audit documentation module ensures version control and access logging for all materials shared with auditors. Any disputed findings are escalated to the Audit Appeals Board, which convenes within the standard 14-day SLA window to render a decision.
+The accounting freeze begins on 15 April. After the freeze, journals require the Controller's approval and are reported to the audit committee.
 
-The LEXA audit preparation checklist contains 87 items that each department must complete before the auditors arrive.
+## 3. Evidence (PBC list)
+
+1. Bank reconciliations for all accounts, signed by the preparer and reviewer.
+2. Accounts receivable ageing and the bad debt provision working.
+3. Inventory count sheets and the count reconciliation.
+4. Payroll reconciliation to the statutory filings.
+5. Vendor statements for the top 30 vendors by spend.
+6. Contract register with the eight largest customer contracts.
+7. Capital expenditure register with capitalisation evidence.
+8. Related-party transaction schedule, including board declarations.
+
+## 4. Responsibilities
+
+Finance owns the PBC pack. Legal owns the contract register and litigation schedule. HR owns payroll and gratuity workings. Department heads own their expense evidence and must respond to requests within 3 working days. Requests not answered within 5 working days escalate to the CFO.
+
+## 5. Sampling
+
+The auditor selects samples after fieldwork begins. Finance must be able to produce supporting documents for any transaction within one business day. Documents stored only in email are not acceptable evidence; the finance system or the contract repository is the record of truth.
+
+## 6. Segregation of duties
+
+The preparer and the reviewer of any reconciliation must be different people. Where the team is too small, the Controller performs the review and documents it. This is checked by the auditor and any exception must be reported in the management letter.
+
+## 7. Findings
+
+Findings are tracked in a remediation register with an owner and a due date. High-severity findings are reported to the audit committee quarterly until closed. Repeated findings are escalated to the CEO.
+
+## 8. Related documents
+
+- Finance_Quarterly_Budget_Allocation for accruals.
+- Finance_Vendor_Payment_Terms for payable evidence.
+- Finance_Capital_Expenditure for the capex register.
+- Legal_Records_Retention_Schedule for retention of audit evidence.
+
+## 9. Version history
+
+Version 1.6 moved the freeze from 20 April to 15 April. Version 1.5 added the related-party schedule. Questions go to the Controller.

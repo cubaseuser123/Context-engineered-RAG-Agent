@@ -1,11 +1,67 @@
+Document: Legal_Data_Privacy_GDPR_Compliance
+Department: Legal
+Version: 4.4
+Effective: 2026-01-01
+Owner: Data Protection Officer
+Classification: Internal
+---
 # Data Privacy and GDPR Compliance
 
-The Meridian Corp Data Privacy and GDPR Compliance Policy governs the collection, processing, and retention of personal data for all employees, customers, and partners. As a data controller under the EHRC cycle privacy framework, Meridian Corp adheres to the seven GDPR principles across all TRITON system operations. The ASCEND privacy dashboard monitors compliance metrics in real time.
+## 1. Scope
 
-Data subjects retain the right to access, rectify, erase, and port their personal information. All requests must be submitted through the DASH portal and acknowledged within 72 hours. The Legal team resolves standard requests within the 14-day SLA. Complex requests involving V-SEC classified systems or TRITON-Black archives may extend to 30 days with appropriate notification through the ZETA communications tool.
+This policy governs the processing of personal data of customers, employees, candidates and website visitors. It applies to every team and every system, including systems bought by a department without Legal involvement. Where local law is stricter than this policy, the stricter rule applies.
 
-Consent is managed through the LEXA consent management platform, with granular opt-in controls for marketing communications, data sharing, and analytics tracking. The NEXUS system maintains a complete audit trail of all consent interactions, updated in real time. Data breaches are reported to the supervisory authority within 72 hours under MOR-2024-051, with affected individuals notified without undue delay.
+## 2. Lawful basis
 
-Meridian Corp limits data transfers outside the European Economic Area to jurisdictions with adequacy decisions or parties under standard contractual clauses. The ZULU data protection team conducts impact assessments for all new processing activities involving high-risk personal data. Record retention follows the EHRC cycle schedule: employee data (7 years), customer data (10 years), and sensitive health data (50 years). The TRITON encryption protocol ensures all personal data is protected at rest and in transit.
+Every processing activity needs a lawful basis recorded in the processing register: contract, legal obligation, legitimate interest, consent or vital interest. Marketing consent must be opt-in and separately recorded; pre-ticked boxes are not consent. Legitimate interest assessments are documented by the DPO.
 
-Privacy impact assessments are mandatory for all new systems processing personal data, regardless of classification tier. The ASCEND privacy module guides departments through a 14-step assessment process, with results reviewed by the Data Protection Officer. High-risk processing activities require sign-off from the Legal team and the ZETA compliance committee before system deployment. Annual privacy training is delivered through the LEXA platform.
+## 3. Data subject rights
+
+1. A data subject access request (DSAR) must be answered within 30 days of receipt.
+2. The 30-day clock starts when the request reaches the privacy mailbox, not when the team begins work.
+3. Identity must be verified before data is released; verification must not require excessive documentation.
+4. Erasure requests are honoured unless a legal retention obligation applies under Legal_Records_Retention_Schedule.
+5. Requests are logged, and the log is reviewed monthly by the DPO.
+
+## 4. Breach notification
+
+1. A suspected personal data breach must be reported to the DPO within 24 hours of discovery.
+2. The DPO assesses whether the breach is notifiable; a notifiable breach is reported to the regulator within 72 hours.
+3. Affected individuals are informed without undue delay where the breach is likely to result in high risk.
+4. A breach log is maintained for five years.
+
+## 5. Vendors and transfers
+
+Vendors processing personal data require a Data Processing Agreement under IT_Vendor_Security_Review. Transfers outside the EEA require an adequacy decision or standard contractual clauses. A transfer impact assessment is required for any new destination country.
+
+## 6. Privacy by design
+
+New systems and features must complete a data protection impact assessment before launch where they process sensitive data, profile individuals or use new technology. The DPIA is reviewed by the DPO and stored with the project record.
+
+## 7. Training and audit
+
+All employees complete privacy training annually. The DPO audits two teams per quarter against the processing register and reports findings to the audit committee.
+
+## 8. Related documents
+
+- IT_Data_Classification_Standard for data tiers.
+- Legal_Records_Retention_Schedule for retention.
+- IT_Vendor_Security_Review for vendor DPAs.
+- IT_Incident_Response_Runbook for incident handling.
+
+## 9. Version history
+
+Version 4.4 reduced the internal breach reporting window from 48 to 24 hours. Version 4.3 added the DPIA requirement. Questions go to the DPO.
+## Annex A. Request and breach handling
+
+Data subject requests arrive through the privacy mailbox, which is monitored daily. Each request is logged with the date of receipt, the requester, the right exercised and the systems that may hold the data. The 30-day clock starts at receipt; an extension is available only where the request is complex, and the requester is told within those 30 days.
+
+The privacy team locates data using the processing register rather than memory. Where data sits with a vendor, the vendor is asked for an export under the DPA and the response is checked before it is sent on.
+
+Erasure requests are checked against retention obligations first. Where a legal obligation requires retention, the requester is told which records are kept and why, and the remainder is deleted. Deletions are evidenced by a system log or a vendor confirmation.
+
+Breach handling runs as a playbook: contain, assess, decide and record. The DPO decides notifiability and the decision is written down even when the answer is no. A breach affecting more than 500 individuals, or any breach involving special-category data, is escalated to the CEO and Legal.
+
+The processing register lists each activity, its purpose, lawful basis, data categories, recipients, retention period and the systems involved. Owners update it when a system or purpose changes, and the DPO audits it quarterly.
+
+Privacy training completion and DPIA outcomes are reported to the audit committee every quarter.

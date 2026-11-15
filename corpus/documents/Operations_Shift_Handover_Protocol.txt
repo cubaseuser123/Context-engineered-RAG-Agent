@@ -1,0 +1,44 @@
+Document: Operations_Shift_Handover_Protocol
+Department: Operations
+Version: 2.1
+Effective: 2026-01-01
+Owner: Operations
+Classification: Internal
+---
+# Shift Handover Protocol
+
+## 1. Purpose
+
+Support and operations run three shifts. This protocol ensures nothing is lost between them. It applies to the service desk, the data centre operations team and the on-call rotation.
+
+## 2. Overlap
+
+1. Shifts overlap by 15 minutes.
+2. The outgoing shift may not leave before the handover is acknowledged.
+3. If the incoming person is late, the outgoing person stays until relief arrives or a manager approves a gap in coverage.
+
+## 3. Handover sheet
+
+The handover sheet records: open tickets with priority, systems in a degraded state, changes in the last 24 hours, scheduled maintenance in the next 24 hours, and anything a customer is waiting on. It is written in the shared operations log, not in a personal note.
+
+## 4. Verbal handover
+
+1. Read the sheet together, not separately.
+2. Highlight anything that could escalate within the shift.
+3. Confirm the acknowledgement in the log with initials and time.
+4. Questions are asked during the overlap, not after the outgoing person has left.
+
+## 5. During an active incident
+
+An incident handover follows IT_Incident_Response_Runbook. The incident commander confirms the handover in the incident channel and the scribe records it in the timeline. The new shift does not restart the incident clock.
+
+## 6. Related documents
+
+- IT_Incident_Response_Runbook for incident roles.
+- Operations_Sev_Incident_Escalation for escalation.
+- Operations_Equipment_Maintenance for planned work in the window.
+- HR_Leave_Policy for shift cover during leave.
+
+## 7. Version history
+
+Version 2.1 reduced the overlap from 30 to 15 minutes after the scheduling review. Version 2.0 introduced the shared log. Questions go to Operations.

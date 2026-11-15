@@ -1,0 +1,77 @@
+Document: HR_Compensation_Bands
+Department: HR
+Version: 6.0
+Effective: 2026-04-01
+Owner: Total Rewards
+Classification: Confidential
+---
+# Compensation Bands
+
+## 1. Purpose
+
+This document defines the salary bands for each job level at Meridian and the rules for positioning employees inside a band. It is confidential and must not be shared outside the company. Managers see the bands for their own team and up to two levels below; People Operations and Finance see all bands. Individuals see their own band in the HR system.
+
+## 2. Bands
+
+All figures are annual base salary in INR lakhs for India-based employees. Singapore and UK bands are produced by applying the location differentials in Section 5 to these figures.
+
+| Level | Title example | Minimum | Midpoint | Maximum |
+|---|---|---|---|---|
+| L1 | Associate | 6.0 | 8.5 | 11.0 |
+| L2 | Engineer / Analyst | 11.0 | 15.0 | 19.0 |
+| L3 | Senior Engineer | 19.0 | 25.0 | 31.0 |
+| L4 | Staff Engineer / Manager | 31.0 | 40.0 | 49.0 |
+| L5 | Senior Manager | 49.0 | 61.0 | 73.0 |
+| L6 | Director | 73.0 | 90.0 | 108.0 |
+
+## 3. Positioning rules
+
+1. New hires are typically positioned between the minimum and the midpoint. Offers above the midpoint require People Operations approval; offers above 90% of the maximum require the Chief People Officer.
+2. An employee whose base salary is below the minimum for their level must be brought to the minimum at the next review cycle.
+3. An employee above the maximum is not reduced. Their salary is frozen until the band catches up, and they remain eligible for bonus and equity.
+4. Employees promoted mid-year are moved to at least the minimum of the new band at promotion, then to the target position at the next review.
+
+## 4. Review cycle
+
+1. Base salary is reviewed once per year, effective 1 April.
+2. The cycle budget is set by Finance in the February planning round and published in Finance_Quarterly_Budget_Allocation.
+3. Managers submit recommendations in March; calibration happens in the first two weeks of March.
+4. Employees hired after 1 January are reviewed in the following cycle unless their offer letter promises an off-cycle review.
+
+## 5. Location differentials
+
+| Location | Differential |
+|---|---|
+| Pune | 1.00 |
+| Bengaluru | 1.12 |
+| Singapore | 1.65 |
+| London | 1.85 |
+| Remote (India) | 0.95 |
+
+Differentials are applied to the band, not to the individual's salary. An employee who relocates is moved to the new band at the next cycle; a move that would reduce salary is capped at a 10% reduction per year.
+
+## 6. Variable pay
+
+1. The target bonus is 10% of base for L1 to L3, 15% for L4 and L5, and 25% for L6.
+2. Bonus is paid in April based on the prior calendar year's company and individual performance.
+3. Employees must be employed on the payment date to receive a bonus, except where local law requires pro-rating.
+4. Sales roles follow the sales compensation plan, which is issued separately and is not governed by this document.
+
+## 7. Equity
+
+Equity grants are approved by the compensation committee. The grant guideline is 0.02% of fully diluted shares for L3, 0.05% for L4, and 0.10% for L5 and above. Vesting is four years with a one-year cliff. Equity is not part of the band and is not considered when testing whether a salary sits inside a band.
+
+## 8. Overtime and allowances
+
+Meridian does not pay overtime for L2 and above. L1 employees required to work on a public holiday receive a compensatory day, not a cash payment. Transport allowance for late shifts is covered by the Facilities and Operations guidance, not by this document.
+
+## 9. Related documents
+
+- HR_Performance_Review_Process for ratings that drive the review.
+- Finance_Quarterly_Budget_Allocation for the cycle budget.
+- HR_Exit_And_Separation for final settlement.
+- Legal_Records_Retention_Schedule for how long compensation records are kept.
+
+## 10. Version history
+
+Version 6.0 raised L4 to L6 bands by 8% and introduced the remote differential. Version 5.2 added the salary-freeze rule for employees above the maximum. Version 5.0 merged the engineering and business bands into a single ladder. Questions go to Total Rewards; individual queries must come through the HR system so they are logged.

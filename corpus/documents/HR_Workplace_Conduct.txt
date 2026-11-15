@@ -1,0 +1,59 @@
+Document: HR_Workplace_Conduct
+Department: HR
+Version: 4.0
+Effective: 2026-01-01
+Owner: Chief People Officer
+Classification: Internal
+---
+# Workplace Conduct Standard
+
+## 1. Principle
+
+Every employee is entitled to a workplace free from harassment, discrimination and retaliation. This standard sets the behaviours expected of everyone, including managers, contractors and visitors, and the consequences of falling short. It applies on company premises, at company events, on business travel and in all work communication channels.
+
+## 2. Expected behaviour
+
+1. Treat colleagues with respect in person and online.
+2. Give credit for others' work and challenge ideas, not people.
+3. Protect confidential information and customer data.
+4. Declare conflicts of interest before decisions are made.
+5. Follow the law and the company's anti-corruption rules.
+
+## 3. Harassment and discrimination
+
+Harassment includes unwelcome conduct that creates an intimidating or hostile environment, including comments about gender, caste, religion, disability, age, sexual orientation or appearance. Discrimination in hiring, pay, promotion or assignment is prohibited. Complaints are handled under the POSH framework where applicable; the internal committee completes its inquiry within 90 days of the complaint. Retaliation against a complainant is a separate violation and is investigated independently.
+
+## 4. Gifts and hospitality
+
+1. Employees may accept gifts valued under INR 5,000 from a business partner.
+2. Gifts above that value must be declined or surrendered to People Operations for donation.
+3. Cash and cash equivalents are never acceptable.
+4. Hospitality must be modest, infrequent and recorded in the gifts register.
+5. Government officials are never offered gifts or hospitality; see Legal_Anti_Corruption_Compliance.
+
+## 5. Conflict of interest
+
+Employees must declare outside employment, board seats, family relationships with suppliers, and any financial interest in a competitor or vendor. Declarations go to People Operations and are reviewed annually. A declared conflict does not automatically disqualify an employee, but undisclosed conflicts are a disciplinary matter.
+
+## 6. Substance use and safety
+
+Reporting to work under the influence of alcohol or illegal substances is prohibited. Prescription medication that impairs judgement must be disclosed to the manager in confidence. Employees must follow all safety instructions on site, including PPE requirements under Operations_Site_Visit_Protocol.
+
+## 7. Reporting
+
+Concerns may be raised with the manager, People Operations, the POSH committee or the anonymous ethics line. Anonymous reports are accepted but are harder to investigate. Knowingly false accusations are themselves a conduct matter, but an unsubstantiated complaint is not a false complaint.
+
+## 8. Consequences
+
+Violations are handled under HR_Grievance_And_Discipline and may result in warnings, termination or referral to law enforcement, depending on severity. Managers who fail to act on a report are subject to disciplinary action themselves.
+
+## 9. Related documents
+
+- HR_Grievance_And_Discipline for process.
+- Legal_Anti_Corruption_Compliance for gifts to officials.
+- Operations_Site_Visit_Protocol for site safety.
+- Legal_Data_Privacy_GDPR_Compliance for personal data handling.
+
+## 10. Version history
+
+Version 4.0 added the gifts register and the conflict declaration requirement. Version 3.1 aligned the POSH inquiry window to 90 days. Version 3.0 merged the former code of conduct and harassment policies. Questions go to People Operations; legal questions go to Legal.

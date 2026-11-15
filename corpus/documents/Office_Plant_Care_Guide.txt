@@ -1,0 +1,32 @@
+Document: Office_Plant_Care_Guide
+Department: Operations
+Version: 1.0
+Effective: 2026-01-01
+Owner: Facilities
+Classification: Internal
+---
+# Office Plant Care Guide
+
+## 1. Watering
+
+Desk plants are watered by the facilities vendor on Tuesdays and Fridays. Employees should not water them; overwatering is the most common cause of plant loss in the office.
+
+## 2. Light
+
+Plants near the north windows receive indirect light and do better than plants on the south side, where afternoon sun scorches leaves. Do not move plants between floors without telling Facilities.
+
+## 3. Reporting a problem
+
+Report wilting or pests to Facilities through the service desk. Plants that cannot be saved are replaced in the quarterly refresh.
+
+## 4. Personal plants
+
+Employees may bring a personal plant to their desk if it fits within their desk area and does not block walkways. Facilities does not maintain personal plants.
+
+## 5. Related documents
+
+- Operations_Facility_Access_Control for building access.
+
+## 6. Version history
+
+Version 1.0 is the first release. Questions go to Facilities.

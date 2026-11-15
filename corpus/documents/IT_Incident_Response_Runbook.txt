@@ -1,0 +1,64 @@
+Document: IT_Incident_Response_Runbook
+Department: IT
+Version: 4.3
+Effective: 2026-02-01
+Owner: Reliability Engineering
+Classification: Internal
+---
+# Incident Response Runbook
+
+## 1. Severity definitions
+
+1. **Sev-1** — customer-facing outage or data loss affecting more than 20% of customers, or any confirmed security breach.
+2. **Sev-2** — degraded service affecting a material subset of customers, or an internal system blocking a revenue process.
+3. **Sev-3** — limited impact with a workaround.
+4. **Sev-4** — cosmetic or single-user issue.
+
+Severity is declared by the on-call engineer and may be raised by the incident commander at any time. Downgrading a Sev-1 requires the incident commander and the engineering director.
+
+## 2. Response windows
+
+| Step | Sev-1 | Sev-2 |
+|---|---|---|
+| Acknowledge page | 15 minutes | 1 hour |
+| Open incident channel | 15 minutes | 1 hour |
+| Status page update | 30 minutes | 2 hours |
+| Customer communication | 1 hour | 4 hours |
+
+Missing an acknowledgement window is tracked as a reliability metric, not a disciplinary matter, unless it is repeated.
+
+## 3. Roles
+
+The incident commander owns the incident and does not debug. The communications lead writes status updates. The subject-matter engineers investigate. The scribe keeps the timeline. For a Sev-1, the incident commander is the on-call engineering manager; for a Sev-2 it may be the on-call engineer.
+
+## 4. Process
+
+1. Acknowledge the page and declare severity in the incident channel.
+2. Open the bridge. For a Sev-1, the bridge must open within 15 minutes of declaration; see Operations_Sev_Incident_Escalation for the current runbook version.
+3. Assign the four roles.
+4. Mitigate first, diagnose second. Roll back if the change is the suspected cause.
+5. Update the status page at the intervals in Section 2.
+6. Resolve only when the customer impact has ended, not when the root cause is understood.
+
+## 5. Communication
+
+Internal updates go in the incident channel every 30 minutes for a Sev-1 and every 2 hours for a Sev-2. Customer updates are written by the communications lead and approved by the incident commander. Never speculate about root cause in a customer update.
+
+## 6. Postmortem
+
+1. A postmortem is required for every Sev-1 and Sev-2.
+2. It is due within 5 business days of resolution.
+3. It is blameless: it names systems and decisions, not individuals.
+4. It contains a timeline, contributing factors, what went well, and action items with owners and dates.
+5. Action items are tracked in the reliability backlog and reviewed monthly.
+
+## 7. Related documents
+
+- Operations_Sev_Incident_Escalation for the escalation matrix.
+- IT_Change_Management for changes that may cause incidents.
+- IT_Data_Classification_Standard for handling incident data.
+- Legal_Data_Privacy_GDPR_Compliance for breach notification.
+
+## 8. Version history
+
+Version 4.3 shortened the Sev-1 acknowledgement from 30 to 15 minutes. Version 4.2 added the scribe role. Version 4.0 introduced the four severity levels. Questions go to Reliability Engineering.

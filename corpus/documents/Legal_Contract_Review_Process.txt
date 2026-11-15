@@ -1,13 +1,66 @@
+Document: Legal_Contract_Review_Process
+Department: Legal
+Version: 6.1
+Effective: 2026-01-01
+Owner: Legal
+Classification: Internal
+---
 # Contract Review Process
 
-The Meridian Corp Contract Review Process ensures all binding agreements undergo rigorous legal examination before execution. All contracts, regardless of value, must be uploaded to the TRITON contract repository and routed through the ASCEND review workflow. Standard contracts with a value below $25,000 are reviewed within the 14-day SLA by the Legal paralegal team.
+## 1. Scope
 
-Complex agreements, including those involving V-SEC classified terms or international jurisdiction, require senior attorney review and are subject to a 21-day SLA. The NEXUS system automatically assigns matters based on contract type, dollar value, and risk profile. The ZETA review engine performs preliminary analysis, flagging non-standard clauses for human review. All parties must execute documents through the DASH e-signature platform to ensure enforceability.
+This process covers every agreement Meridian signs with a third party: customer contracts, vendor agreements, NDAs, data processing agreements, leases and statements of work. Employment contracts are handled by People Operations and are not reviewed here.
 
-Meridian Corp maintains a library of 340 pre-approved contract templates, categorized by the EHRC cycle taxonomy. Deviations from standard language exceeding 15% of the template body trigger mandatory escalation to the General Counsel. The MOR-2024-073 directive requires that all contracts include the standard indemnification clause, limitation of liability cap, and TRITON data handling provisions.
+## 2. Service levels
 
-Contract renewals are flagged in the ASCEND system 90 days before expiration. The ZULU renewal team manages negotiations for agreements valued above $100,000. The LEXA module tracks renewal status across all active contracts, currently numbering 2,847. Terminations must follow the notice periods specified in the agreement, with all related correspondence retained for 7 years per MOR-2025-029.
+1. Standard contract review takes 7 business days from receipt of a complete request.
+2. Expedited review takes 48 hours and requires the department head to state the business reason.
+3. NDAs on the approved template are reviewed within 1 business day.
+4. A request without the counterparty's full draft, the deal summary and the commercial terms is not considered received.
 
-Amendments and change orders to executed contracts follow the same review workflow as new agreements, with expedited processing available for modifications under $10,000. The NEXUS system maintains a complete version history of all contract documents, including redlines and approval chains. The LEXA module sends automated reminders 60 days before renewal deadlines to ensure continuity of service and compliance.
+## 3. Request requirements
 
-Meridian Corp averages 47 active contract reviews per month, with a median completion time of 9 days.
+1. Submit through the legal request system, not by email.
+2. Include the counterparty name, the contract value, the term, the data involved and the business owner.
+3. Attach the counterparty's draft and any redlines already exchanged.
+4. State the deadline and the consequence of missing it.
+
+## 4. Review standards
+
+Legal reviews liability caps, indemnities, termination rights, data protection, payment terms, governing law and intellectual property. Any clause that deviates from the playbook requires a documented approval from the Head of Legal. Unlimited liability, most-favoured-nation pricing and exclusivity are escalation triggers.
+
+## 5. Signature authority
+
+1. Contracts up to INR 5,00,000 may be signed by a Director.
+2. Contracts up to INR 50,00,000 require the CFO.
+3. Contracts above INR 50,00,000 require the CEO.
+4. Delegation must be in writing and is recorded in the authority register.
+
+## 6. Post-signature
+
+1. The executed contract is stored in the contract repository within 2 business days.
+2. Finance is notified so payment terms and revenue schedules are set up.
+3. Renewal alerts are set 90 days before expiry for contracts with auto-renewal.
+4. Amendments follow the same review process as the original contract.
+
+## 7. Related documents
+
+- Legal_Data_Privacy_GDPR_Compliance for data clauses.
+- Legal_Records_Retention_Schedule for retention.
+- Finance_Procurement_Approval_Matrix for purchase approvals.
+- IT_Vendor_Security_Review for security assessment.
+
+## 8. Version history
+
+Version 6.1 reduced expedited review from 72 to 48 hours. Version 6.0 introduced the legal request system. Version 5.4 added the renewal alert. Questions go to Legal.
+## Annex A. Intake and negotiation
+
+Requests are triaged on arrival. Triage records whether the contract is standard, negotiable or escalated and assigns a reviewer within one business day. Requests without commercial terms are returned with the missing items listed.
+
+The playbook sets fallback positions for liability, indemnity, termination, payment and data clauses. A reviewer may accept a fallback without escalation; anything beyond it needs the Head of Legal. Every accepted deviation is recorded with a one-line reason so the next review of the same counterparty starts from the same position.
+
+Negotiation rounds are logged with the counterparty's outstanding points and the owner. Legal aims for two rounds or fewer on standard agreements, and a third round triggers a call with the business owner to decide whether to walk away.
+
+Execution uses the company e-signature tool. Contracts needing a wet signature, notarisation or an apostille are handled by Legal and the originals couriered to the contract repository. Signatories must hold authority under Section 5 at the value on the signature date, not the value when negotiation began.
+
+Renewals, amendments and statements of work are reviewed as new requests and inherit the original risk assessment unless the commercial terms change. Legal reports monthly on volume, cycle time and expedited requests by department.

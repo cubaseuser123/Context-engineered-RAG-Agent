@@ -1,0 +1,53 @@
+Document: Operations_Sev_Incident_Escalation
+Department: Operations
+Version: 2.0
+Effective: 2026-03-01
+Owner: Reliability Engineering
+Classification: Internal
+---
+# Severity Incident Escalation
+
+## 1. Purpose
+
+This runbook defines who is paged, in what order, and how quickly a bridge must open when a production or customer-facing incident is declared. It is the operational companion to IT_Incident_Response_Runbook, which defines severity and the postmortem process.
+
+## 2. Bridge requirement
+
+Runbook version 1.4, in force from January 2025 until February 2026, required the incident bridge to open within 10 minutes of declaration. This version (2.0) requires the bridge to open within 15 minutes, because the 10-minute target produced incomplete bridges while pages were still in flight. The 15-minute window is the current standard and applies to every Sev-1, including security incidents.
+
+## 3. Escalation matrix
+
+| Severity | First page | Second page (after) | Executive notified |
+|---|---|---|---|
+| Sev-1 | On-call engineer, on-call manager | Engineering director (15 min) | CTO (30 min) |
+| Sev-2 | On-call engineer | On-call manager (30 min) | Department head (2 h) |
+| Sev-3 | On-call engineer | Team lead (next business day) | No |
+
+Pages go through the on-call tool, not direct messages. If the first page is not acknowledged within the window, the tool automatically escalates to the next level. Escalation does not stop when someone joins the bridge; it stops when the incident commander is confirmed.
+
+## 4. Roles on the bridge
+
+The incident commander owns coordination and communication. The communications lead writes customer updates. The scribe keeps the timeline. Subject-matter engineers investigate. For a Sev-1 the incident commander must be an engineering manager or above; for a Sev-2 the on-call engineer may take the role.
+
+## 5. Communication cadence
+
+Internal updates every 30 minutes for a Sev-1 and every 2 hours for a Sev-2. Customer updates follow IT_Incident_Response_Runbook. No root-cause speculation in customer communication.
+
+## 6. Declaring and downgrading
+
+Any engineer may declare a Sev-1. Downgrading requires the incident commander and the engineering director. Repeatedly downgrading to avoid the bridge requirement is reviewed by Reliability Engineering.
+
+## 7. After the incident
+
+A postmortem is due within 5 business days. Action items are tracked with owners. The on-call rotation is reviewed if the same service pages more than three times in a week.
+
+## 8. Related documents
+
+- IT_Incident_Response_Runbook for severity and postmortems.
+- IT_Change_Management for changes implicated in incidents.
+- Operations_Shift_Handover_Protocol for handover during long incidents.
+- HR_Leave_Policy for cancelled on-call leave.
+
+## 9. Version history
+
+Version 2.0 changed the bridge window from 10 to 15 minutes and added the security-incident clause. Version 1.4 introduced automatic escalation. Questions go to Reliability Engineering.

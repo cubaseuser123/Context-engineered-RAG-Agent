@@ -1,0 +1,59 @@
+Document: HR_Learning_And_Development
+Department: HR
+Version: 2.2
+Effective: 2026-01-01
+Owner: People Operations
+Classification: Internal
+---
+# Learning and Development Policy
+
+## 1. Annual budget
+
+1. Every permanent employee has an annual learning budget of INR 40,000.
+2. The budget covers courses, certifications, conferences, books and professional memberships.
+3. It does not cover travel to conferences, which follows Finance_Travel_And_Expense_Policy, or equipment, which follows HR_Remote_Work_Policy.
+4. The budget resets on 1 January and does not carry forward.
+5. Unused budget is not paid out.
+
+## 2. Study leave
+
+1. Employees may take up to 3 days of paid study leave per year for an exam or an intensive course.
+2. Study leave requires 14 days' notice and manager approval.
+3. Study leave does not reduce annual leave entitlement.
+4. Study leave taken during a declared incident may be cancelled by the incident commander and is restored in full.
+
+## 3. Approval and reimbursement
+
+1. Requests above INR 15,000 need manager approval before booking. Requests above INR 30,000 also need department head approval.
+2. Reimbursement requires a receipt and a one-paragraph summary of what was learned.
+3. Reimbursement is processed in the next payroll cycle after the summary is submitted.
+4. Where the company pays directly, the employee must still submit the summary within 30 days of completion.
+
+## 4. Clawback
+
+1. Courses costing more than INR 50,000 that lead to a recognised certification require a 12-month commitment.
+2. If the employee resigns within 12 months of completion, the unamortised cost is recovered from the final settlement on a straight-line basis.
+3. Clawback does not apply where the employee is made redundant.
+
+## 5. Team learning
+
+Each department receives a separate team learning budget of INR 5,00,000 per year for workshops, internal training and guest speakers. The department head approves spend from this budget and reports it quarterly to Finance. Team learning is recorded in the department's quarterly budget review.
+
+## 6. Mandatory training
+
+Security awareness, data protection, anti-corruption and workplace conduct training are mandatory and are funded centrally, not from the individual budget. Completion is tracked; repeated non-completion is escalated to the department head.
+
+## 7. Mentoring
+
+Employees may request a mentor outside their reporting line. Mentoring pairs meet at least monthly for six months. Mentor time is not billed to either budget. The program is administered by People Operations and reviewed twice a year.
+
+## 8. Related documents
+
+- HR_Performance_Review_Process for development goals.
+- Finance_Travel_And_Expense_Policy for conference travel.
+- HR_Exit_And_Separation for clawback at exit.
+- IT_Acceptable_Use_Policy for online course platforms.
+
+## 9. Version history
+
+Version 2.2 raised the individual budget from INR 30,000 to INR 40,000. Version 2.1 introduced the clawback for certifications above INR 50,000. Version 2.0 merged the separate engineering and business budgets. Questions go to People Operations.

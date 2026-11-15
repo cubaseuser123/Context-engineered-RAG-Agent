@@ -1,0 +1,66 @@
+Document: HR_Parental_Leave
+Department: HR
+Version: 3.0
+Effective: 2026-02-01
+Owner: People Operations
+Classification: Internal
+---
+# Parental Leave Policy
+
+## 1. Purpose
+
+This policy sets out paid leave for birth, adoption and surrogacy for all permanent employees who have completed 90 days of continuous service. It applies equally to all genders; the entitlement depends on the caregiving role the employee declares, not on the employee's gender or the child's origin. Employees on fixed-term contracts of 12 months or more receive the same entitlement pro-rated to their remaining contract length.
+
+## 2. Primary caregiver entitlement
+
+1. A primary caregiver is entitled to 26 weeks of paid parental leave.
+2. Leave may begin up to four weeks before the expected date of birth or the date of adoption placement.
+3. Leave must be taken in a single continuous block. Splitting into two blocks is permitted only where the second block is taken within 12 months of the birth and the manager and People Operations both approve in writing.
+4. Pay during primary caregiver leave is 100% of base salary for the first 26 weeks.
+5. The employee returns to the same role and grade. If the role has been made redundant during the leave, the redundancy process must follow the Exit and Separation policy and the employee is entitled to redeployment priority for 90 days.
+
+## 3. Secondary caregiver entitlement
+
+1. A secondary caregiver is entitled to 6 weeks of paid parental leave.
+2. Secondary leave may be taken in up to three blocks within 12 months of the birth or placement.
+3. Pay during secondary caregiver leave is 100% of base salary.
+4. A secondary caregiver may switch to primary caregiver status once, by written declaration, provided fewer than 13 weeks of the primary entitlement have been used. The switch requires People Operations approval and is recorded in the HR system.
+
+## 4. Adoption and surrogacy
+
+1. Adoption is treated identically to birth for both entitlements.
+2. Leave may begin on the date the child is placed with the employee, not the date the adoption is legally finalised.
+3. Employees pursuing surrogacy are entitled to the secondary caregiver entitlement, and to the primary entitlement where they are the sole intended parent.
+4. Documentation required: placement letter from the adoption agency or a surrogacy agreement summary. Medical details are never required.
+
+## 5. Notice and documentation
+
+1. Employees must notify their manager and People Operations at least 30 days before the intended start date, or as soon as practicable where birth or placement is unexpected.
+2. A birth certificate or placement letter must be submitted within 60 days of the start date.
+3. Failure to submit documentation within 60 days converts the leave to unpaid until the documentation is received; the leave is then reinstated retrospectively.
+
+## 6. Top-up and benefits during leave
+
+Employees may top up statutory pay to full salary using accrued annual leave or, where the statutory scheme pays less than base salary, through the salary top-up scheme described in Appendix B. Health insurance continues uninterrupted for the employee and dependants. Pension contributions continue at the employee's pre-leave rate for the full duration of paid leave. Annual leave accrues during parental leave at the normal monthly rate but may not be taken until the employee returns.
+
+## 7. Return to work
+
+1. Employees are entitled to a phased return of up to four weeks at 60% workload with full pay.
+2. A return-to-work conversation with the manager must happen in the two weeks before the return date.
+3. Nursing employees are entitled to two 30-minute breaks per working day for 12 months after the birth.
+4. Travel requirements are waived for the first eight weeks after return.
+
+## 8. Interaction with other leave
+
+Parental leave does not reduce annual leave entitlement. Sick leave taken during parental leave is recorded separately and does not extend the parental leave period. Parental leave counts as continuous service for the purpose of the Employee Referral Program and the Learning and Development budget.
+
+## 9. Related documents
+
+- HR_Leave_Policy for annual leave accrual during parental leave.
+- HR_Remote_Work_Policy for remote arrangements on return.
+- HR_Exit_And_Separation for redundancy during leave.
+- Legal_Records_Retention_Schedule for retention of parental leave records.
+
+## 10. Version history
+
+Version 3.0 equalised primary caregiver entitlement at 26 weeks for all employees and removed the previous distinction between birth and adoption. Version 2.2 added the phased return. Version 2.0 introduced the single permitted caregiver-status switch. Requests for clarification go to People Operations; requests for an exception go to the Head of People with a written business case.

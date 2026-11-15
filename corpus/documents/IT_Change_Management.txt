@@ -1,0 +1,58 @@
+Document: IT_Change_Management
+Department: IT
+Version: 3.7
+Effective: 2026-01-01
+Owner: Reliability Engineering
+Classification: Internal
+---
+# Change Management Policy
+
+## 1. Purpose
+
+This policy controls how changes reach production so that reliability is not traded for speed. It applies to application deploys, infrastructure changes, database migrations, configuration changes and third-party integrations. Documentation-only changes and changes made entirely inside a feature-flagged path that is off in production are exempt.
+
+## 2. Change types
+
+1. **Standard** — pre-approved, low-risk changes with a documented runbook, such as a routine dependency patch or a dashboard update.
+2. **Normal** — any change that is not standard or emergency; requires review and a change record.
+3. **Emergency** — a change needed to resolve an active Sev-1 or Sev-2. Emergency changes may proceed with verbal approval from the incident commander and are recorded retrospectively within one business day.
+
+## 3. Normal change process
+
+1. Open a change record describing the change, the systems affected, the rollback plan and the monitoring plan.
+2. Obtain code review from at least one engineer who is not the author.
+3. Obtain approval from the system owner. Changes touching payment flows also require Finance sign-off.
+4. Submit to the Change Advisory Board (CAB) at least 5 business days before the planned deployment window.
+5. Deploy in the approved window and watch the dashboards for 30 minutes.
+6. Close the change record with the observed outcome.
+
+The CAB meets every Tuesday at 15:00 IST. Changes submitted after the Monday 12:00 cut-off are considered the following week. A change rejected by the CAB may be re-submitted once with the requested amendments.
+
+## 4. Deployment windows
+
+Production deploys are permitted Monday to Thursday, 10:00 to 17:00 IST. Friday deploys require the engineering director's approval. No production changes are made during the end-of-quarter freeze, from the 25th of the last month of each quarter until the second working day of the next quarter, except for emergency changes and security patches.
+
+## 5. Rollback
+
+Every normal change must have a tested rollback plan. Database migrations must be backward compatible for at least one release so the application can roll back without restoring data. A change without a rollback plan is rejected by the CAB.
+
+## 6. Post-deployment
+
+1. Monitor error rates, latency and saturation for at least 30 minutes.
+2. If the change is implicated in an incident, roll back first and investigate afterwards.
+3. Changes that cause an incident require a postmortem under IT_Incident_Response_Runbook.
+
+## 7. Exceptions
+
+An exception to the window or the CAB requirement needs the engineering director's written approval and an expiry date. Exceptions are reviewed monthly by Reliability Engineering.
+
+## 8. Related documents
+
+- IT_Incident_Response_Runbook for incidents caused by change.
+- IT_Access_Control_Standard for production access.
+- Operations_Sev_Incident_Escalation for emergency escalation.
+- IT_Vendor_Security_Review for vendor-side changes.
+
+## 9. Version history
+
+Version 3.7 added the quarterly freeze. Version 3.6 required backward-compatible migrations. Version 3.5 moved the CAB from weekly Thursday to Tuesday. Questions go to Reliability Engineering.

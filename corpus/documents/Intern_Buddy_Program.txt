@@ -1,0 +1,36 @@
+Document: Intern_Buddy_Program
+Department: HR
+Version: 1.2
+Effective: 2026-01-01
+Owner: Talent Acquisition
+Classification: Internal
+---
+# Intern Buddy Program
+
+## 1. Assignment
+
+Every intern is paired with a buddy from the same team for the duration of the internship. The buddy is not the intern's manager and is not responsible for performance assessment.
+
+## 2. Expectations
+
+1. Meet daily for the first week, then twice a week.
+2. Review the intern's first deliverable and give written feedback.
+3. Introduce the intern to at least five people outside the team.
+4. Escalate concerns to the manager rather than handling them alone.
+
+## 3. Duration
+
+Internships run 10 to 12 weeks. The buddy commitment ends on the intern's last day. Buddies receive a recognition payment of INR 10,000 after the internship ends.
+
+## 4. Conversion
+
+Interns may be considered for a full-time role after a strong final review. Conversion decisions follow HR_Compensation_Bands and the standard hiring process; the buddy does not sit on the hiring panel.
+
+## 5. Related documents
+
+- HR_Employee_Onboarding_Guide for the first-week checklist.
+- HR_Employee_Referral_Program for referrals, which do not apply to interns.
+
+## 6. Version history
+
+Version 1.2 added the recognition payment. Questions go to Talent Acquisition.

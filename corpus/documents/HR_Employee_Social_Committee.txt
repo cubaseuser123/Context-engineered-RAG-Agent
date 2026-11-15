@@ -1,0 +1,32 @@
+Document: HR_Employee_Social_Committee
+Department: HR
+Version: 1.5
+Effective: 2026-01-01
+Owner: People Operations
+Classification: Internal
+---
+# Employee Social Committee
+
+## 1. Purpose
+
+The social committee organises team events, festival celebrations and the annual offsite. It has 12 members elected each January and a budget of INR 15,00,000 per year, separate from department budgets.
+
+## 2. Events
+
+1. Monthly team socials of up to INR 1,000 per attendee.
+2. Two festival celebrations per year.
+3. One annual offsite; family members may attend at their own cost.
+4. Events must not be scheduled during the finance quarter-end freeze.
+
+## 3. Budget
+
+Spend is approved by the committee chair and reconciled quarterly with Finance. Alcohol may not be purchased with company funds except at the annual offsite, where a cash bar applies.
+
+## 4. Related documents
+
+- Finance_Quarterly_Budget_Allocation for the HR envelope.
+- HR_Workplace_Conduct for behaviour at company events.
+
+## 5. Version history
+
+Version 1.5 raised the monthly social budget. Questions go to People Operations.

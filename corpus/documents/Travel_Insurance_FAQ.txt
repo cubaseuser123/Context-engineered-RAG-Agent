@@ -1,0 +1,46 @@
+Document: Travel_Insurance_FAQ
+Department: Finance
+Version: 1.0
+Effective: 2026-01-01
+Owner: Finance Operations
+Classification: Internal
+---
+# Travel Insurance FAQ
+
+## 1. Do I need to buy travel insurance?
+
+No. Corporate travel cover applies automatically to every business trip booked through the corporate travel tool. Buying separate cover is not reimbursable.
+
+## 2. What is covered?
+
+Medical treatment and evacuation up to USD 250,000, trip cancellation, baggage loss up to USD 1,500, and personal liability. Pre-existing conditions are covered for business travel only.
+
+## 3. How do I claim?
+
+Call the insurer's assistance line before any treatment. Keep every receipt and submit the claim within 30 days of returning. Finance can provide the policy number and the assistance card.
+
+## 4. Leisure add-ons
+
+Extending a trip for leisure is allowed with manager approval, but the leisure portion is not covered and any change fee is personal.
+
+## 5. Related documents
+
+- Finance_Travel_And_Expense_Policy for booking and per diem.
+- Legal_Contract_Review_Process for the insurance contract.
+
+## 6. Version history
+
+Version 1.0 is the first release. Questions go to Finance Operations.
+## Annex A. Claims and exclusions
+
+Cover begins when the trip is booked through the corporate travel tool and ends when the traveller returns to their home city. Personal days attached to a business trip are not covered, including the gap between the business purpose ending and the return flight.
+
+The assistance line must be called before non-emergency treatment so the insurer can confirm the provider and guarantee payment. In an emergency, call as soon as it is safe and keep the case reference. Treatment paid personally is reimbursed on the itemised bill, the diagnosis and proof of payment.
+
+Claims are submitted within 30 days of return with the policy number, the booking confirmation, receipts and any carrier or police report. Late claims are considered case by case and are not guaranteed.
+
+Exclusions include extreme sports, travel against medical advice, travel to a country under a company advisory, and loss caused by leaving baggage unattended in a public place. Valuables above USD 1,500 per item are declared before travel.
+
+Baggage delay is covered after six hours with a daily limit for essentials, against receipts rather than a flat amount. Trip cancellation is covered for illness, bereavement or a customer commitment that cannot move, and needs written evidence; a change of mind is not covered.
+
+The policy number and assistance card come from Finance Operations and sit on the trip page. Travellers on assignments beyond 90 days confirm extended cover before departure.

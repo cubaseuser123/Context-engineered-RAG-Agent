@@ -1,0 +1,53 @@
+Document: Legal_Records_Retention_Schedule
+Department: Legal
+Version: 2.8
+Effective: 2026-01-01
+Owner: Head of Legal
+Classification: Internal
+---
+# Records Retention Schedule
+
+## 1. Purpose
+
+This schedule states how long each category of record is kept and when the retention clock starts. Keeping records longer than necessary creates privacy and discovery risk; deleting them early breaches legal obligations. Where two rules conflict, the longer period applies.
+
+## 2. Schedule
+
+| Record category | Retention period | Clock starts |
+|---|---|---|
+| Executed contracts | 8 years | Contract expiry or termination |
+| Contract drafts and redlines | 3 years | Contract signature |
+| Payroll and tax records | 7 years | End of the tax year |
+| Employee personnel files | 7 years | Last working day |
+| Recruitment records | 1 year | Application date |
+| Incident logs and postmortems | 3 years | Incident resolution |
+| Security access logs | 1 year | Log creation |
+| Financial statements and audit files | 8 years | End of the financial year |
+| Privacy breach log | 5 years | Breach discovery |
+| Vendor due diligence | 6 years | Engagement end |
+
+## 3. Application
+
+1. The clock starts on the trigger event, not on the date the record was created.
+2. A legal hold suspends deletion for the affected records under Legal_Subpoena_And_Litigation_Hold.
+3. Records past their retention period are deleted during the quarterly purge run by the record owner.
+4. Deletion of Confidential or Restricted records requires a certificate under IT_Data_Classification_Standard.
+
+## 4. Legal holds
+
+When a hold is issued, the record owner must stop all deletion immediately, including automated purge jobs, and confirm compliance in writing within two business days. The hold overrides this schedule until Legal releases it in writing.
+
+## 5. Exceptions
+
+An exception to shorten retention requires the Head of Legal's approval and must be recorded with the reason. Exceptions to lengthen retention are granted for litigation, investigations and regulatory requests.
+
+## 6. Related documents
+
+- IT_Data_Classification_Standard for disposal.
+- Legal_Data_Privacy_GDPR_Compliance for erasure requests.
+- Finance_Fiscal_Year_2026_Audit_Prep for audit evidence.
+- HR_Exit_And_Separation for personnel files.
+
+## 7. Version history
+
+Version 2.8 extended contract retention from 5 to 8 years. Version 2.7 added the privacy breach log. Questions go to Legal.

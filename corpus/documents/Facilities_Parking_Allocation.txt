@@ -1,0 +1,33 @@
+Document: Facilities_Parking_Allocation
+Department: Operations
+Version: 1.4
+Effective: 2026-01-01
+Owner: Facilities
+Classification: Internal
+---
+# Parking Allocation
+
+## 1. Allocation
+
+The Pune campus has 60 parking bays: 20 reserved for directors and above, 30 allocated by lottery each quarter, and 10 visitor bays. Employees apply for the lottery through Facilities during the last week of the quarter. Bays are not transferable and are reassigned when unused for 10 consecutive working days.
+
+## 2. Visitor parking
+
+Visitor bays are released by reception on arrival and must be vacated within 30 minutes of the visitor leaving. Contractors do not receive a bay unless the sponsoring manager requests one in writing.
+
+## 3. Two-wheelers
+
+Two-wheeler parking is unrestricted and available on a first-come basis in the east lot. Helmets must not be left on seats in the rain; covered racks are available.
+
+## 4. Rules
+
+Speed limit is 10 km/h on campus. Overnight parking requires Facilities approval. Electric vehicle charging points are available on the ground floor and are limited to four hours per vehicle.
+
+## 5. Related documents
+
+- Operations_Facility_Access_Control for campus access.
+- HR_Return_To_Office_Mandate for attendance, which is unrelated to parking eligibility.
+
+## 6. Version history
+
+Version 1.4 moved the lottery from annual to quarterly. Questions go to Facilities.

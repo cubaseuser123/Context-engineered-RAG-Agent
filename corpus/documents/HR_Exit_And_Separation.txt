@@ -1,0 +1,62 @@
+Document: HR_Exit_And_Separation
+Department: HR
+Version: 3.4
+Effective: 2026-01-01
+Owner: People Operations
+Classification: Internal
+---
+# Exit and Separation Policy
+
+## 1. Scope
+
+This policy covers resignation, termination, redundancy and retirement for all permanent employees. It does not cover contractors, whose notice terms are in their engagement letter.
+
+## 2. Notice periods
+
+1. Employees at L4 and above serve 60 days' notice.
+2. Employees at L1 to L3 serve 30 days' notice.
+3. Employees in their first 90 days serve 15 days' notice.
+4. Notice runs from the day after the written resignation is acknowledged by the manager and People Operations. Verbal notice does not start the clock.
+5. Meridian may pay salary in lieu of notice, in whole or in part, at its discretion.
+
+## 3. Resignation process
+
+1. Submit resignation in the HR system and inform the manager in writing.
+2. People Operations acknowledges within two working days and confirms the last working day.
+3. Knowledge transfer is agreed with the manager within five working days.
+4. The employee must return all company property, including the laptop, badge and any storage media, on or before the last working day.
+5. Access to systems is removed at 18:00 on the last working day unless a shorter period is required for security.
+
+## 4. Exit interview
+
+An exit interview is offered to every departing employee and is scheduled within five working days of the last day. It is conducted by People Operations, not by the manager. Responses are aggregated quarterly and are never attributed to an individual without consent. Attendance is voluntary and does not affect final settlement.
+
+## 5. Final settlement
+
+1. Final salary, leave encashment and any approved reimbursements are paid within 45 days of the last working day.
+2. Leave encashment follows HR_Leave_Policy: up to five accrued days, not carried-forward days.
+3. Sign-on or relocation bonuses subject to a clawback are recovered from the final settlement where the clawback period has not elapsed.
+4. Disputed amounts are raised with Payroll within 30 days of the settlement statement.
+
+## 6. Redundancy
+
+Redundancy requires a business case approved by the Chief People Officer and the CEO. Employees selected for redundancy receive the statutory notice or pay in lieu, plus a severance of one month's base salary per completed year of service, capped at six months. Redeployment is attempted for 30 days before redundancy is confirmed.
+
+## 7. Termination for cause
+
+Termination for cause follows HR_Grievance_And_Discipline. It does not attract severance. Notice pay is not owed where termination is for gross misconduct established through the disciplinary process.
+
+## 8. Alumni and references
+
+Departing employees in good standing are added to the alumni network. References confirm dates of employment and job title only; managers do not provide character references on company letterhead.
+
+## 9. Related documents
+
+- HR_Leave_Policy for encashment rules.
+- HR_Grievance_And_Discipline for termination for cause.
+- IT_Access_Control_Standard for access removal.
+- Legal_Records_Retention_Schedule for personnel record retention.
+
+## 10. Version history
+
+Version 3.4 reduced final settlement from 60 to 45 days. Version 3.3 introduced the 15-day notice for new joiners. Version 3.0 aligned notice periods to job levels. Questions go to People Operations; payroll questions go to Payroll.

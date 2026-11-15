@@ -1,11 +1,76 @@
+Document: Finance_Travel_And_Expense_Policy
+Department: Finance
+Version: 8.1
+Effective: 2026-01-01
+Owner: Finance Operations
+Classification: Internal
+---
 # Travel and Expense Policy
 
-The Meridian Corp Travel and Expense Policy governs all business-related expenditures incurred by employees, contractors, and authorized guests. All expense reports must be submitted through the ASCEND financial module, which integrates with the TRITON system for real-time budget tracking. Employees are expected to submit them in a timely manner after incurring any reimbursable cost.
+## 1. Scope
 
-Travel booking utilizes the corporate DASH portal, where preferred vendors offer negotiated rates under the EHRC cycle procurement agreement. Domestic airfare is capped at $1,200 per segment, while international flights must not exceed $3,500 without V-SEC tier 3 approval. Hotel accommodations are limited to $220 per night domestically and $340 internationally. Ground transportation, including rideshare services, is reimbursable up to $85 per day.
+This policy covers business travel and reimbursable expenses for all employees and contractors travelling on Meridian business. It sets the approval path, the limits and the evidence required. Expenses outside the limits are not reimbursed unless an exception is approved before the spend.
 
-Meal per diems vary by destination tier: Tier-1 cities ($95/day), Tier-2 cities ($72/day), and Tier-3 locations ($58/day). Alcohol is not reimbursable under any circumstances per MOR-2024-055. Conference attendance requires pre-approval via the WFH-7R-E form, routed through the NEXUS workflow engine. Equipment purchases over $500 demand secondary authorization from the ZETA purchasing committee.
+## 2. Approval before booking
 
-The LEXA expense training module must be completed by all new hires within their first 14 days. Meridian Corp processes reimbursements through direct deposit, with payment cycles synchronized to the corporate payroll schedule. Disputed claims are reviewed by the ZULU audit team within the standard SLA. All receipts must be uploaded in PDF format through the TRITON mobile app or desktop portal. The MOR-2025-078 directive mandates that expense records be retained for 7 years.
+1. All domestic travel requires manager approval before booking.
+2. International travel requires manager and department head approval.
+3. Travel to a country where Meridian has no entity also requires Legal review for immigration and tax.
+4. Bookings made without approval are reimbursed only at the discretion of the Finance business partner.
+5. Travel must be booked through the corporate travel tool; direct bookings are reimbursed only when the tool cannot serve the route.
 
-Personal vehicle mileage is reimbursed at the standard rate of $0.67 per mile, with documentation required for any single trip exceeding 100 miles. Client entertainment expenses require pre-approval for amounts over $200 and must include attendee names and business purpose. The ZETA audit team reviews a random 15% sample of expense reports each quarter to ensure compliance with the EHRC cycle guidelines.
+## 3. Air and rail
+
+1. Economy class for flights under six hours.
+2. Premium economy for flights of six hours or more.
+3. Business class only for L6 and above on flights over nine hours, or with medical approval.
+4. Rail travel is booked in the class equivalent to the flight entitlement.
+5. Changes for personal reasons are not reimbursable.
+
+## 4. Accommodation
+
+Hotel caps are per night, excluding taxes:
+
+| City tier | Cap per night |
+|---|---|
+| Tier 1 (Mumbai, Delhi, Bengaluru) | INR 6,000 |
+| Tier 2 (Pune, Hyderabad, Chennai) | INR 4,500 |
+| Tier 3 (all other cities) | INR 3,000 |
+
+Role multipliers apply to the cap: L2 and above 1.15, L4 and above 1.20, Director and above 1.33. A Director staying in Mumbai therefore has a cap of INR 8,000 per night. The multiplier applies to the tier cap, not to the actual invoice, and does not stack with any other allowance.
+
+## 5. Per diem
+
+1. Domestic per diem is INR 2,500 per day.
+2. International per diem follows the country table published by Finance each January.
+3. Per diem covers meals and incidentals. Meals provided by the company or included in a conference fee are deducted at INR 600 per provided meal.
+4. Per diem is paid for each night away plus one travel day, not for days worked at the home office.
+
+## 6. Ground transport
+
+1. Airport transfers by taxi or ride-hailing are reimbursable with a receipt.
+2. Personal car use is reimbursed at INR 12 per kilometre, capped at the cost of a train ticket for the same journey.
+3. Rental cars require prior approval and are not permitted in cities with reliable ride-hailing.
+4. Parking at the airport is reimbursable for trips longer than two nights.
+
+## 7. Evidence and submission
+
+1. Claims must be submitted within 30 days of the expense.
+2. Every claim needs an itemised receipt; card statements alone are not evidence.
+3. Claims above INR 25,000 need the department head's approval in addition to the manager's.
+4. Duplicate claims are treated as a conduct matter, not an accounting error.
+
+## 8. Non-reimbursable items
+
+Alcohol, personal entertainment, minibar, laundry on trips shorter than four nights, airline lounge access without status, traffic fines, and travel insurance purchased separately where corporate cover applies.
+
+## 9. Related documents
+
+- Finance_Expense_Card_Policy for card spend.
+- Finance_Procurement_Approval_Matrix for approval thresholds on large bookings.
+- HR_Remote_Work_Policy for home office allowance, which is not travel.
+- Legal_Anti_Corruption_Compliance for hospitality involving officials.
+
+## 10. Version history
+
+Version 8.1 raised Tier 1 caps from INR 5,500 to INR 6,000. Version 8.0 introduced role multipliers and removed the flat city allowance. Version 7.4 reduced the claim window from 60 to 30 days. Questions go to Finance Operations.
