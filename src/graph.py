@@ -3,7 +3,7 @@
 One set of nodes, one compiled graph per :class:`RunConfig`. The edges are what
 differ:
 
-* engineered: router -> (retriever | memory_reader | out_of_scope) -> ...
+* engineered: memory_reader -> router -> (retriever | context_enforcer | out_of_scope)
 * naive:      retriever -> context_enforcer -> synthesizer -> memory_writer
 
 The naive arm never sees the router, never reads or writes memory, and the
@@ -32,14 +32,14 @@ logger = logging.getLogger(__name__)
 
 def route_by_intent(
     state: AgentState,
-) -> Literal["retriever", "memory_reader", "out_of_scope"]:
+) -> Literal["retriever", "context_enforcer", "out_of_scope"]:
     """Conditional edge: route on the classified intent."""
     intent = state.get("intent", "out_of_scope")
     if intent == "out_of_scope":
         return "out_of_scope"
     if state.get("needs_retrieval", intent in {"policy_lookup", "clarification"}):
         return "retriever"
-    return "memory_reader"
+    return "context_enforcer"
 
 
 def build_graph(config: RunConfig):
@@ -56,18 +56,18 @@ def build_graph(config: RunConfig):
         graph.add_node("memory_reader", memory_reader_node)
         graph.add_node("out_of_scope", out_of_scope_node)
 
-        graph.add_edge(START, "router")
+        graph.add_edge(START, "memory_reader")
+        graph.add_edge("memory_reader", "router")
         graph.add_conditional_edges(
             "router",
             route_by_intent,
             {
                 "retriever": "retriever",
-                "memory_reader": "memory_reader",
+                "context_enforcer": "context_enforcer",
                 "out_of_scope": "out_of_scope",
             },
         )
-        graph.add_edge("retriever", "memory_reader")
-        graph.add_edge("memory_reader", "context_enforcer")
+        graph.add_edge("retriever", "context_enforcer")
         graph.add_edge("out_of_scope", END)
     else:
         graph.add_edge(START, "retriever")

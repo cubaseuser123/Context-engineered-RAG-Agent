@@ -10,7 +10,7 @@ from src.models.run_record import RunRecord
 
 def test_followup_can_require_retrieval():
     assert route_by_intent({"intent": "clarification", "needs_retrieval": True}) == "retriever"
-    assert route_by_intent({"intent": "clarification", "needs_retrieval": False}) == "memory_reader"
+    assert route_by_intent({"intent": "clarification", "needs_retrieval": False}) == "context_enforcer"
 
 
 def test_router_keeps_separate_search_and_memory_decisions(monkeypatch):
@@ -67,3 +67,30 @@ def test_exact_duplicates_do_not_consume_the_evidence_budget(monkeypatch):
     assert len(result["retrieved_chunks"]) == 2
     assert result["retrieved_chunks"][0]["chunk_id"] == "c"
     assert result["retrieved_chunks"][0]["vector_score"] == .85
+
+
+def test_router_receives_stored_facts_before_search(monkeypatch):
+    import src.graph as graph
+    seen = []
+    monkeypatch.setattr(graph, "memory_reader_node", lambda _: {"memory_entries": [{"fact": "I joined in 2018"}]})
+    def classify(state):
+        seen.append(state["memory_entries"])
+        return {"intent": "policy_lookup", "needs_retrieval": True}
+    monkeypatch.setattr(graph, "router_node", classify)
+    monkeypatch.setattr(graph, "retriever_node", lambda _: {"retrieved_chunks": []})
+    monkeypatch.setattr(graph, "synthesizer_node", lambda _: {"response": "stub"})
+    monkeypatch.setattr(graph, "memory_writer_node", lambda _: {})
+    graph.build_graph(RunConfig.engineered()).compile().invoke({"query": "Does the grace period apply to me?"})
+    assert seen == [[{"fact": "I joined in 2018"}]]
+
+
+def test_router_prompt_contains_bounded_memory(monkeypatch):
+    messages = []
+    def chat(prompt, **kwargs):
+        messages.extend(prompt)
+        return LLMResponse(text=json.dumps({"intent": "policy_lookup"}), model="stub", usage=Usage(), latency_ms=0)
+    monkeypatch.setattr(router.llm, "chat", chat)
+    router.router_node({"query": "Does the grace period apply to me?",
+                        "memory_entries": [{"fact": "I joined in 2018"}, {"fact": "irrelevant " * 1000}]})
+    assert "I joined in 2018" in messages[1]["content"]
+    assert "irrelevant " not in messages[1]["content"]

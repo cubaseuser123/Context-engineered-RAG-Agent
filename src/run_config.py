@@ -47,6 +47,7 @@ class RunConfig:
     ) -> "RunConfig":
         return cls(
             arm="engineered",
+            pipeline_version="context-v4",
             routing=True,
             memory=True,
             enforce_budget=True,
