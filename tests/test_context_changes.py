@@ -94,3 +94,31 @@ def test_router_prompt_contains_bounded_memory(monkeypatch):
                         "memory_entries": [{"fact": "I joined in 2018"}, {"fact": "irrelevant " * 1000}]})
     assert "I joined in 2018" in messages[1]["content"]
     assert "irrelevant " not in messages[1]["content"]
+
+
+def test_leave_exception_survives_expansion_and_budget(monkeypatch):
+    from src.documents import parse_document, chunk_document
+    from src.config import CORPUS_DIR
+    from src.nodes.context_enforcer import context_enforcer_node
+    doc = parse_document(CORPUS_DIR / "HR_Leave_Policy.txt")
+    seed = chunk_document(doc["doc_id"], doc["body"])[0]
+    seed.update(source_doc=doc["doc_id"], score=.99)
+    noise = {"chunk_id": "noise", "source_doc": "Unknown", "score": .1, "content": "irrelevant " * 3000}
+    monkeypatch.setattr(retriever.vector_store, "query", lambda **_: [seed, noise])
+    config = RunConfig.engineered().as_dict()
+    found = retriever.retriever_node({"query": "carry forward grace period", "run_config": config})
+    trimmed = context_enforcer_node({**found, "run_config": config})
+    evidence = trimmed["trimmed_chunks"]
+    assert len(evidence) == 1
+    assert evidence[0]["content"] == doc["body"]
+    assert "30 April" in evidence[0]["content"]
+    assert evidence[0]["seed_chunk_ids"] == [seed["chunk_id"]]
+    assert trimmed["budget_log"]["total_after"] <= trimmed["budget_log"]["total_cap"]
+    naive = retriever.retriever_node({"query": "carry forward grace period", "run_config": RunConfig.naive().as_dict()})
+    assert naive["retrieved_chunks"] == [seed, noise]
+
+
+def test_expansion_does_not_replace_stale_index_content():
+    seed = {"chunk_id": "HR_Leave_Policy::000", "source_doc": "HR_Leave_Policy",
+            "score": .9, "content": "This obsolete rule does not match the local policy."}
+    assert retriever._expand_policies([seed], RunConfig.engineered()) == [seed]

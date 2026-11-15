@@ -141,6 +141,9 @@ def _build_record(
                     section=c.get("section", ""),
                     score=float(c.get("score", 0.0)),
                     vector_score=c.get("vector_score"),
+                    evidence_scope=c.get("evidence_scope", "indexed_chunk"),
+                    seed_chunk_ids=c.get("seed_chunk_ids", []),
+                    expanded_chunk_ids=c.get("expanded_chunk_ids", []),
                     tokens=count_tokens(c.get("content", "")),
                 )
                 for c in retrieved

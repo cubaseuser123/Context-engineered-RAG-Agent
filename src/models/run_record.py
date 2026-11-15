@@ -30,6 +30,9 @@ class RetrievedChunk(BaseModel):
     score: float = 0.0
     vector_score: float | None = None
     tokens: int = 0
+    evidence_scope: str = "indexed_chunk"
+    seed_chunk_ids: list[str] = Field(default_factory=list)
+    expanded_chunk_ids: list[str] = Field(default_factory=list)
 
 
 class RetrievalInfo(BaseModel):

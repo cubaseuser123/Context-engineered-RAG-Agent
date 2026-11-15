@@ -15,8 +15,46 @@ from src.models.state import AgentState
 from src.observability import span
 from src.run_config import RunConfig
 from src.stores import vector_store
+from src.config import CORPUS_DIR
+from src.documents import normalize_doc_id, parse_document, chunk_document
+from src.nodes.context_enforcer import zone_caps
+from src.prompts import SYNTHESIZER_SYSTEM_PROMPT
+from src.token_utils import count_tokens
 
 logger = logging.getLogger(__name__)
+
+
+def _expand_policies(chunks: list[dict], config: RunConfig) -> list[dict]:
+    """Keep short matching policies whole, so budgeting cannot split exceptions.
+
+    The vector hit IDs remain attached as provenance. A full-policy block has
+    its own ID rather than pretending it was a single indexed chunk. Unknown,
+    stale or oversized documents retain their original search fragments.
+    """
+    cap = zone_caps(config, count_tokens(SYNTHESIZER_SYSTEM_PROMPT))["retrieval"]
+    expanded = set()
+    result = []
+    for chunk in chunks:
+        doc_id = normalize_doc_id(chunk.get("source_doc", ""))
+        if doc_id in expanded:
+            continue
+        path = CORPUS_DIR / f"{doc_id}.txt"
+        if path.is_file():
+            doc = parse_document(path)
+            body = doc["body"]
+            # Do not replace remotely indexed evidence with a different local version.
+            matches = " ".join(chunk["content"].split()) in " ".join(body.split())
+            if matches and (cap is None or count_tokens(body) <= cap):
+                hits = [c["chunk_id"] for c in chunks if normalize_doc_id(c.get("source_doc", "")) == doc_id]
+                result.append({**chunk, "chunk_id": f"{doc_id}::full",
+                               "content": body, "tokens": count_tokens(body),
+                               "section": "Complete policy", "evidence_scope": "full_document",
+                               "seed_chunk_ids": hits,
+                               "expanded_chunk_ids": [c["chunk_id"] for c in chunk_document(doc_id, body)]})
+                expanded.add(doc_id)
+                continue
+        result.append(chunk)
+    return result
 
 
 def retriever_node(state: AgentState) -> dict:
@@ -64,11 +102,17 @@ def retriever_node(state: AgentState) -> dict:
                 if key not in selected or chunk["score"] > selected[key]["score"]:
                     selected[key] = chunk
             chunks = sorted(selected.values(), key=lambda c: c["score"], reverse=True)
+            chunks = _expand_policies(chunks, config)
         annotate(
             **{
                 "retrieval.chunk_ids": [c["chunk_id"] for c in chunks],
                 "retrieval.scores": [round(c["score"], 4) for c in chunks],
                 "retrieval.vector_scores": [c.get("vector_score", c["score"]) for c in chunks],
+                "retrieval.expansions": [
+                    {"source_doc": c["source_doc"], "seed_chunk_ids": c["seed_chunk_ids"],
+                     "expanded_chunk_ids": c["expanded_chunk_ids"]}
+                    for c in chunks if c.get("evidence_scope") == "full_document"
+                ],
             }
         )
 
