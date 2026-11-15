@@ -1,106 +1,105 @@
-# Context-Engineered RAG
+# Context Engineering, Measured
 
-A common challenge when building Retrieval-Augmented Generation (RAG) agents is managing context limits. When users have extended conversations, the combined size of the system prompt, retrieved documents, and conversation history can silently exceed the LLM's token limit. This often results in API truncation, dropped documents, and hallucinated answers.
+A comparison of naive RAG and a context-engineered policy assistant, using a
+synthetic company corpus, the same generator, and the same evaluation questions.
+The engineered arm adds routing, standalone search queries, bounded user memory,
+retrieval deduplication, and context budgets.
 
-This repository implements a LangGraph RAG agent with a strict **Context Budget Enforcer**. It mathematically limits tokens across the system prompt, retrieval chunks, memory, and conversation history. If the payload approaches the limit, the enforcer systematically drops the oldest conversation turns or lowest-scoring chunks to guarantee a pristine, under-budget prompt.
+## Current results
 
-## Technologies
+The latest retained comparison is `engineered-b5000-20261112_233129`: 30 scenarios,
+52 turns per arm, 104 saved answers, and 312 usable current-version judge grades.
+Each answer has a live Langfuse experiment item and trace ID.
 
-- **Agent Orchestration**: LangGraph
-- **LLM**: Google Gemini 2.5 Flash (for both routing and evaluation)
-- **Vector / Fact Storage**: SQLite (Memory Store)
-- **Observability & Tracing**: Arize Phoenix & OpenTelemetry (OTEL)
-- **Evaluations**: Phoenix Evals (`LLM-as-a-judge`), Pandas
-- **Testing**: Pytest
+| Measurement | Naive | Engineered |
+|---|---:|---:|
+| Mean total agent chat tokens | 4,549.7 | 4,215.0 |
+| Mean synthesis tokens | 4,549.7 | 2,895.7 |
+| Mean measured turn time | 10.48 s | 13.80 s |
+| Automated answer correctness | 49/52 | 47/52 |
+| Automated groundedness | 46/52 | 47/52 |
+| Automated citation support | 46/52 | 46/52 |
 
-## Architecture
+Total chat-token usage fell **7.4%**, but measured latency increased and overall
+answer-quality improvement was not established. Timing includes provider retries
+and harness overhead. Judge scores are provisional: review found both false
+negatives on valid refusals and a missed unsupported accounting claim. A small,
+assisted annotation review is preserved; it is not independent calibration.
 
-The system is built using LangGraph to route intents, retrieve context, enforce token budgets, and generate responses.
+- [Complete report](reports/engineered-b5000-20261112_233129.md)
+- [Baseline experiment](https://us.cloud.langfuse.com/project/cmw7csmg300xlad0jlzv2wohn/experiments/results?baseline=ae878644e65170f1)
+- [Engineered experiment](https://us.cloud.langfuse.com/project/cmw7csmg300xlad0jlzv2wohn/experiments/results?baseline=fd94d3e326944fb1)
 
-```mermaid
-graph TD
-    User([User Query]) --> Router[Intent Router]
-    
-    Router -- "policy_lookup" --> Retrieval[Vector Retrieval]
-    Router -- "clarification" --> History[Load History & Memory]
-    Router -- "out_of_scope" --> Reject[Out of Scope Handler]
-    
-    Retrieval --> History
-    History --> Enforcer{Context Enforcer}
-    
-    Enforcer -- "Over Budget" --> Trim[Trim Lowest Chunks / Oldest History]
-    Trim -.-> Enforcer
-    
-    Enforcer -- "Under Budget" --> LLM[Gemini 2.5 Flash]
-    
-    LLM --> MemWrite[Persist to SQLite Memory]
-    MemWrite --> User
+## Layout
+
+| Path | Purpose |
+|---|---|
+| `src/` | LangGraph agent, providers, retrieval, memory, context assembly, tracing |
+| `corpus/documents/` | 52 synthetic policy and distractor documents |
+| `evals/` | Versioned scenarios, runner, metrics, judges, calibration and reports |
+| `evals/datasets/` | Benchmark and assisted human-review records |
+| `scripts/` | Ingestion, evaluation, live Langfuse experiments and score verification |
+| `tests/` | Offline regression tests and an explicitly selected live smoke test |
+| `runs/` | Retained answers, manifests, append-only grades and scorecards |
+| `reports/` | Reports supporting the retained comparisons and review |
+
+## Setup
+
+Python 3.11 or later is required. PowerShell commands:
+
+```powershell
+python -m venv .venv
+.venv/Scripts/python.exe -m pip install -e ".[dev]"
+Copy-Item .env.example .env
 ```
 
-## Context Engineering
+Fill `.env` with Groq generation/judge keys, a Google embedding key, and Pinecone
+configuration. Add Langfuse keys for live traces and experiments. Secrets, local
+SQLite memory, provider caches and tool settings are ignored by Git.
 
-Instead of blindly injecting retrieved chunks into the prompt, the Enforcer calculates the token cost of four distinct zones before the LLM is called.
+## Offline verification
 
-```mermaid
-pie title Token Budget Allocation Target
-    "System Prompt" : 10
-    "Retrieval Chunks" : 50
-    "Memory Entries" : 15
-    "Conversation History" : 25
+```powershell
+$env:LANGFUSE_TRACING_ENABLED = "false"
+.venv/Scripts/python.exe -m pytest
 ```
 
-The **Context Budget Enforcer** operates under a strict `TOTAL_BUDGET`. If the aggregated payload crosses this threshold, it initiates a cascading trim:
-1. **Conversation Trimming**: Oldest user/assistant messages are dropped first.
-2. **Retrieval Trimming**: Low-scoring vector chunks are dropped next.
-3. **Emergency Trimming**: If the payload is still too heavy, it falls back to emergency truncation, heavily prioritizing the rigid System Rules and core Memory over raw context.
+The default suite excludes live-provider tests. It does not regenerate answers
+or spend model quota.
 
-## Core Components
+## Live evaluation
 
-- **`context_enforcer`**: The node that trims tokens to guarantee the prompt stays within budget constraints.
-- **`router`**: Intent classification (`policy_lookup`, `clarification`, `out_of_scope`) using Gemini Flash to prevent expensive RAG lookups on basic conversational queries.
-- **`memory_store`**: SQLite-backed memory to persist facts and context across conversation turns.
-- **`evals`**: A 5-metric evaluation suite (Router Accuracy, Source Coverage, Answer Correctness, Hallucination, Faithfulness) utilizing `phoenix-evals`.
-- **`tracing`**: Full OpenTelemetry observability via Arize Phoenix to visualize token consumption and span latencies.
+The first ingestion replaces the configured Pinecone `policies` namespace and
+records document/chunk counts and retrieval probes in `corpus/ingest_report.json`.
+It is not needed to read the saved results.
 
-## Evaluation & Observability
-
-Using Arize Phoenix, we track every span and evaluate pipeline performance. Here is a look at a flawed baseline run (hallucinating) versus our final polished run.
-
-### Before Evals (Flawed Baseline)
-Without rigid prompt constraints, the LLM hallucinates an answer to out-of-scope, trick questions (like adopting giraffes) by misinterpreting internal data policy documents. 
-
-![Flawed hallucination run in Phoenix](/assets/flawed_giraffe.png)
-
-### After Evals (Final Polish)
-With our context enforcer and strict `out_of_scope` routing in place, the agent correctly identifies off-topic questions instantly (3s latency) and safely refuses to answer.
-
-![Perfect out of scope run in Phoenix](/assets/perfect_weather.png)
-
-## Getting Started
-
-### Prerequisites
-- Python 3.10+
-- `GOOGLE_API_KEY` exported in your environment (for Gemini models)
-
-### Installation
-1. Clone the repository and install dependencies:
-```bash
-pip install -r requirements.txt
+```powershell
+$env:LANGFUSE_TRACING_ENABLED = "true"
+.venv/Scripts/python.exe -m scripts.ingest_corpus
+.venv/Scripts/python.exe -m scripts.langfuse_experiment_runner --arm both
 ```
 
-2. Initialize tracing locally:
-To view the traces and evaluation metrics, you need to run Arize Phoenix. This is automatically handled by the initialization scripts, which launch Phoenix at `http://localhost:6006`.
+Resume the existing comparison without regenerating its completed scenarios:
 
-### Running Tests and Evaluations
-
-To validate the architecture, the project includes an automated test suite and LLM-as-a-judge evaluators.
-
-```bash
-# 1. Start the test suite to generate execution traces
-python -m scripts.run_test_suite
-
-# 2. Run the LLM evaluators against the recorded Phoenix traces
-python -m scripts.run_evals
+```powershell
+.venv/Scripts/python.exe -m scripts.langfuse_experiment_runner --arm both --run-id engineered-b5000-20261112_233129 --resume
+.venv/Scripts/python.exe -m scripts.verify_langfuse_experiments engineered-b5000-20261112_233129 --require-scores
 ```
 
-*Note: The LLM-as-a-judge evaluators use `asyncio` batching for high-throughput grading.*
+The Langfuse runner checkpoints each completed grade and reuses score IDs on
+resume. Grades are append-only: select the current version for each metric using
+`evals.judges.judge_version`, rather than counting every historical line.
+
+`scripts.run_eval` also supports local record/report generation without requiring
+Langfuse. `scripts.run_sweep` and `scripts.calibrate_judge` provide budget sweeps
+and human-label calibration. Neither is part of the default offline test run.
+
+## Evidence and limitations
+
+Both arms share the generator, synthesis prompt, index, embedding model and
+benchmark. Total agent chat tokens include synthesis and auxiliary model calls;
+they exclude embeddings and judge calls. Cost figures are estimates, not billing.
+Reports include confidence intervals and paired comparisons.
+
+The benchmark, saved records, judge versions and assisted annotation metadata
+are retained alongside the reports so individual results can be inspected.
