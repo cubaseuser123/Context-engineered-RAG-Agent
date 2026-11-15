@@ -31,4 +31,30 @@ eggs/
 *.db
 *.sqlite3
 graphify-out/
-docs/
+# Local tool state and historical material kept outside the published project.
+.freebuff/
+.kimchi/
+.local-archive/
+.pytest_cache/
+
+# Keep the verified comparisons and the runs behind the human annotations.
+runs/**
+!runs/engineered-b5000-20261112_150416-*/
+!runs/engineered-b5000-20261112_233129-*/
+!runs/smoke-v2-engineered-b5000-20261112_190504-engineered/
+!runs/smoke-v2-engineered-b5000-20261112_191131-engineered/
+!runs/*/records.jsonl
+!runs/*/manifest.json
+!runs/*/judgements.jsonl
+!runs/*/scorecard.json
+
+# Retain reports cited by the walkthrough and assisted review.
+reports/*
+!reports/engineered-b5000-20261112_150416.md
+!reports/engineered-b5000-20261112_233129.md
+!reports/smoke-v2-engineered-b5000-20261112_190504.md
+!reports/smoke-v2-engineered-b5000-20261112_191131.md
+!reports/context_v3_review_check.json
+
+# Provider response cache and quota ledger
+.cache/
