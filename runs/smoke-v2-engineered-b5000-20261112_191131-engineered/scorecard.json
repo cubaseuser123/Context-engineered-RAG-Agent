@@ -1,0 +1,227 @@
+{
+  "schema_version": "1",
+  "arm": "engineered",
+  "config": {
+    "arm": "engineered",
+    "routing": true,
+    "memory": true,
+    "enforce_budget": true,
+    "retrieval_k": 8,
+    "total_budget": 5000,
+    "max_history_tokens": null,
+    "pipeline_version": "context-v2"
+  },
+  "config_hash": "1e378c3fbf58",
+  "dataset_version": "v1",
+  "dataset_hash": "951e8892fa0c8ada",
+  "generated_at": "2026-11-12T13:44:07.252059+00:00",
+  "health": {
+    "scenarios_expected": 1,
+    "scenarios_completed": 1,
+    "scenario_completion_rate": 1.0,
+    "turns_expected": 6,
+    "turns_recorded": 6,
+    "turn_completion_rate": 1.0,
+    "api_error_rate": 0.0,
+    "api_errors": 0,
+    "judge_coverage": 1.0,
+    "cache_hit_rate": 0.0,
+    "scenarios_seen": 1
+  },
+  "cohorts": {
+    "multi_turn": {
+      "n_turns": 6,
+      "n_scenarios": 1,
+      "metrics": {
+        "routing_accuracy": {
+          "mean": 0.6667,
+          "ci_low": 0.3,
+          "ci_high": 0.9032,
+          "n": 6
+        },
+        "retrieval_recall_at_k": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 3
+        },
+        "retrieval_precision_at_k": {
+          "mean": 0.25,
+          "ci_low": 0.25,
+          "ci_high": 0.25,
+          "n": 3
+        },
+        "citation_precision": {
+          "mean": 0.4444,
+          "ci_low": 0.1111,
+          "ci_high": 0.8333,
+          "n": 6
+        },
+        "citation_recall": {
+          "mean": 0.9444,
+          "ci_low": 0.8333,
+          "ci_high": 1.0,
+          "n": 6
+        },
+        "budget_invariant": {
+          "mean": 1.0,
+          "ci_low": 0.4385,
+          "ci_high": 1.0,
+          "n": 3
+        },
+        "constraint_pass": {
+          "mean": 1.0,
+          "ci_low": 0.4385,
+          "ci_high": 1.0,
+          "n": 3
+        },
+        "answer_correctness": {
+          "mean": 1.0,
+          "ci_low": 0.6097,
+          "ci_high": 1.0,
+          "n": 6
+        },
+        "groundedness": {
+          "mean": 1.0,
+          "ci_low": 0.6097,
+          "ci_high": 1.0,
+          "n": 6
+        },
+        "citation_support": {
+          "mean": 0.8333,
+          "ci_low": 0.4365,
+          "ci_high": 0.9699,
+          "n": 6
+        },
+        "tokens_per_answer": {
+          "mean": 2705.6667,
+          "ci_low": 1615.1667,
+          "ci_high": 3837.5,
+          "n": 6
+        },
+        "latency_ms": {
+          "mean": 13139.72,
+          "ci_low": 7887.1719,
+          "ci_high": 18331.3376,
+          "n": 6
+        },
+        "searches_per_answer": {
+          "mean": 0.5,
+          "ci_low": 0.1667,
+          "ci_high": 0.8333,
+          "n": 6
+        },
+        "cost_usd": {
+          "mean": 0.0009,
+          "ci_low": 0.0006,
+          "ci_high": 0.0013,
+          "n": 6
+        }
+      }
+    },
+    "overall": {
+      "n_turns": 6,
+      "n_scenarios": 1,
+      "metrics": {
+        "routing_accuracy": {
+          "mean": 0.6667,
+          "ci_low": 0.3,
+          "ci_high": 0.9032,
+          "n": 6
+        },
+        "retrieval_recall_at_k": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 3
+        },
+        "retrieval_precision_at_k": {
+          "mean": 0.25,
+          "ci_low": 0.25,
+          "ci_high": 0.25,
+          "n": 3
+        },
+        "citation_precision": {
+          "mean": 0.4444,
+          "ci_low": 0.1111,
+          "ci_high": 0.8333,
+          "n": 6
+        },
+        "citation_recall": {
+          "mean": 0.9444,
+          "ci_low": 0.8333,
+          "ci_high": 1.0,
+          "n": 6
+        },
+        "budget_invariant": {
+          "mean": 1.0,
+          "ci_low": 0.4385,
+          "ci_high": 1.0,
+          "n": 3
+        },
+        "constraint_pass": {
+          "mean": 1.0,
+          "ci_low": 0.4385,
+          "ci_high": 1.0,
+          "n": 3
+        },
+        "answer_correctness": {
+          "mean": 1.0,
+          "ci_low": 0.6097,
+          "ci_high": 1.0,
+          "n": 6
+        },
+        "groundedness": {
+          "mean": 1.0,
+          "ci_low": 0.6097,
+          "ci_high": 1.0,
+          "n": 6
+        },
+        "citation_support": {
+          "mean": 0.8333,
+          "ci_low": 0.4365,
+          "ci_high": 0.9699,
+          "n": 6
+        },
+        "tokens_per_answer": {
+          "mean": 2705.6667,
+          "ci_low": 1615.1667,
+          "ci_high": 3837.5,
+          "n": 6
+        },
+        "latency_ms": {
+          "mean": 13139.72,
+          "ci_low": 7887.1719,
+          "ci_high": 18331.3376,
+          "n": 6
+        },
+        "searches_per_answer": {
+          "mean": 0.5,
+          "ci_low": 0.1667,
+          "ci_high": 0.8333,
+          "n": 6
+        },
+        "cost_usd": {
+          "mean": 0.0009,
+          "ci_low": 0.0006,
+          "ci_high": 0.0013,
+          "n": 6
+        }
+      }
+    }
+  },
+  "cohort_counts": {
+    "multi_turn": 1
+  },
+  "refusal_confusion": {
+    "refused_warranted": 0,
+    "answered_warranted": 0,
+    "refused_unwarranted": 0,
+    "answered_unwarranted": 6,
+    "n": 6,
+    "refusal_recall": null,
+    "refusal_precision": null
+  },
+  "failures": [],
+  "failure_count": 0
+}

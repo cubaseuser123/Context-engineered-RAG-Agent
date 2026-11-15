@@ -1,0 +1,59 @@
+{
+  "run_id": "engineered-b5000-20261112_233129-naive",
+  "created_at": "2026-11-13T06:36:19.742259+00:00",
+  "finished_at": "2026-11-13T06:36:19.784581+00:00",
+  "arm": "naive",
+  "config": {
+    "arm": "naive",
+    "routing": false,
+    "memory": false,
+    "enforce_budget": false,
+    "retrieval_k": 8,
+    "total_budget": null,
+    "max_history_tokens": null,
+    "pipeline_version": "context-v3"
+  },
+  "config_hash": "513747d6a0bf",
+  "git_sha": "237291db10e5f21f5e003b8375626c24093c32af",
+  "dataset_version": "v1",
+  "dataset_hash": "3d1eb954707ef7f4",
+  "dataset_label": "v1",
+  "scenarios": 30,
+  "turns": 52,
+  "errors": 0,
+  "models": {
+    "generator": "qwen/qwen3.8-27b",
+    "judge": "openai/gpt-oss-120b",
+    "temperature": 0.0
+  },
+  "corpus_documents": 52,
+  "cache": {
+    "google:gemini-embedding-001": {
+      "cached_calls": 0,
+      "calls": 29,
+      "completion_tokens": 0,
+      "errors": 0,
+      "prompt_tokens": 0
+    },
+    "groq:openai/gpt-oss-120b": {
+      "cached_calls": 0,
+      "calls": 25,
+      "completion_tokens": 2055,
+      "errors": 15,
+      "prompt_tokens": 38294
+    },
+    "groq:qwen/qwen3.8-27b": {
+      "cached_calls": 0,
+      "calls": 221,
+      "completion_tokens": 29238,
+      "errors": 137,
+      "prompt_tokens": 165319
+    }
+  },
+  "environment": {
+    "python": "3.13.3",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "memory_db": "D:\\NextJs Projects\\Conext Engineering RAG\\memory.db"
+  },
+  "notes": ""
+}

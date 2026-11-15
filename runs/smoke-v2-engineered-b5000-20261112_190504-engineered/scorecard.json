@@ -1,0 +1,390 @@
+{
+  "schema_version": "1",
+  "arm": "engineered",
+  "config": {
+    "arm": "engineered",
+    "routing": true,
+    "memory": true,
+    "enforce_budget": true,
+    "retrieval_k": 8,
+    "total_budget": 5000,
+    "max_history_tokens": null,
+    "pipeline_version": "context-v2"
+  },
+  "config_hash": "1e378c3fbf58",
+  "dataset_version": "v1",
+  "dataset_hash": "5bf4232e556d6847",
+  "generated_at": "2026-11-12T13:44:23.506823+00:00",
+  "health": {
+    "scenarios_expected": 4,
+    "scenarios_completed": 4,
+    "scenario_completion_rate": 1.0,
+    "turns_expected": 14,
+    "turns_recorded": 14,
+    "turn_completion_rate": 1.0,
+    "api_error_rate": 0.0,
+    "api_errors": 0,
+    "judge_coverage": 1.0,
+    "cache_hit_rate": 0.0,
+    "scenarios_seen": 4
+  },
+  "cohorts": {
+    "multi_turn": {
+      "n_turns": 11,
+      "n_scenarios": 2,
+      "metrics": {
+        "routing_accuracy": {
+          "mean": 0.4545,
+          "ci_low": 0.2127,
+          "ci_high": 0.7199,
+          "n": 11
+        },
+        "retrieval_recall_at_k": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 5
+        },
+        "retrieval_precision_at_k": {
+          "mean": 0.275,
+          "ci_low": 0.25,
+          "ci_high": 0.325,
+          "n": 5
+        },
+        "citation_precision": {
+          "mean": 0.5,
+          "ci_low": 0.2,
+          "ci_high": 0.8,
+          "n": 10
+        },
+        "citation_recall": {
+          "mean": 0.8333,
+          "ci_low": 0.6,
+          "ci_high": 1.0,
+          "n": 10
+        },
+        "budget_invariant": {
+          "mean": 1.0,
+          "ci_low": 0.6097,
+          "ci_high": 1.0,
+          "n": 6
+        },
+        "constraint_pass": {
+          "mean": 0.8333,
+          "ci_low": 0.4365,
+          "ci_high": 0.9699,
+          "n": 6
+        },
+        "answer_correctness": {
+          "mean": 0.7273,
+          "ci_low": 0.4344,
+          "ci_high": 0.9025,
+          "n": 11
+        },
+        "groundedness": {
+          "mean": 1.0,
+          "ci_low": 0.7412,
+          "ci_high": 1.0,
+          "n": 11
+        },
+        "citation_support": {
+          "mean": 0.9091,
+          "ci_low": 0.6226,
+          "ci_high": 0.9838,
+          "n": 11
+        },
+        "tokens_per_answer": {
+          "mean": 2347.5455,
+          "ci_low": 1475.6364,
+          "ci_high": 3218.4545,
+          "n": 11
+        },
+        "latency_ms": {
+          "mean": 9241.2793,
+          "ci_low": 7180.2605,
+          "ci_high": 11875.2224,
+          "n": 11
+        },
+        "searches_per_answer": {
+          "mean": 0.5455,
+          "ci_low": 0.2727,
+          "ci_high": 0.8182,
+          "n": 11
+        },
+        "cost_usd": {
+          "mean": 0.0008,
+          "ci_low": 0.0005,
+          "ci_high": 0.001,
+          "n": 11
+        }
+      }
+    },
+    "overall": {
+      "n_turns": 14,
+      "n_scenarios": 4,
+      "metrics": {
+        "routing_accuracy": {
+          "mean": 0.4286,
+          "ci_low": 0.2138,
+          "ci_high": 0.6741,
+          "n": 14
+        },
+        "retrieval_recall_at_k": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 6
+        },
+        "retrieval_precision_at_k": {
+          "mean": 0.2708,
+          "ci_low": 0.25,
+          "ci_high": 0.3125,
+          "n": 6
+        },
+        "citation_precision": {
+          "mean": 0.5455,
+          "ci_low": 0.2727,
+          "ci_high": 0.8182,
+          "n": 11
+        },
+        "citation_recall": {
+          "mean": 0.8485,
+          "ci_low": 0.6364,
+          "ci_high": 1.0,
+          "n": 11
+        },
+        "budget_invariant": {
+          "mean": 1.0,
+          "ci_low": 0.6457,
+          "ci_high": 1.0,
+          "n": 7
+        },
+        "constraint_pass": {
+          "mean": 0.8571,
+          "ci_low": 0.4869,
+          "ci_high": 0.9743,
+          "n": 7
+        },
+        "answer_correctness": {
+          "mean": 0.6429,
+          "ci_low": 0.3876,
+          "ci_high": 0.8366,
+          "n": 14
+        },
+        "groundedness": {
+          "mean": 0.9286,
+          "ci_low": 0.6853,
+          "ci_high": 0.9873,
+          "n": 14
+        },
+        "citation_support": {
+          "mean": 0.7857,
+          "ci_low": 0.5241,
+          "ci_high": 0.9243,
+          "n": 14
+        },
+        "tokens_per_answer": {
+          "mean": 2109.9286,
+          "ci_low": 1302.4286,
+          "ci_high": 2963.5714,
+          "n": 14
+        },
+        "latency_ms": {
+          "mean": 9290.4435,
+          "ci_low": 6196.5224,
+          "ci_high": 12921.8649,
+          "n": 14
+        },
+        "searches_per_answer": {
+          "mean": 0.5,
+          "ci_low": 0.2857,
+          "ci_high": 0.7857,
+          "n": 14
+        },
+        "cost_usd": {
+          "mean": 0.0007,
+          "ci_low": 0.0004,
+          "ci_high": 0.001,
+          "n": 14
+        }
+      }
+    },
+    "memory": {
+      "n_turns": 2,
+      "n_scenarios": 1,
+      "metrics": {
+        "routing_accuracy": {
+          "mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.6576,
+          "n": 2
+        },
+        "retrieval_recall_at_k": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 1
+        },
+        "retrieval_precision_at_k": {
+          "mean": 0.25,
+          "ci_low": 0.25,
+          "ci_high": 0.25,
+          "n": 1
+        },
+        "citation_precision": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 1
+        },
+        "citation_recall": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 1
+        },
+        "budget_invariant": {
+          "mean": 1.0,
+          "ci_low": 0.2065,
+          "ci_high": 1.0,
+          "n": 1
+        },
+        "constraint_pass": {
+          "mean": 1.0,
+          "ci_low": 0.2065,
+          "ci_high": 1.0,
+          "n": 1
+        },
+        "answer_correctness": {
+          "mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.6576,
+          "n": 2
+        },
+        "groundedness": {
+          "mean": 1.0,
+          "ci_low": 0.3424,
+          "ci_high": 1.0,
+          "n": 2
+        },
+        "citation_support": {
+          "mean": 0.5,
+          "ci_low": 0.0945,
+          "ci_high": 0.9055,
+          "n": 2
+        },
+        "tokens_per_answer": {
+          "mean": 1858.0,
+          "ci_low": 0.0,
+          "ci_high": 3716.0,
+          "n": 2
+        },
+        "latency_ms": {
+          "mean": 13523.9476,
+          "ci_low": 1025.9403,
+          "ci_high": 26021.9549,
+          "n": 2
+        },
+        "searches_per_answer": {
+          "mean": 0.5,
+          "ci_low": 0.0,
+          "ci_high": 1.0,
+          "n": 2
+        },
+        "cost_usd": {
+          "mean": 0.0006,
+          "ci_low": 0.0,
+          "ci_high": 0.0012,
+          "n": 2
+        }
+      }
+    },
+    "refusal": {
+      "n_turns": 1,
+      "n_scenarios": 1,
+      "metrics": {
+        "routing_accuracy": {
+          "mean": 1.0,
+          "ci_low": 0.2065,
+          "ci_high": 1.0,
+          "n": 1
+        },
+        "answer_correctness": {
+          "mean": 1.0,
+          "ci_low": 0.2065,
+          "ci_high": 1.0,
+          "n": 1
+        },
+        "groundedness": {
+          "mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.7935,
+          "n": 1
+        },
+        "citation_support": {
+          "mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.7935,
+          "n": 1
+        },
+        "tokens_per_answer": {
+          "mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "n": 1
+        },
+        "latency_ms": {
+          "mean": 1364.2408,
+          "ci_low": 1364.2408,
+          "ci_high": 1364.2408,
+          "n": 1
+        },
+        "searches_per_answer": {
+          "mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "n": 1
+        },
+        "cost_usd": {
+          "mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "n": 1
+        }
+      }
+    }
+  },
+  "cohort_counts": {
+    "multi_turn": 2,
+    "memory": 1,
+    "refusal": 1
+  },
+  "refusal_confusion": {
+    "refused_warranted": 1,
+    "answered_warranted": 0,
+    "refused_unwarranted": 0,
+    "answered_unwarranted": 13,
+    "n": 14,
+    "refusal_recall": 1.0,
+    "refusal_precision": 1.0
+  },
+  "failures": [
+    {
+      "run_id": "smoke-v2-engineered-b5000-20261112_190504-engineered",
+      "scenario_id": "mt_leave_ambiguity",
+      "turn_index": 2,
+      "cohort": "multi_turn",
+      "reasons": [
+        "constraint_fail"
+      ],
+      "question": "And what happens to the days I don't use?",
+      "response": "According to the **Leave Policy**:\n\n- Up to **12 unused days** carry forward into the next calendar year.\n- Carried-forward days must be used by **31 March** of the following year, or they are **forfeited**.\n- Any days beyond the 12-day carry-forward limit are forfeited at year-end.\n\nSo in short: use them, or lose them.",
+      "citations": [
+        "HR_Leave_Policy"
+      ],
+      "retrieved_docs": [],
+      "context": "=== CONVERSATION ===\nuser: How much leave do I get?\nassistant: According to the **Leave Policy**, your entitlements are:\n\n- **Annual leave:** 24 days per calendar year (full-time). Part-time employees accrue pro-rata based on contracted hours \u00f7 40.\n- **Sick leave:** 12 days per year (separate balance, does not carry forward).\n- **Carry-forward:** Up to 12 unused annual leave days can carry into the next year, but must be used by 31 March or they're forfeited.\n\nAccording to the **Parental Leave Policy**:\n- **Primary caregiver:** 26 weeks at 100% base salary.\n- **Secondary caregiver:** 6 weeks at 100% base salary.\n\nAccording to the **Learning and Development Policy**:\n- **Study leave:** Up to 3 days paid per year for an exam or intensive course.\n\nIf you're on probation, you can accrue leave from day one but may only take up to 5 days until probation is confirmed.\nuser: Annual leave, the paid one.\nassistant: According to the **Leave Policy**, you get **24 days of paid annual leave** per calendar year (full-time).\n\nKey details:\n- Part-time employees accrue pro-rata (contracted hours \u00f7 40).\n- Up to **12 unused days** can carry forward into the next year, but must be used by **31 March**"
+    }
+  ],
+  "failure_count": 1
+}

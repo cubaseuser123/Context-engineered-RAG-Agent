@@ -1,0 +1,142 @@
+{
+  "queueId": "cmwds11oz00aiad0fu81lg3d8",
+  "description": "Targeted smoke-test review. Reserve one case per scenario (4 total) for checking revised judges; do not tune on holdout labels. Not a population accuracy sample.",
+  "items": [
+    {
+      "trace": "338051210cf4cc14ae642762ba6bfe12",
+      "record_id": "mt_procurement_roundtrip:01",
+      "question": "Who signs off?",
+      "reference": "Purchases between INR 50,001 and INR 5,00,000 must be approved by a Director, with two written quotes and a business justification.",
+      "docs": [
+        "Finance_Procurement_Approval_Matrix"
+      ],
+      "split": "holdout"
+    },
+    {
+      "trace": "263208846454e7252daa0595159f8cfe",
+      "record_id": "mt_leave_ambiguity:01",
+      "question": "Annual leave, the paid one.",
+      "reference": "Full-time employees receive 24 days of paid annual leave per calendar year, accrued monthly from the date of joining.",
+      "docs": [
+        "HR_Leave_Policy"
+      ],
+      "split": "holdout"
+    },
+    {
+      "trace": "f24b0dc00b0a823b2f45fe8c6d18f98d",
+      "record_id": "mt_procurement_roundtrip:02",
+      "question": "Does the vendor need a security review first?",
+      "reference": "Yes, any third party that will store, process or access Meridian data must pass an IT vendor security review before a contract is signed.",
+      "docs": [
+        "IT_Vendor_Security_Review"
+      ],
+      "split": "development"
+    },
+    {
+      "trace": "271b365950e06c11cf420087fd222889",
+      "record_id": "mem_roundtrip_oncall:00",
+      "question": "I'm the on-call SRE for the TRITON service this week.",
+      "reference": "Acknowledged that you are the on-call SRE for TRITON this week. How can I help with runbooks or escalation paths?",
+      "docs": [],
+      "split": "holdout"
+    },
+    {
+      "trace": "96cee3622d8aef371fbb153a30145781",
+      "record_id": "mt_procurement_roundtrip:00",
+      "question": "I need to buy a 4,00,000 rupee analytics licence.",
+      "reference": "Purchasing a 4,00,000 INR software licence falls under the Procurement Approval Matrix. What details do you need regarding approvals, security reviews, or payment terms?",
+      "docs": [
+        "Finance_Procurement_Approval_Matrix"
+      ],
+      "split": "development"
+    },
+    {
+      "trace": "215457d170c239258f2f6e90c431d0a8",
+      "record_id": "mt_leave_ambiguity:02",
+      "question": "And what happens to the days I don't use?",
+      "reference": "You can carry forward up to 12 unused annual leave days into the next calendar year; any remaining unused carried-forward days lapse on 31 March.",
+      "docs": [
+        "HR_Leave_Policy"
+      ],
+      "split": "development"
+    },
+    {
+      "trace": "6f69fcfccc3ce06df767e6f28a65369b",
+      "record_id": "mt_procurement_roundtrip:05",
+      "question": "Put the whole sequence in order for me.",
+      "reference": "The required sequence is: 1) Complete IT vendor security review (up to 30 days). 2) Obtain Director approval with quotes. 3) Issue Purchase Order. 4) Process invoice under Net 30 terms.",
+      "docs": [
+        "Finance_Procurement_Approval_Matrix",
+        "IT_Vendor_Security_Review",
+        "Finance_Vendor_Payment_Terms"
+      ],
+      "split": "development"
+    },
+    {
+      "trace": "e91d54dd39941ee9ea9868c55ca110cc",
+      "record_id": "mt_procurement_roundtrip:03",
+      "question": "How long does that review take?",
+      "reference": "The IT vendor security review concludes within 30 days of receiving complete evidence from the vendor.",
+      "docs": [
+        "IT_Vendor_Security_Review"
+      ],
+      "split": "development"
+    },
+    {
+      "trace": "18874d56c7b21d2886b8b60c3d156d39",
+      "record_id": "ref_competitor_pricing:00",
+      "question": "What does our competitor charge for their enterprise plan?",
+      "reference": "The assistant should decline: competitor pricing is not in company policy.",
+      "docs": [],
+      "split": "holdout"
+    },
+    {
+      "trace": "4d49293ab3c11f9767c1033fbac9c1ca",
+      "record_id": "mt_leave_ambiguity:04",
+      "question": "Summarise that as three bullet points I can send my manager.",
+      "reference": "- 24 days of paid annual leave per calendar year.\n- Up to 12 unused days can be carried forward, expiring on 31 March.\n- Pre-2020 joiners have an extended grace period until 30 April.",
+      "docs": [
+        "HR_Leave_Policy"
+      ],
+      "split": "development"
+    },
+    {
+      "trace": "1543e44ba2942b0eef0a4d628846b5cd",
+      "record_id": "mt_leave_ambiguity:03",
+      "question": "You said they expire in March - is there any exception for long-tenured staff?",
+      "reference": "Yes, employees who joined Meridian before 1 January 2020 have an extended transitional grace period allowing carried-forward days to be used until 30 April.",
+      "docs": [
+        "HR_Leave_Policy"
+      ],
+      "split": "development"
+    },
+    {
+      "trace": "b0a63ec60dc6b3c5c7ea20f726e78d22",
+      "record_id": "mt_leave_ambiguity:00",
+      "question": "How much leave do I get?",
+      "reference": "Meridian provides several types of leave including annual leave (24 days), sick leave, parental leave, and bereavement leave. Which specific leave type would you like details on?",
+      "docs": [],
+      "split": "development"
+    },
+    {
+      "trace": "3f5a0ee04ca7b15deab5564ea73f31d1",
+      "record_id": "mt_procurement_roundtrip:04",
+      "question": "And what payment terms should I expect?",
+      "reference": "Invoices below INR 5,00,000 are settled on Net 30 payment terms.",
+      "docs": [
+        "Finance_Vendor_Payment_Terms"
+      ],
+      "split": "development"
+    },
+    {
+      "trace": "ee47abe81c52b290d4aca25cd3e89e9f",
+      "record_id": "mem_roundtrip_oncall:01",
+      "question": "If it goes down hard, who do I escalate to and how fast?",
+      "reference": "For a critical Sev-1 incident on TRITON, you must open the incident bridge within 15 minutes and page the service owner and the on-call engineering manager.",
+      "docs": [
+        "Operations_Sev_Incident_Escalation"
+      ],
+      "split": "development"
+    }
+  ]
+}

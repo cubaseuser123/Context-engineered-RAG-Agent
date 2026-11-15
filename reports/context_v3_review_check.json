@@ -1,0 +1,78 @@
+{
+  "judge_version": "openai/gpt-oss-120b-v3-whole-answer",
+  "review_type": "Assisted development review; not independent calibration",
+  "agree": 8,
+  "total": 10,
+  "items": [
+    {
+      "record_id": "mt_procurement_roundtrip:02",
+      "human": 1,
+      "judge": 1,
+      "reason": "The answer directly addresses the question, all statements are backed by policy, and no unsupported assumptions are made.",
+      "error": null
+    },
+    {
+      "record_id": "mt_procurement_roundtrip:00",
+      "human": 0,
+      "judge": 1,
+      "reason": "All three checks pass; the answer correctly addresses the question and all claims are backed by the provided policies.",
+      "error": null
+    },
+    {
+      "record_id": "mt_leave_ambiguity:02",
+      "human": 1,
+      "judge": 1,
+      "reason": "All checks pass; answer matches question, claims are backed by policy, and no unsupported assumptions are made.",
+      "error": null
+    },
+    {
+      "record_id": "mt_procurement_roundtrip:05",
+      "human": 0,
+      "judge": 0,
+      "reason": "All steps are correct, but the added 60\u201375\u202fday lead\u2011time estimate is not supported by any policy.",
+      "error": null
+    },
+    {
+      "record_id": "mt_procurement_roundtrip:03",
+      "human": 0,
+      "judge": 1,
+      "reason": "All checks pass; answer matches the question, claims are supported by policy, and conditions are properly qualified.",
+      "error": null
+    },
+    {
+      "record_id": "mt_leave_ambiguity:04",
+      "human": 1,
+      "judge": 1,
+      "reason": "All three checks pass; the answer correctly answers the request, all claims are supported by the policy, and no unsupported assumptions are made.",
+      "error": null
+    },
+    {
+      "record_id": "mt_leave_ambiguity:03",
+      "human": 1,
+      "judge": 1,
+      "reason": "All checks pass; the answer correctly addresses the question and is fully supported by the policy.",
+      "error": null
+    },
+    {
+      "record_id": "mt_leave_ambiguity:00",
+      "human": 1,
+      "judge": 1,
+      "reason": "All checks pass; the answer addresses the question, all claims are backed by policy, and no unsupported assumptions are made.",
+      "error": null
+    },
+    {
+      "record_id": "mt_procurement_roundtrip:04",
+      "human": 1,
+      "judge": 1,
+      "reason": "All checks pass; answer matches the question and is fully supported by policy.",
+      "error": null
+    },
+    {
+      "record_id": "mem_roundtrip_oncall:01",
+      "human": 1,
+      "judge": 1,
+      "reason": "The answer directly addresses the escalation path and timing, and all statements are backed by the provided policy.",
+      "error": null
+    }
+  ]
+}

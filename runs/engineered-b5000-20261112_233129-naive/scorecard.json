@@ -1,0 +1,634 @@
+{
+  "schema_version": "1",
+  "arm": "naive",
+  "config": {
+    "arm": "naive",
+    "routing": false,
+    "memory": false,
+    "enforce_budget": false,
+    "retrieval_k": 8,
+    "total_budget": null,
+    "max_history_tokens": null,
+    "pipeline_version": "context-v3"
+  },
+  "config_hash": "513747d6a0bf",
+  "dataset_version": "v1",
+  "dataset_hash": "3d1eb954707ef7f4",
+  "generated_at": "2026-11-13T06:41:25.582375+00:00",
+  "health": {
+    "scenarios_expected": 30,
+    "scenarios_completed": 30,
+    "scenario_completion_rate": 1.0,
+    "turns_expected": 52,
+    "turns_recorded": 52,
+    "turn_completion_rate": 1.0,
+    "api_error_rate": 0.0,
+    "api_errors": 0,
+    "judge_coverage": 1.0,
+    "cache_hit_rate": 0.0,
+    "scenarios_seen": 30
+  },
+  "cohorts": {
+    "single_doc": {
+      "n_turns": 10,
+      "n_scenarios": 10,
+      "metrics": {
+        "retrieval_recall_at_k": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 10
+        },
+        "retrieval_precision_at_k": {
+          "mean": 0.2625,
+          "ci_low": 0.25,
+          "ci_high": 0.2875,
+          "n": 10
+        },
+        "citation_precision": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 10
+        },
+        "citation_recall": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 10
+        },
+        "budget_invariant": {
+          "mean": 1.0,
+          "ci_low": 0.7225,
+          "ci_high": 1.0,
+          "n": 10
+        },
+        "constraint_pass": {
+          "mean": 1.0,
+          "ci_low": 0.7225,
+          "ci_high": 1.0,
+          "n": 10
+        },
+        "answer_correctness": {
+          "mean": 1.0,
+          "ci_low": 0.7225,
+          "ci_high": 1.0,
+          "n": 10
+        },
+        "groundedness": {
+          "mean": 1.0,
+          "ci_low": 0.7225,
+          "ci_high": 1.0,
+          "n": 10
+        },
+        "citation_support": {
+          "mean": 1.0,
+          "ci_low": 0.7225,
+          "ci_high": 1.0,
+          "n": 10
+        },
+        "tokens_per_answer": {
+          "mean": 4376.9,
+          "ci_low": 4055.5,
+          "ci_high": 4731.6,
+          "n": 10
+        },
+        "latency_ms": {
+          "mean": 8304.5811,
+          "ci_low": 4642.4167,
+          "ci_high": 12347.2719,
+          "n": 10
+        },
+        "searches_per_answer": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 10
+        },
+        "cost_usd": {
+          "mean": 0.0014,
+          "ci_low": 0.0013,
+          "ci_high": 0.0016,
+          "n": 10
+        }
+      }
+    },
+    "overall": {
+      "n_turns": 52,
+      "n_scenarios": 30,
+      "metrics": {
+        "retrieval_recall_at_k": {
+          "mean": 0.9318,
+          "ci_low": 0.8409,
+          "ci_high": 1.0,
+          "n": 44
+        },
+        "retrieval_precision_at_k": {
+          "mean": 0.233,
+          "ci_low": 0.2045,
+          "ci_high": 0.2585,
+          "n": 44
+        },
+        "citation_precision": {
+          "mean": 0.8765,
+          "ci_low": 0.778,
+          "ci_high": 0.9561,
+          "n": 44
+        },
+        "citation_recall": {
+          "mean": 0.8977,
+          "ci_low": 0.7955,
+          "ci_high": 0.9773,
+          "n": 44
+        },
+        "budget_invariant": {
+          "mean": 1.0,
+          "ci_low": 0.9312,
+          "ci_high": 1.0,
+          "n": 52
+        },
+        "constraint_pass": {
+          "mean": 0.9697,
+          "ci_low": 0.8468,
+          "ci_high": 0.9946,
+          "n": 33
+        },
+        "answer_correctness": {
+          "mean": 0.9423,
+          "ci_low": 0.8436,
+          "ci_high": 0.9802,
+          "n": 52
+        },
+        "groundedness": {
+          "mean": 0.8846,
+          "ci_low": 0.7703,
+          "ci_high": 0.946,
+          "n": 52
+        },
+        "citation_support": {
+          "mean": 0.8846,
+          "ci_low": 0.7703,
+          "ci_high": 0.946,
+          "n": 52
+        },
+        "tokens_per_answer": {
+          "mean": 4549.6538,
+          "ci_low": 4361.8654,
+          "ci_high": 4736.5385,
+          "n": 52
+        },
+        "latency_ms": {
+          "mean": 10479.109,
+          "ci_low": 7822.7841,
+          "ci_high": 13726.2295,
+          "n": 52
+        },
+        "searches_per_answer": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 52
+        },
+        "cost_usd": {
+          "mean": 0.0014,
+          "ci_low": 0.0014,
+          "ci_high": 0.0015,
+          "n": 52
+        }
+      }
+    },
+    "trap": {
+      "n_turns": 7,
+      "n_scenarios": 7,
+      "metrics": {
+        "retrieval_recall_at_k": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 7
+        },
+        "retrieval_precision_at_k": {
+          "mean": 0.25,
+          "ci_low": 0.1964,
+          "ci_high": 0.3036,
+          "n": 7
+        },
+        "citation_precision": {
+          "mean": 0.9286,
+          "ci_low": 0.7857,
+          "ci_high": 1.0,
+          "n": 7
+        },
+        "citation_recall": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 7
+        },
+        "budget_invariant": {
+          "mean": 1.0,
+          "ci_low": 0.6457,
+          "ci_high": 1.0,
+          "n": 7
+        },
+        "constraint_pass": {
+          "mean": 1.0,
+          "ci_low": 0.6457,
+          "ci_high": 1.0,
+          "n": 7
+        },
+        "answer_correctness": {
+          "mean": 0.8571,
+          "ci_low": 0.4869,
+          "ci_high": 0.9743,
+          "n": 7
+        },
+        "groundedness": {
+          "mean": 1.0,
+          "ci_low": 0.6457,
+          "ci_high": 1.0,
+          "n": 7
+        },
+        "citation_support": {
+          "mean": 1.0,
+          "ci_low": 0.6457,
+          "ci_high": 1.0,
+          "n": 7
+        },
+        "tokens_per_answer": {
+          "mean": 4239.8571,
+          "ci_low": 3833.7143,
+          "ci_high": 4596.7143,
+          "n": 7
+        },
+        "latency_ms": {
+          "mean": 15574.8293,
+          "ci_low": 4419.4546,
+          "ci_high": 33393.0698,
+          "n": 7
+        },
+        "searches_per_answer": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 7
+        },
+        "cost_usd": {
+          "mean": 0.0013,
+          "ci_low": 0.0012,
+          "ci_high": 0.0015,
+          "n": 7
+        }
+      }
+    },
+    "multi_turn": {
+      "n_turns": 22,
+      "n_scenarios": 4,
+      "metrics": {
+        "retrieval_recall_at_k": {
+          "mean": 0.8571,
+          "ci_low": 0.7143,
+          "ci_high": 1.0,
+          "n": 21
+        },
+        "retrieval_precision_at_k": {
+          "mean": 0.2024,
+          "ci_low": 0.1548,
+          "ci_high": 0.25,
+          "n": 21
+        },
+        "citation_precision": {
+          "mean": 0.781,
+          "ci_low": 0.6095,
+          "ci_high": 0.9238,
+          "n": 21
+        },
+        "citation_recall": {
+          "mean": 0.7857,
+          "ci_low": 0.5952,
+          "ci_high": 0.9286,
+          "n": 21
+        },
+        "budget_invariant": {
+          "mean": 1.0,
+          "ci_low": 0.8513,
+          "ci_high": 1.0,
+          "n": 22
+        },
+        "constraint_pass": {
+          "mean": 0.8889,
+          "ci_low": 0.565,
+          "ci_high": 0.9801,
+          "n": 9
+        },
+        "answer_correctness": {
+          "mean": 0.9545,
+          "ci_low": 0.782,
+          "ci_high": 0.9919,
+          "n": 22
+        },
+        "groundedness": {
+          "mean": 0.8636,
+          "ci_low": 0.6667,
+          "ci_high": 0.9525,
+          "n": 22
+        },
+        "citation_support": {
+          "mean": 0.8182,
+          "ci_low": 0.6148,
+          "ci_high": 0.9269,
+          "n": 22
+        },
+        "tokens_per_answer": {
+          "mean": 4867.0909,
+          "ci_low": 4558.9091,
+          "ci_high": 5218.2273,
+          "n": 22
+        },
+        "latency_ms": {
+          "mean": 10074.6565,
+          "ci_low": 7120.2225,
+          "ci_high": 13384.469,
+          "n": 22
+        },
+        "searches_per_answer": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 22
+        },
+        "cost_usd": {
+          "mean": 0.0016,
+          "ci_low": 0.0014,
+          "ci_high": 0.0017,
+          "n": 22
+        }
+      }
+    },
+    "memory": {
+      "n_turns": 8,
+      "n_scenarios": 4,
+      "metrics": {
+        "retrieval_recall_at_k": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 6
+        },
+        "retrieval_precision_at_k": {
+          "mean": 0.2708,
+          "ci_low": 0.25,
+          "ci_high": 0.3125,
+          "n": 6
+        },
+        "citation_precision": {
+          "mean": 0.9444,
+          "ci_low": 0.8333,
+          "ci_high": 1.0,
+          "n": 6
+        },
+        "citation_recall": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 6
+        },
+        "budget_invariant": {
+          "mean": 1.0,
+          "ci_low": 0.6756,
+          "ci_high": 1.0,
+          "n": 8
+        },
+        "constraint_pass": {
+          "mean": 1.0,
+          "ci_low": 0.6097,
+          "ci_high": 1.0,
+          "n": 6
+        },
+        "answer_correctness": {
+          "mean": 1.0,
+          "ci_low": 0.6756,
+          "ci_high": 1.0,
+          "n": 8
+        },
+        "groundedness": {
+          "mean": 1.0,
+          "ci_low": 0.6756,
+          "ci_high": 1.0,
+          "n": 8
+        },
+        "citation_support": {
+          "mean": 1.0,
+          "ci_low": 0.6756,
+          "ci_high": 1.0,
+          "n": 8
+        },
+        "tokens_per_answer": {
+          "mean": 4293.875,
+          "ci_low": 3914.875,
+          "ci_high": 4669.0,
+          "n": 8
+        },
+        "latency_ms": {
+          "mean": 11050.1127,
+          "ci_low": 4796.4091,
+          "ci_high": 18900.7826,
+          "n": 8
+        },
+        "searches_per_answer": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 8
+        },
+        "cost_usd": {
+          "mean": 0.0014,
+          "ci_low": 0.0012,
+          "ci_high": 0.0015,
+          "n": 8
+        }
+      }
+    },
+    "refusal": {
+      "n_turns": 5,
+      "n_scenarios": 5,
+      "metrics": {
+        "budget_invariant": {
+          "mean": 1.0,
+          "ci_low": 0.5655,
+          "ci_high": 1.0,
+          "n": 5
+        },
+        "constraint_pass": {
+          "mean": 1.0,
+          "ci_low": 0.2065,
+          "ci_high": 1.0,
+          "n": 1
+        },
+        "answer_correctness": {
+          "mean": 0.8,
+          "ci_low": 0.3755,
+          "ci_high": 0.9638,
+          "n": 5
+        },
+        "groundedness": {
+          "mean": 0.4,
+          "ci_low": 0.1176,
+          "ci_high": 0.7693,
+          "n": 5
+        },
+        "citation_support": {
+          "mean": 0.6,
+          "ci_low": 0.2307,
+          "ci_high": 0.8824,
+          "n": 5
+        },
+        "tokens_per_answer": {
+          "mean": 4341.4,
+          "ci_low": 3828.0,
+          "ci_high": 4827.2,
+          "n": 5
+        },
+        "latency_ms": {
+          "mean": 8560.142,
+          "ci_low": 4014.5066,
+          "ci_high": 13371.9822,
+          "n": 5
+        },
+        "searches_per_answer": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 5
+        },
+        "cost_usd": {
+          "mean": 0.0013,
+          "ci_low": 0.0012,
+          "ci_high": 0.0015,
+          "n": 5
+        }
+      }
+    }
+  },
+  "cohort_counts": {
+    "single_doc": 10,
+    "trap": 7,
+    "multi_turn": 4,
+    "memory": 4,
+    "refusal": 5
+  },
+  "refusal_confusion": {
+    "refused_warranted": 5,
+    "answered_warranted": 0,
+    "refused_unwarranted": 0,
+    "answered_unwarranted": 47,
+    "n": 52,
+    "refusal_recall": 1.0,
+    "refusal_precision": 1.0
+  },
+  "failures": [
+    {
+      "run_id": "engineered-b5000-20261112_233129-naive",
+      "scenario_id": "mt_leave_ambiguity",
+      "turn_index": 4,
+      "cohort": "multi_turn",
+      "reasons": [
+        "retrieval_miss"
+      ],
+      "question": "Summarise that as three bullet points I can send my manager.",
+      "response": "- Unused annual leave carries forward up to **12 days** into the next calendar year.\n- Carried-forward days must be used by **31 March** (or **30 April** if you joined before 1 Jan 2020); anything left after that is forfeited with no payment in lieu.\n- Carried-forward days are **not eligible for encashment** — only days accrued in the current year can be encashed (up to 5, December cycle).",
+      "citations": [],
+      "retrieved_docs": [
+        "HR_Employee_Onboarding_Guide",
+        "Finance_Fiscal_Year_2026_Audit_Prep",
+        "Cafeteria_Catering_Standards",
+        "IT_Meeting_Room_Booking",
+        "Conference_Speaking_Guidelines",
+        "HR_Return_To_Office_Mandate",
+        "Finance_Travel_And_Expense_Policy",
+        "HR_Remote_Work_Policy"
+      ],
+      "context": "=== DOCUMENTS ===\n[Source: HR_Employee_Onboarding_Guide]\n# Employee Onboarding Guide\n\n## 1. Before day one\n\nPeople Operations issues the offer letter, collects signed documents and creates the employee record at least five working days before the start date. IT provisions the laptop and accounts from that record. The manager assigns a buddy from the same team, not the hiring manager, and schedules the first-week calendar before the employee starts. A welcome email goes out two days before the start date with the office address, the first-day contact and the documents to bring.\n\n## 2. Day one\n\n1. Badge collection at reception between 09:30 and 10:30.\n2. Laptop and access handover with IT, including MFA enrolment.\n3. A 30-minute session with People Operations covering payroll, benefits and the code of conduct.\n4. Team lunch with the buddy.\n5. No meetings after 15:00 so the employee can complete mandatory training.\n\n## 3. The 30-60-90 plan\n\nEvery new employee has a written 30-60-90 plan agreed with their manager in week one.\n\n1. **First 30 days — orient.** Complete mandatory training, understand the team's roadmap, ship one small change or complete one analysis, and meet every direct "
+    },
+    {
+      "run_id": "engineered-b5000-20261112_233129-naive",
+      "scenario_id": "mt_travel_tier",
+      "turn_index": 2,
+      "cohort": "multi_turn",
+      "reasons": [
+        "retrieval_miss"
+      ],
+      "question": "I'm a Level 2 manager, does that change it?",
+      "response": "No, it doesn't change it. The multiplier is based on your **level**, not your title. At L2 you fall in the L2–L3 bracket:\n\n**1.15× × INR 6,000 = INR 6,900 per night** (excluding taxes).\n\nAccording to the Finance Travel and Expense Policy, Section 4.",
+      "citations": [
+        "Finance_Travel_And_Expense_Policy"
+      ],
+      "retrieved_docs": [
+        "HR_Compensation_Bands",
+        "HR_Compensation_Bands",
+        "HR_Performance_Review_Process",
+        "HR_Compensation_Bands",
+        "HR_Performance_Review_Process",
+        "HR_Leave_Policy",
+        "Operations_Sev_Incident_Escalation",
+        "HR_Return_To_Office_Mandate"
+      ],
+      "context": "=== DOCUMENTS ===\n[Source: HR_Compensation_Bands]\n# Compensation Bands\n\n## 1. Purpose\n\nThis document defines the salary bands for each job level at Meridian and the rules for positioning employees inside a band. It is confidential and must not be shared outside the company. Managers see the bands for their own team and up to two levels below; People Operations and Finance see all bands. Individuals see their own band in the HR system.\n\n## 2. Bands\n\nAll figures are annual base salary in INR lakhs for India-based employees. Singapore and UK bands are produced by applying the location differentials in Section 5 to these figures.\n\n| Level | Title example | Minimum | Midpoint | Maximum |\n|---|---|---|---|---|\n| L1 | Associate | 6.0 | 8.5 | 11.0 |\n| L2 | Engineer / Analyst | 11.0 | 15.0 | 19.0 |\n| L3 | Senior Engineer | 19.0 | 25.0 | 31.0 |\n| L4 | Staff Engineer / Manager | 31.0 | 40.0 | 49.0 |\n| L5 | Senior Manager | 49.0 | 61.0 | 73.0 |\n| L6 | Director | 73.0 | 90.0 | 108.0 |\n\n## 3. Positioning rules\n\n1. New hires are typically positioned between the minimum and the midpoint. Offers above the midpoint require People Operations approval; offers above 90% of the maximum require the Chief"
+    },
+    {
+      "run_id": "engineered-b5000-20261112_233129-naive",
+      "scenario_id": "mt_incident_response",
+      "turn_index": 3,
+      "cohort": "multi_turn",
+      "reasons": [
+        "constraint_fail"
+      ],
+      "question": "How quickly do we need to open it?",
+      "response": "For a **Sev-2**, the response windows table in the IT_Incident_Response_Runbook (§2) sets **\"Open incident channel\" at 1 hour** from declaration.\n\nThe 15-minute bridge requirement in Operations_Sev_Incident_Escalation (§2) is explicitly stated for **Sev-1** only. The documents don't specify a separate, shorter bridge-opening deadline for Sev-2 beyond that 1-hour window.",
+      "citations": [
+        "Operations_Sev_Incident_Escalation",
+        "IT_Incident_Response_Runbook"
+      ],
+      "retrieved_docs": [
+        "Operations_14_Day_SLA_Commitment",
+        "Operations_14_Day_SLA_Commitment",
+        "Operations_Sev_Incident_Escalation",
+        "Finance_Fiscal_Year_2026_Audit_Prep",
+        "Legal_Data_Privacy_GDPR_Compliance",
+        "IT_Access_Control_Standard",
+        "IT_Incident_Response_Runbook",
+        "Legal_Contract_Review_Process"
+      ],
+      "context": "=== DOCUMENTS ===\n[Source: Operations_14_Day_SLA_Commitment]\n# 14-Day SLA Commitment\n\n## 1. Commitment\n\nMeridian commits to completing standard customer onboarding within 14 calendar days of receiving a complete setup package. The commitment applies to the Professional and Enterprise plans. Starter plan onboarding is self-service and is not covered.\n\n## 2. Start and stop\n\n1. The clock starts when the complete setup package is received: signed contract, admin contact, domain verification and data export specification.\n2. The clock pauses while Meridian waits for customer input and resumes when the input arrives.\n3. The clock does not pause for customer holidays, only for Meridian-declared freezes.\n4. The clock stops when the production tenant is live and the admin receives the handover email.\n\n## 3. Credits\n\n1. If onboarding exceeds 14 days for reasons within Meridian's control, the customer receives a service credit of 5% of the first-year subscription fee.\n2. A delay of more than 30 days attracts a 10% credit.\n3. Credits are applied to the next invoice and are not paid in cash.\n4. Credits are not available where the delay is caused by missing customer input, third-party integratio"
+    },
+    {
+      "run_id": "engineered-b5000-20261112_233129-naive",
+      "scenario_id": "mt_procurement_roundtrip",
+      "turn_index": 5,
+      "cohort": "multi_turn",
+      "reasons": [
+        "retrieval_miss"
+      ],
+      "question": "Put the whole sequence in order for me.",
+      "response": "## End-to-End Sequence: ₹4,00,000 Analytics Licence\n\n### 1. Prepare\n- Obtain **quotes** (dated within 60 days of your approval request).\n- Write the **business justification**.\n- Determine classification: subscription (expensed) vs. perpetual licence (capitalised).\n\n### 2. Procurement approval\n- **Director** approves, with quotes and justification attached.\n- *(Procurement Approval Matrix.)*\n\n### 3. Vendor readiness *(can run in parallel with each other)*\n- **Vendor onboarding** – bank details verified by a second Finance user.\n- **Security review** *(only if the vendor stores, processes or ac",
+      "citations": [
+        "Legal_Contract_Review_Process",
+        "Finance_Vendor_Payment_Terms",
+        "Finance_Procurement_Approval_Matrix",
+        "IT_Vendor_Security_Review"
+      ],
+      "retrieved_docs": [
+        "HR_Employee_Onboarding_Guide",
+        "Operations_Sev_Incident_Escalation",
+        "IT_Incident_Response_Runbook",
+        "Legal_Subpoena_And_Litigation_Hold",
+        "Finance_Fiscal_Year_2026_Audit_Prep",
+        "Cafeteria_Catering_Standards",
+        "Operations_Supply_Chain_Contingency",
+        "IT_Incident_Response_Runbook"
+      ],
+      "context": "=== DOCUMENTS ===\n[Source: HR_Employee_Onboarding_Guide]\n# Employee Onboarding Guide\n\n## 1. Before day one\n\nPeople Operations issues the offer letter, collects signed documents and creates the employee record at least five working days before the start date. IT provisions the laptop and accounts from that record. The manager assigns a buddy from the same team, not the hiring manager, and schedules the first-week calendar before the employee starts. A welcome email goes out two days before the start date with the office address, the first-day contact and the documents to bring.\n\n## 2. Day one\n\n1. Badge collection at reception between 09:30 and 10:30.\n2. Laptop and access handover with IT, including MFA enrolment.\n3. A 30-minute session with People Operations covering payroll, benefits and the code of conduct.\n4. Team lunch with the buddy.\n5. No meetings after 15:00 so the employee can complete mandatory training.\n\n## 3. The 30-60-90 plan\n\nEvery new employee has a written 30-60-90 plan agreed with their manager in week one.\n\n1. **First 30 days — orient.** Complete mandatory training, understand the team's roadmap, ship one small change or complete one analysis, and meet every direct "
+    }
+  ],
+  "failure_count": 4
+}

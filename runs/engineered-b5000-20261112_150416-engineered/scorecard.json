@@ -1,0 +1,755 @@
+{
+  "schema_version": "1",
+  "arm": "engineered",
+  "config": {
+    "arm": "engineered",
+    "routing": true,
+    "memory": true,
+    "enforce_budget": true,
+    "retrieval_k": 8,
+    "total_budget": 5000,
+    "max_history_tokens": null
+  },
+  "config_hash": "33f7b1f9eb97",
+  "dataset_version": "v1",
+  "dataset_hash": "3d1eb954707ef7f4",
+  "generated_at": "2026-11-12T10:04:09.637587+00:00",
+  "health": {
+    "scenarios_expected": 30,
+    "scenarios_completed": 30,
+    "scenario_completion_rate": 1.0,
+    "turns_expected": 52,
+    "turns_recorded": 52,
+    "turn_completion_rate": 1.0,
+    "api_error_rate": 0.0,
+    "api_errors": 0,
+    "judge_coverage": 1.0,
+    "cache_hit_rate": 0.0,
+    "scenarios_seen": 30
+  },
+  "cohorts": {
+    "single_doc": {
+      "n_turns": 10,
+      "n_scenarios": 10,
+      "metrics": {
+        "routing_accuracy": {
+          "mean": 1.0,
+          "ci_low": 0.7225,
+          "ci_high": 1.0,
+          "n": 10
+        },
+        "retrieval_recall_at_k": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 10
+        },
+        "retrieval_precision_at_k": {
+          "mean": 0.2625,
+          "ci_low": 0.25,
+          "ci_high": 0.2875,
+          "n": 10
+        },
+        "citation_precision": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 10
+        },
+        "citation_recall": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 10
+        },
+        "budget_invariant": {
+          "mean": 1.0,
+          "ci_low": 0.7225,
+          "ci_high": 1.0,
+          "n": 10
+        },
+        "constraint_pass": {
+          "mean": 1.0,
+          "ci_low": 0.7225,
+          "ci_high": 1.0,
+          "n": 10
+        },
+        "answer_correctness": {
+          "mean": 0.6,
+          "ci_low": 0.3127,
+          "ci_high": 0.8318,
+          "n": 10
+        },
+        "groundedness": {
+          "mean": 0.3,
+          "ci_low": 0.1078,
+          "ci_high": 0.6032,
+          "n": 10
+        },
+        "citation_support": {
+          "mean": 0.9,
+          "ci_low": 0.5958,
+          "ci_high": 0.9821,
+          "n": 10
+        },
+        "tokens_per_answer": {
+          "mean": 3523.1,
+          "ci_low": 3367.4,
+          "ci_high": 3702.1,
+          "n": 10
+        },
+        "latency_ms": {
+          "mean": 12544.6311,
+          "ci_low": 8463.677,
+          "ci_high": 17764.7647,
+          "n": 10
+        },
+        "searches_per_answer": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 10
+        },
+        "cost_usd": {
+          "mean": 0.0011,
+          "ci_low": 0.001,
+          "ci_high": 0.0012,
+          "n": 10
+        }
+      }
+    },
+    "overall": {
+      "n_turns": 52,
+      "n_scenarios": 30,
+      "metrics": {
+        "routing_accuracy": {
+          "mean": 0.6923,
+          "ci_low": 0.5573,
+          "ci_high": 0.8009,
+          "n": 52
+        },
+        "retrieval_recall_at_k": {
+          "mean": 0.8387,
+          "ci_low": 0.7097,
+          "ci_high": 0.9677,
+          "n": 31
+        },
+        "retrieval_precision_at_k": {
+          "mean": 0.2218,
+          "ci_low": 0.1815,
+          "ci_high": 0.2581,
+          "n": 31
+        },
+        "citation_precision": {
+          "mean": 0.7718,
+          "ci_low": 0.6333,
+          "ci_high": 0.8872,
+          "n": 39
+        },
+        "citation_recall": {
+          "mean": 0.8419,
+          "ci_low": 0.7265,
+          "ci_high": 0.9444,
+          "n": 39
+        },
+        "budget_invariant": {
+          "mean": 1.0,
+          "ci_low": 0.8928,
+          "ci_high": 1.0,
+          "n": 32
+        },
+        "constraint_pass": {
+          "mean": 0.9091,
+          "ci_low": 0.7643,
+          "ci_high": 0.9686,
+          "n": 33
+        },
+        "answer_correctness": {
+          "mean": 0.6154,
+          "ci_low": 0.4796,
+          "ci_high": 0.7353,
+          "n": 52
+        },
+        "groundedness": {
+          "mean": 0.4231,
+          "ci_low": 0.2987,
+          "ci_high": 0.5581,
+          "n": 52
+        },
+        "citation_support": {
+          "mean": 0.5,
+          "ci_low": 0.3689,
+          "ci_high": 0.6311,
+          "n": 52
+        },
+        "tokens_per_answer": {
+          "mean": 2561.2692,
+          "ci_low": 2123.8269,
+          "ci_high": 2983.4231,
+          "n": 52
+        },
+        "latency_ms": {
+          "mean": 13223.0223,
+          "ci_low": 11165.9516,
+          "ci_high": 15332.1024,
+          "n": 52
+        },
+        "searches_per_answer": {
+          "mean": 0.6154,
+          "ci_low": 0.4808,
+          "ci_high": 0.75,
+          "n": 52
+        },
+        "cost_usd": {
+          "mean": 0.0008,
+          "ci_low": 0.0007,
+          "ci_high": 0.001,
+          "n": 52
+        }
+      }
+    },
+    "trap": {
+      "n_turns": 7,
+      "n_scenarios": 7,
+      "metrics": {
+        "routing_accuracy": {
+          "mean": 1.0,
+          "ci_low": 0.6457,
+          "ci_high": 1.0,
+          "n": 7
+        },
+        "retrieval_recall_at_k": {
+          "mean": 0.8571,
+          "ci_low": 0.5714,
+          "ci_high": 1.0,
+          "n": 7
+        },
+        "retrieval_precision_at_k": {
+          "mean": 0.2143,
+          "ci_low": 0.125,
+          "ci_high": 0.2857,
+          "n": 7
+        },
+        "citation_precision": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 7
+        },
+        "citation_recall": {
+          "mean": 0.8571,
+          "ci_low": 0.5714,
+          "ci_high": 1.0,
+          "n": 7
+        },
+        "budget_invariant": {
+          "mean": 1.0,
+          "ci_low": 0.6457,
+          "ci_high": 1.0,
+          "n": 7
+        },
+        "constraint_pass": {
+          "mean": 1.0,
+          "ci_low": 0.6457,
+          "ci_high": 1.0,
+          "n": 7
+        },
+        "answer_correctness": {
+          "mean": 0.8571,
+          "ci_low": 0.4869,
+          "ci_high": 0.9743,
+          "n": 7
+        },
+        "groundedness": {
+          "mean": 0.2857,
+          "ci_low": 0.0822,
+          "ci_high": 0.6411,
+          "n": 7
+        },
+        "citation_support": {
+          "mean": 0.4286,
+          "ci_low": 0.1582,
+          "ci_high": 0.7495,
+          "n": 7
+        },
+        "tokens_per_answer": {
+          "mean": 3604.4286,
+          "ci_low": 3473.2857,
+          "ci_high": 3735.8571,
+          "n": 7
+        },
+        "latency_ms": {
+          "mean": 14394.7812,
+          "ci_low": 10605.1439,
+          "ci_high": 18856.588,
+          "n": 7
+        },
+        "searches_per_answer": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 7
+        },
+        "cost_usd": {
+          "mean": 0.0011,
+          "ci_low": 0.0011,
+          "ci_high": 0.0012,
+          "n": 7
+        }
+      }
+    },
+    "multi_turn": {
+      "n_turns": 22,
+      "n_scenarios": 4,
+      "metrics": {
+        "routing_accuracy": {
+          "mean": 0.5455,
+          "ci_low": 0.3466,
+          "ci_high": 0.7308,
+          "n": 22
+        },
+        "retrieval_recall_at_k": {
+          "mean": 0.6667,
+          "ci_low": 0.3333,
+          "ci_high": 1.0,
+          "n": 9
+        },
+        "retrieval_precision_at_k": {
+          "mean": 0.1806,
+          "ci_low": 0.0833,
+          "ci_high": 0.2639,
+          "n": 9
+        },
+        "citation_precision": {
+          "mean": 0.5375,
+          "ci_low": 0.2875,
+          "ci_high": 0.7875,
+          "n": 16
+        },
+        "citation_recall": {
+          "mean": 0.6771,
+          "ci_low": 0.4583,
+          "ci_high": 0.875,
+          "n": 16
+        },
+        "budget_invariant": {
+          "mean": 1.0,
+          "ci_low": 0.7225,
+          "ci_high": 1.0,
+          "n": 10
+        },
+        "constraint_pass": {
+          "mean": 0.6667,
+          "ci_low": 0.3542,
+          "ci_high": 0.8794,
+          "n": 9
+        },
+        "answer_correctness": {
+          "mean": 0.5,
+          "ci_low": 0.3072,
+          "ci_high": 0.6928,
+          "n": 22
+        },
+        "groundedness": {
+          "mean": 0.6364,
+          "ci_low": 0.4295,
+          "ci_high": 0.8027,
+          "n": 22
+        },
+        "citation_support": {
+          "mean": 0.5,
+          "ci_low": 0.3072,
+          "ci_high": 0.6928,
+          "n": 22
+        },
+        "tokens_per_answer": {
+          "mean": 2427.6364,
+          "ci_low": 1769.2273,
+          "ci_high": 3087.6818,
+          "n": 22
+        },
+        "latency_ms": {
+          "mean": 14880.5252,
+          "ci_low": 12545.0569,
+          "ci_high": 17317.4927,
+          "n": 22
+        },
+        "searches_per_answer": {
+          "mean": 0.4545,
+          "ci_low": 0.2273,
+          "ci_high": 0.6818,
+          "n": 22
+        },
+        "cost_usd": {
+          "mean": 0.0008,
+          "ci_low": 0.0006,
+          "ci_high": 0.001,
+          "n": 22
+        }
+      }
+    },
+    "memory": {
+      "n_turns": 8,
+      "n_scenarios": 4,
+      "metrics": {
+        "routing_accuracy": {
+          "mean": 0.25,
+          "ci_low": 0.0715,
+          "ci_high": 0.5907,
+          "n": 8
+        },
+        "retrieval_recall_at_k": {
+          "mean": 0.8,
+          "ci_low": 0.4,
+          "ci_high": 1.0,
+          "n": 5
+        },
+        "retrieval_precision_at_k": {
+          "mean": 0.225,
+          "ci_low": 0.1,
+          "ci_high": 0.325,
+          "n": 5
+        },
+        "citation_precision": {
+          "mean": 0.75,
+          "ci_low": 0.4167,
+          "ci_high": 1.0,
+          "n": 6
+        },
+        "citation_recall": {
+          "mean": 1.0,
+          "ci_low": 1.0,
+          "ci_high": 1.0,
+          "n": 6
+        },
+        "budget_invariant": {
+          "mean": 1.0,
+          "ci_low": 0.5655,
+          "ci_high": 1.0,
+          "n": 5
+        },
+        "constraint_pass": {
+          "mean": 1.0,
+          "ci_low": 0.6097,
+          "ci_high": 1.0,
+          "n": 6
+        },
+        "answer_correctness": {
+          "mean": 0.625,
+          "ci_low": 0.3057,
+          "ci_high": 0.8632,
+          "n": 8
+        },
+        "groundedness": {
+          "mean": 0.375,
+          "ci_low": 0.1368,
+          "ci_high": 0.6943,
+          "n": 8
+        },
+        "citation_support": {
+          "mean": 0.375,
+          "ci_low": 0.1368,
+          "ci_high": 0.6943,
+          "n": 8
+        },
+        "tokens_per_answer": {
+          "mean": 2414.5,
+          "ci_low": 1145.0,
+          "ci_high": 3435.875,
+          "n": 8
+        },
+        "latency_ms": {
+          "mean": 14702.5848,
+          "ci_low": 8161.5075,
+          "ci_high": 20165.1284,
+          "n": 8
+        },
+        "searches_per_answer": {
+          "mean": 0.625,
+          "ci_low": 0.25,
+          "ci_high": 0.875,
+          "n": 8
+        },
+        "cost_usd": {
+          "mean": 0.0008,
+          "ci_low": 0.0004,
+          "ci_high": 0.0011,
+          "n": 8
+        }
+      }
+    },
+    "refusal": {
+      "n_turns": 5,
+      "n_scenarios": 5,
+      "metrics": {
+        "routing_accuracy": {
+          "mean": 1.0,
+          "ci_low": 0.5655,
+          "ci_high": 1.0,
+          "n": 5
+        },
+        "constraint_pass": {
+          "mean": 1.0,
+          "ci_low": 0.2065,
+          "ci_high": 1.0,
+          "n": 1
+        },
+        "answer_correctness": {
+          "mean": 0.8,
+          "ci_low": 0.3755,
+          "ci_high": 0.9638,
+          "n": 5
+        },
+        "groundedness": {
+          "mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.4345,
+          "n": 5
+        },
+        "citation_support": {
+          "mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.4345,
+          "n": 5
+        },
+        "tokens_per_answer": {
+          "mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "n": 5
+        },
+        "latency_ms": {
+          "mean": 3279.0297,
+          "ci_low": 3031.8303,
+          "ci_high": 3545.4691,
+          "n": 5
+        },
+        "searches_per_answer": {
+          "mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "n": 5
+        },
+        "cost_usd": {
+          "mean": 0.0,
+          "ci_low": 0.0,
+          "ci_high": 0.0,
+          "n": 5
+        }
+      }
+    }
+  },
+  "cohort_counts": {
+    "single_doc": 10,
+    "trap": 7,
+    "multi_turn": 4,
+    "memory": 4,
+    "refusal": 5
+  },
+  "refusal_confusion": {
+    "refused_warranted": 5,
+    "answered_warranted": 0,
+    "refused_unwarranted": 7,
+    "answered_unwarranted": 40,
+    "n": 52,
+    "refusal_recall": 1.0,
+    "refusal_precision": 0.4166666666666667
+  },
+  "failures": [
+    {
+      "run_id": "engineered-b5000-20261112_150416-engineered",
+      "scenario_id": "trap_sev1_escalation_conflict",
+      "turn_index": 0,
+      "cohort": "trap",
+      "reasons": [
+        "retrieval_miss"
+      ],
+      "question": "How fast must we open a bridge for a Sev-1 incident?",
+      "response": "According to the **IT Incident Response Runbook** (Section 4, Process), the bridge must open within **15 minutes** of declaration for a Sev-1 incident.",
+      "citations": [
+        "IT_Incident_Response_Runbook"
+      ],
+      "retrieved_docs": [
+        "IT_Incident_Response_Runbook",
+        "IT_Incident_Response_Runbook",
+        "IT_Access_Control_Standard",
+        "IT_Change_Management",
+        "IT_Access_Control_Standard",
+        "IT_Change_Management",
+        "IT_Vendor_Security_Review",
+        "IT_Meeting_Room_Booking"
+      ],
+      "context": "=== DOCUMENTS ===\n[Source: IT_Incident_Response_Runbook]\n# Incident Response Runbook\n\n## 1. Severity definitions\n\n1. **Sev-1** — customer-facing outage or data loss affecting more than 20% of customers, or any confirmed security breach.\n2. **Sev-2** — degraded service affecting a material subset of customers, or an internal system blocking a revenue process.\n3. **Sev-3** — limited impact with a workaround.\n4. **Sev-4** — cosmetic or single-user issue.\n\nSeverity is declared by the on-call engineer and may be raised by the incident commander at any time. Downgrading a Sev-1 requires the incident commander and the engineering director.\n\n## 2. Response windows\n\n| Step | Sev-1 | Sev-2 |\n|---|---|---|\n| Acknowledge page | 15 minutes | 1 hour |\n| Open incident channel | 15 minutes | 1 hour |\n| Status page update | 30 minutes | 2 hours |\n| Customer communication | 1 hour | 4 hours |\n\nMissing an acknowledgement window is tracked as a reliability metric, not a disciplinary matter, unless it is repeated.\n\n## 3. Roles\n\nThe incident commander owns the incident and does not debug. The communications lead writes status updates. The subject-matter engineers investigate. The scribe keeps the timeli"
+    },
+    {
+      "run_id": "engineered-b5000-20261112_150416-engineered",
+      "scenario_id": "mt_leave_ambiguity",
+      "turn_index": 2,
+      "cohort": "multi_turn",
+      "reasons": [
+        "constraint_fail"
+      ],
+      "question": "And what happens to the days I don't use?",
+      "response": "According to the **HR_Leave_Policy** (as discussed earlier):\n\n- **Up to 12 unused days** can carry forward into the next calendar year.\n- Any days beyond 12 are **forfeited** at year-end.\n- Carried-forward days must be used by **31 March** of the following year, or they are also forfeited.\n\nSo in short: use them, or lose them — with a 12-day grace window into the next year.",
+      "citations": [
+        "HR_Leave_Policy"
+      ],
+      "retrieved_docs": [],
+      "context": "=== MEMORY ===\n- User is following up on a previous conversation where annual leave details (24 days/year, monthly accrual, 12 days carry-forward) were already discussed\n- User is inquiring about paid annual leave policies, suggesting they are an employee or HR professional seeking clarification on leave entitlements\n- User is an employee interested in their leave entitlements and benefits\n\n=== CONVERSATION ===\nuser: How much leave do I get?\nassistant: According to the **HR_Leave_Policy**:\n\n- **Annual leave:** 24 days per calendar year for full-time employees (accrued monthly, pro-rated from your join date).\n- **Part-time:** Pro-rata based on contracted hours ÷ 40.\n- **On probation:** You accrue from day one but can only take up to 5 days until probation is confirmed.\n- **Sick leave:** 12 days per year (separate balance, does not carry forward or encash).\n\n**Carry-forward:** Up to 12 unused days can carry into the next year, but must be used by 31 March or they're forfeited.\n\nIf you'd like details on parental leave, encashment, or anything else, just ask.\nuser: Annual leave, the paid one.\nassistant: I already shared the annual leave details in my previous response — 24 days per cal"
+    },
+    {
+      "run_id": "engineered-b5000-20261112_150416-engineered",
+      "scenario_id": "mt_leave_ambiguity",
+      "turn_index": 3,
+      "cohort": "multi_turn",
+      "reasons": [
+        "constraint_fail",
+        "refused_unnecessarily"
+      ],
+      "question": "You said they expire in March - is there any exception for long-tenured staff?",
+      "response": "I don't have that information in the available policy documents. The carry-forward rules I previously shared (12 days, 31 March deadline) didn't mention any tenure-based exceptions, but I can't confirm whether such an exception exists or doesn't without the full policy text in front of me.\n\nI'd recommend checking with your HR team or the full **HR_Leave_Policy** document to see if any tenure-based exceptions are outlined.",
+      "citations": [
+        "HR_Leave_Policy"
+      ],
+      "retrieved_docs": [],
+      "context": "=== MEMORY ===\n- User is interested in understanding the carry-forward and forfeiture rules for unused leave days\n- User is an employee tracking their own leave/PTO days\n- User is following up on a previous conversation where annual leave details (24 days/year, monthly accrual, 12 days carry-forward) were already discussed\n- User is inquiring about paid annual leave policies, suggesting they are an employee or HR professional seeking clarification on leave entitlements\n- User is an employee interested in their leave entitlements and benefits\n\n=== CONVERSATION ===\nuser: How much leave do I get?\nassistant: According to the **HR_Leave_Policy**:\n\n- **Annual leave:** 24 days per calendar year for full-time employees (accrued monthly, pro-rated from your join date).\n- **Part-time:** Pro-rata based on contracted hours ÷ 40.\n- **On probation:** You accrue from day one but can only take up to 5 days until probation is confirmed.\n- **Sick leave:** 12 days per year (separate balance, does not carry forward or encash).\n\n**Carry-forward:** Up to 12 unused days can carry into the next year, but must be used by 31 March or they're forfeited.\n\nIf you'd like details on parental leave, encashment, o"
+    },
+    {
+      "run_id": "engineered-b5000-20261112_150416-engineered",
+      "scenario_id": "mt_travel_tier",
+      "turn_index": 0,
+      "cohort": "multi_turn",
+      "reasons": [
+        "refused_unnecessarily"
+      ],
+      "question": "I'm travelling to Mumbai next week for three nights.",
+      "response": "I'm a policy assistant for Meridian Technologies. I can help you with questions about company policies including HR, IT & Security, Finance, Legal & Compliance, and Operations. Could you rephrase your question to relate to a company policy?",
+      "citations": [],
+      "retrieved_docs": [],
+      "context": ""
+    },
+    {
+      "run_id": "engineered-b5000-20261112_150416-engineered",
+      "scenario_id": "mt_incident_response",
+      "turn_index": 0,
+      "cohort": "multi_turn",
+      "reasons": [
+        "refused_unnecessarily"
+      ],
+      "question": "We're seeing 500s on the checkout API for about 5% of requests.",
+      "response": "I'm a policy assistant for Meridian Technologies. I can help you with questions about company policies including HR, IT & Security, Finance, Legal & Compliance, and Operations. Could you rephrase your question to relate to a company policy?",
+      "citations": [],
+      "retrieved_docs": [],
+      "context": ""
+    },
+    {
+      "run_id": "engineered-b5000-20261112_150416-engineered",
+      "scenario_id": "mt_incident_response",
+      "turn_index": 1,
+      "cohort": "multi_turn",
+      "reasons": [
+        "retrieval_miss"
+      ],
+      "question": "Is that a Sev-1?",
+      "response": "According to the **IT_Incident_Response_Runbook**, this would likely be classified as a **Sev-2**, not a Sev-1.\n\nHere is the breakdown based on the severity definitions in Section 1:\n\n*   **Sev-1** is defined as a customer-facing outage or data loss affecting **more than 20%** of customers, or any confirmed security breach.\n*   **Sev-2** is defined as a **degraded service affecting a material subset of customers**, or an internal system blocking a revenue process.\n\nSince the issue affects approximately **5%** of requests, it does not meet the \">20%\" threshold for a Sev-1. However, because it i",
+      "citations": [
+        "IT_Incident_Response_Runbook"
+      ],
+      "retrieved_docs": [
+        "IT_Incident_Response_Runbook",
+        "IT_Incident_Response_Runbook",
+        "IT_Vendor_Security_Review",
+        "IT_Vendor_Security_Review",
+        "IT_Meeting_Room_Booking",
+        "IT_Access_Control_Standard",
+        "IT_Acceptable_Use_Policy",
+        "IT_Change_Management"
+      ],
+      "context": "=== DOCUMENTS ===\n[Source: IT_Acceptable_Use_Policy]\n# Acceptable Use Policy\n\n## 1. Scope\n\nThis policy governs use of Meridian devices, accounts, networks and data. It applies to everyone with a company account, including contractors and interns, and continues to apply whenever company data is accessed, wherever that happens.\n\n## 2. Permitted use\n\n1. Company systems are provided for business use.\n2. Incidental personal use is permitted where it is lawful, brief and does not affect performance or security.\n3. Personal use must not involve Confidential or Restricted data, illegal content, gambling, or political campaigning.\n4. Streaming, gaming and large personal downloads are not permitted on the corporate network during core hours.\n\n## 3. Prohibited use\n\n1. Installing unauthorised software, browser extensions or drivers on company devices.\n2. Sharing accounts or credentials, including with teammates.\n3. Connecting company devices to untrusted networks without the VPN.\n4. Copying Confidential data to personal devices or personal cloud storage.\n5. Using removable media for Confidential or Restricted data; USB storage is disabled by default.\n6. Using public AI assistants or translatio"
+    },
+    {
+      "run_id": "engineered-b5000-20261112_150416-engineered",
+      "scenario_id": "mt_incident_response",
+      "turn_index": 2,
+      "cohort": "multi_turn",
+      "reasons": [
+        "refused_unnecessarily"
+      ],
+      "question": "Who has to be on the bridge?",
+      "response": "I don't have that information in the available policy documents for this turn. The IT_Incident_Response_Runbook was referenced in our earlier exchange, but I don't have its full content available right now to confirm the specific bridge/communication requirements for a Sev-2.\n\nIf you can re-share the relevant section or ask me to look it up again, I'd be happy to help. Alternatively, your on-call engineer or incident commander should be able to confirm the required bridge participants based on the runbook.",
+      "citations": [
+        "IT_Incident_Response_Runbook"
+      ],
+      "retrieved_docs": [],
+      "context": "=== MEMORY ===\n- User is tracking an incident affecting approximately 5% of requests, potentially related to a checkout API\n- User is involved in IT incident response or operations, familiar with severity classification (Sev-1, Sev-2)\n\n=== CONVERSATION ===\nuser: We're seeing 500s on the checkout API for about 5% of requests.\nassistant: I'm a policy assistant for Meridian Technologies. I can help you with questions about company policies including HR, IT & Security, Finance, Legal & Compliance, and Operations. Could you rephrase your question to relate to a company policy?\nuser: Is that a Sev-1?\nassistant: According to the **IT_Incident_Response_Runbook**, this would likely be classified as a **Sev-2**, not a Sev-1.\n\nHere is the breakdown based on the severity definitions in Section 1:\n\n*   **Sev-1** is defined as a customer-facing outage or data loss affecting **more than 20%** of customers, or any confirmed security breach.\n*   **Sev-2** is defined as a **degraded service affecting a material subset of customers**, or an internal system blocking a revenue process.\n\nSince the issue affects approximately **5%** of requests, it does not meet the \">20%\" threshold for a Sev-1. However,"
+    },
+    {
+      "run_id": "engineered-b5000-20261112_150416-engineered",
+      "scenario_id": "mt_incident_response",
+      "turn_index": 3,
+      "cohort": "multi_turn",
+      "reasons": [
+        "retrieval_miss"
+      ],
+      "question": "How quickly do we need to open it?",
+      "response": "According to the **IT_Incident_Response_Runbook**, for a **Sev-2** the incident channel (bridge) must be opened within **1 hour** of declaration (Section 2, Response windows table).\n\nFor comparison, the runbook explicitly states in Section 4 (Process, step 2) that for a **Sev-1** the bridge must open within **15 minutes** of declaration.\n\nSo your target is **1 hour** from when you declared the Sev-2.",
+      "citations": [
+        "IT_Incident_Response_Runbook"
+      ],
+      "retrieved_docs": [
+        "IT_Access_Control_Standard",
+        "IT_Incident_Response_Runbook",
+        "IT_Change_Management",
+        "IT_Vendor_Security_Review",
+        "IT_Access_Control_Standard",
+        "IT_Vendor_Security_Review",
+        "IT_Change_Management",
+        "IT_Incident_Response_Runbook"
+      ],
+      "context": "=== MEMORY ===\n- User is tracking bridge/communication requirements for their incident\n- User has an IT_Incident_Response_Runbook that was referenced in a prior exchange\n- User is currently dealing with a Sev-2 incident\n- User is involved in incident response (likely an engineer or on-call role)\n- User is tracking an incident affecting approximately 5% of requests, potentially related to a checkout API\n- User is involved in IT incident response or operations, familiar with severity classification (Sev-1, Sev-2)\n\n=== DOCUMENTS ===\n[Source: IT_Access_Control_Standard]\nlass production access. The request must be made by calling the security hotline on extension 4400 and must be approved verbally by the incident commander. Break-glass sessions are recorded, expire after four hours, and are reviewed by Security Engineering the next business day. Appendix A lists the emergency contacts and their extensions; the table is maintained by the service desk.\n\n## 7. Monitoring\n\nAll authentication events, privilege changes and break-glass sessions are logged to the central log store and retained per IT_Data_Classification_Standard. Alerts fire on repeated failed logins, impossible travel, and pri"
+    },
+    {
+      "run_id": "engineered-b5000-20261112_150416-engineered",
+      "scenario_id": "mt_incident_response",
+      "turn_index": 4,
+      "cohort": "multi_turn",
+      "reasons": [
+        "retrieval_miss"
+      ],
+      "question": "What do I tell customers in the meantime?",
+      "response": "According to the **IT_Incident_Response_Runbook**:\n\n**Deadline:** Customer communication is due within **4 hours** of declaration for a Sev-2 (Section 2, Response windows).\n\n**Who writes it:** The **communications lead** drafts the update, and it must be **approved by the incident commander** before it goes out (Section 5).\n\n**What to include / avoid:**\n- State the known impact (e.g., degraded checkout performance).\n- **Never speculate about root cause** in a customer update (Section 5).\n\nSo in short: your communications lead should draft a brief status update acknowledging the degraded checko",
+      "citations": [
+        "IT_Incident_Response_Runbook"
+      ],
+      "retrieved_docs": [
+        "IT_Incident_Response_Runbook",
+        "IT_Incident_Response_Runbook",
+        "IT_Meeting_Room_Booking",
+        "IT_Change_Management",
+        "IT_Change_Management",
+        "IT_Vendor_Security_Review",
+        "IT_Vendor_Security_Review",
+        "IT_Data_Classification_Standard"
+      ],
+      "context": "=== MEMORY ===\n- User appears to be in an IT operations or incident response role\n- User is actively managing a Sev-2 incident and is tracking response timeline requirements\n- User is tracking bridge/communication requirements for their incident\n- User has an IT_Incident_Response_Runbook that was referenced in a prior exchange\n- User is currently dealing with a Sev-2 incident\n- User is involved in incident response (likely an engineer or on-call role)\n- User is tracking an incident affecting approximately 5% of requests, potentially related to a checkout API\n- User is involved in IT incident response or operations, familiar with severity classification (Sev-1, Sev-2)\n\n=== DOCUMENTS ===\n[Source: IT_Vendor_Security_Review]\n# Vendor Security Review\n\n## 1. When a review is required\n\nAny third party that will store, process or access Meridian data must pass a security review before a contract is signed. This includes SaaS tools, contractors with system access, managed services and data processors. A review is not required for vendors that receive only Public information, but the classification must be recorded.\n\n## 2. Process and timelines\n\n1. The business owner submits the vendor reque"
+    },
+    {
+      "run_id": "engineered-b5000-20261112_150416-engineered",
+      "scenario_id": "mt_procurement_roundtrip",
+      "turn_index": 3,
+      "cohort": "multi_turn",
+      "reasons": [
+        "constraint_fail",
+        "refused_unnecessarily"
+      ],
+      "question": "How long does that review take?",
+      "response": "I don't have that information in the available policy documents. The IT Vendor Security Review policy is referenced, but the specific timeline or duration for the review isn't included in what I have access to.\n\nI'd recommend reaching out to **IT Security** directly to confirm the expected turnaround time, especially since you'll want to factor it into your overall procurement timeline.",
+      "citations": [
+        "IT_Vendor_Security_Review"
+      ],
+      "retrieved_docs": [],
+      "context": "=== MEMORY ===\n- User is tracking vendor onboarding and security review requirements\n- User is involved in purchasing an analytics licence\n- User's organization uses a Procurement Approval Matrix with defined approval bands\n- User is tracking the approval/sign-off chain for this purchase\n- User is the initiator/requester of the purchase, not the approver\n- User is working on a purchase of INR 4,00,000 (4 lakhs)\n- User's organization has a capex threshold of INR 10,00,000 and a software expense card cap of INR 25,000\n- User needs to prepare three written quotes or a sole-source justification for the analytics licence purchase\n- User's purchase requires Director-level approval (50,001–5,00,000 band)\n- User works in an organization that uses INR (India-based)\n- User is purchasing a 4,00,000 INR analytics licence\n\n=== CONVERSATION ===\nuser: I need to buy a 4,00,000 rupee analytics licence.\nassistant: Here's what applies to your INR 4,00,000 analytics licence purchase:\n\n**Classification:** This is an **expense**, not capex. The capex threshold is INR 10,00,000 (per the Capital Expenditure Policy). Software subscriptions are expensed unless the contract grants a perpetual licence.\n\n**App"
+    }
+  ],
+  "failure_count": 13
+}
